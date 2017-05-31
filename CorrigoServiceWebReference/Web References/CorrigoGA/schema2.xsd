@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://microsoft.com/wsdl/types/" elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/" id="schema2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:unsignedShort" />
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8194A747-DD62-462A-852E-BE07AB9EE682}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_9x.WebServices.Examples</RootNamespace>
+    <AssemblyName>9x.WebServices.Examples</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\9x.WebServices.Addresses\9x.WebServices.Addresses.csproj">
+      <Project>{30ba1548-f542-496f-b6dd-8a524f48622f}</Project>
+      <Name>9x.WebServices.Addresses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.AssetTrees\9x.WebServices.AssetTrees.csproj">
+      <Project>{c3723af6-e64b-4c83-80b0-57e5f59d119e}</Project>
+      <Name>9x.WebServices.AssetTrees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.BillingAccounts\9x.WebServices.BillingAccounts.csproj">
+      <Project>{38446f3d-44d9-4637-b54e-af65ac7c4e74}</Project>
+      <Name>9x.WebServices.BillingAccounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Contacts\9x.WebServices.Contacts.csproj">
+      <Project>{dbee36cf-77e1-496a-a4ae-f19e94e1ff24}</Project>
+      <Name>9x.WebServices.Contacts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Contracts\9x.WebServices.Contracts.csproj">
+      <Project>{0d2d6e60-b976-4cb1-a3f9-6908785c3cad}</Project>
+      <Name>9x.WebServices.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Customers\9x.WebServices.Customers.csproj">
+      <Project>{35983c17-07c3-4457-8cf3-cd6c0bb08953}</Project>
+      <Name>9x.WebServices.Customers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.CustomField2s\9x.WebServices.CustomField2s.csproj">
+      <Project>{aa7fdd66-94fb-4fa5-a778-2819329e21c8}</Project>
+      <Name>9x.WebServices.CustomField2s</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Documents\9x.WebServices.Documents.csproj">
+      <Project>{69781a32-91a0-44ff-a42c-3d45283af042}</Project>
+      <Name>9x.WebServices.Documents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Employees\9x.WebServices.Employees.csproj">
+      <Project>{e129c449-6183-4b96-adb8-83fca363359c}</Project>
+      <Name>9x.WebServices.Employees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Location\9x.WebServices.Locations.csproj">
+      <Project>{7663D91E-2881-40CE-A8C5-EF4C752D8FE3}</Project>
+      <Name>9x.WebServices.Locations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Organizations\9x.WebServices.Organizations.csproj">
+      <Project>{edfe0463-f164-4c65-a935-52f6a202db92}</Project>
+      <Name>9x.WebServices.Organizations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.RepairCodes\9x.WebServices.RepairCodes.csproj">
+      <Project>{E4199A05-662F-4926-880A-923F6EC9AD2B}</Project>
+      <Name>9x.WebServices.RepairCodes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Specialties\9x.WebServices.Specialties.csproj">
+      <Project>{83fe305c-21d2-4e6c-ab74-53aa495c9f3e}</Project>
+      <Name>9x.WebServices.Specialties</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.Tasks\9x.WebServices.Tasks.csproj">
+      <Project>{0fd20739-af65-49f0-a536-829150b05711}</Project>
+      <Name>9x.WebServices.Tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.WoActionLogs\9x.WebServices.WoActionLogs.csproj">
+      <Project>{4a49df9e-49e4-431c-9603-cba2107cb213}</Project>
+      <Name>9x.WebServices.WoActionLogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.WoLastActions\9x.WebServices.WoLastActions.csproj">
+      <Project>{680dac0f-b9f9-4ecf-b0bd-bbd944558169}</Project>
+      <Name>9x.WebServices.WoLastActions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.WoPriorities\9x.WebServices.WoPriorities.csproj">
+      <Project>{b72da169-f639-49c5-9734-c81ed75408a7}</Project>
+      <Name>9x.WebServices.WoPriorities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.WorkOrders\9x.WebServices.WorkOrders.csproj">
+      <Project>{7c4b23b5-a61f-456a-8919-e2da7438b08d}</Project>
+      <Name>9x.WebServices.WorkOrders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9x.WebServices.WorkZones\9x.WebServices.WorkZones.csproj">
+      <Project>{c3ecbaf4-014a-4504-af3e-fef73c68e964}</Project>
+      <Name>9x.WebServices.WorkZones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Actor\9x.WebServices.Actors.csproj">
+      <Project>{698A6CED-4D88-4871-A1A0-C1D2B714DBB9}</Project>
+      <Name>9x.WebServices.Actors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CorrigoServiceWebReference\CorrigoServiceWebReference.csproj">
+      <Project>{1849279D-221B-4C26-95B4-7D3F7AE8D536}</Project>
+      <Name>CorrigoServiceWebReference</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OneTransactionCommands\OneTransactionCommands.csproj">
+      <Project>{A843C1DF-0AAB-4430-A55F-A8BF699A58DE}</Project>
+      <Name>OneTransactionCommands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spaces\9x.WebServices.Spaces.csproj">
+      <Project>{D6276AD4-39D4-4D0D-860D-127509B1542E}</Project>
+      <Name>9x.WebServices.Spaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

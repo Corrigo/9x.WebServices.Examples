@@ -1,0 +1,3632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://corrigo.com/integration/" elementFormDefault="qualified" targetNamespace="http://corrigo.com/integration/" id="schema1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://microsoft.com/wsdl/types/" />
+  <xs:element name="Retrieve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="entitySpecifier" type="tns:EntitySpecifier" />
+        <xs:element minOccurs="0" maxOccurs="1" name="propertySet" type="tns:PropertySetBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EntitySpecifier">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="EntityType" type="tns:EntityType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EntityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TaxCode" />
+      <xs:enumeration value="InvoiceDictionaryItem" />
+      <xs:enumeration value="BillingAccount" />
+      <xs:enumeration value="WorkOrder" />
+      <xs:enumeration value="Location" />
+      <xs:enumeration value="Address" />
+      <xs:enumeration value="Customer" />
+      <xs:enumeration value="Invoice" />
+      <xs:enumeration value="InvoiceLine" />
+      <xs:enumeration value="CorporateEntity" />
+      <xs:enumeration value="GLAccount" />
+      <xs:enumeration value="Payment" />
+      <xs:enumeration value="PaymentItem" />
+      <xs:enumeration value="Employee" />
+      <xs:enumeration value="WorkZone" />
+      <xs:enumeration value="Space" />
+      <xs:enumeration value="Task" />
+      <xs:enumeration value="Disposition" />
+      <xs:enumeration value="WoItem" />
+      <xs:enumeration value="CustomFieldDescriptor" />
+      <xs:enumeration value="CustomField" />
+      <xs:enumeration value="Organization" />
+      <xs:enumeration value="Contact" />
+      <xs:enumeration value="TimePeriod" />
+      <xs:enumeration value="Specialty" />
+      <xs:enumeration value="WorkOrderType" />
+      <xs:enumeration value="CustomerNoteType" />
+      <xs:enumeration value="RepairCode" />
+      <xs:enumeration value="AttributeDescriptor" />
+      <xs:enumeration value="WoActionReasonLookup" />
+      <xs:enumeration value="WoPriority" />
+      <xs:enumeration value="WoPunchListItem" />
+      <xs:enumeration value="WoLastAction" />
+      <xs:enumeration value="WoNote" />
+      <xs:enumeration value="Actor" />
+      <xs:enumeration value="ContactAddress" />
+      <xs:enumeration value="PunchListMaster" />
+      <xs:enumeration value="PunchListMasterItem" />
+      <xs:enumeration value="PunchListMasterNote" />
+      <xs:enumeration value="Address2" />
+      <xs:enumeration value="ContactInfo" />
+      <xs:enumeration value="CustomField2" />
+      <xs:enumeration value="Note" />
+      <xs:enumeration value="WorkOrderCost" />
+      <xs:enumeration value="WoAssignment" />
+      <xs:enumeration value="WoOnSite" />
+      <xs:enumeration value="WoActionLog" />
+      <xs:enumeration value="WoVerification" />
+      <xs:enumeration value="WoActionLogProp" />
+      <xs:enumeration value="FinancialItem" />
+      <xs:enumeration value="WoQuote" />
+      <xs:enumeration value="WoEquipment" />
+      <xs:enumeration value="Blob" />
+      <xs:enumeration value="DocumentType" />
+      <xs:enumeration value="Document" />
+      <xs:enumeration value="Product" />
+      <xs:enumeration value="LaborCode" />
+      <xs:enumeration value="WpTree" />
+      <xs:enumeration value="WoEstimate" />
+      <xs:enumeration value="ToDoItem" />
+      <xs:enumeration value="LinkCustomerAndGroup" />
+      <xs:enumeration value="LinkContactAndGroup" />
+      <xs:enumeration value="AssetInfo" />
+      <xs:enumeration value="PmSchedule" />
+      <xs:enumeration value="PmItem" />
+      <xs:enumeration value="Contract" />
+      <xs:enumeration value="TaxRegion" />
+      <xs:enumeration value="TaxRegionItem" />
+      <xs:enumeration value="PriceList" />
+      <xs:enumeration value="PriceListItem" />
+      <xs:enumeration value="ChargeCodeLookup" />
+      <xs:enumeration value="CustomFieldOption" />
+      <xs:enumeration value="Model" />
+      <xs:enumeration value="LinkUserAndSpecialty" />
+      <xs:enumeration value="LinkUserAndCustomerGroup" />
+      <xs:enumeration value="LinkUserAndWorkZone" />
+      <xs:enumeration value="LinkUserAndPortfolio" />
+      <xs:enumeration value="LinkUserAndTeam" />
+      <xs:enumeration value="UserPayRate" />
+      <xs:enumeration value="LinkUserAndStockLocation" />
+      <xs:enumeration value="LinkProviderPriceList" />
+      <xs:enumeration value="LinkProviderAndService" />
+      <xs:enumeration value="Role" />
+      <xs:enumeration value="AlertScope" />
+      <xs:enumeration value="AlertSubscription" />
+      <xs:enumeration value="AssetTree" />
+      <xs:enumeration value="AttributeOption" />
+      <xs:enumeration value="Team" />
+      <xs:enumeration value="LinkTeamAndWorkZone" />
+      <xs:enumeration value="LinkPortfolioAndWorkZone" />
+      <xs:enumeration value="BusinessHours" />
+      <xs:enumeration value="Holiday" />
+      <xs:enumeration value="SpecDispatchRule" />
+      <xs:enumeration value="EscalationRule" />
+      <xs:enumeration value="OnCallRule" />
+      <xs:enumeration value="Responsibility" />
+      <xs:enumeration value="Warranty" />
+      <xs:enumeration value="AssetAttribute" />
+      <xs:enumeration value="SpecialtyMoneyValues" />
+      <xs:enumeration value="ContactMoneyValues" />
+      <xs:enumeration value="TaskMoneyValues" />
+      <xs:enumeration value="UserPayRateMoneyValues" />
+      <xs:enumeration value="RoleMoneyValues" />
+      <xs:enumeration value="Portfolio" />
+      <xs:enumeration value="AssetTemplate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EntityWithComposedIdSpecifierOfAssetTree" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySpecifier" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AssetTreeEntitySpecifier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityWithComposedIdSpecifierOfAssetTree">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ChildId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EntityWithComposedIdSpecifierOfGLAccount" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySpecifier" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GLAccountEntitySpecifier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityWithComposedIdSpecifierOfGLAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EntityWithComposedIdSpecifierOfActor" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySpecifier" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ActorEntitySpecifier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityWithComposedIdSpecifierOfActor">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:ActorType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ActorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Employee" />
+      <xs:enumeration value="Occupancy" />
+      <xs:enumeration value="CorrigoNet" />
+      <xs:enumeration value="Resident" />
+      <xs:enumeration value="CommLease" />
+      <xs:enumeration value="CommLeaseSpace" />
+      <xs:enumeration value="Property" />
+      <xs:enumeration value="Portfolio" />
+      <xs:enumeration value="LeaseGroup" />
+      <xs:enumeration value="LeaseUser" />
+      <xs:enumeration value="Supplier" />
+      <xs:enumeration value="Asset" />
+      <xs:enumeration value="WO" />
+      <xs:enumeration value="Org" />
+      <xs:enumeration value="Warranty" />
+      <xs:enumeration value="WOPrintout" />
+      <xs:enumeration value="Team" />
+      <xs:enumeration value="CompanyProp" />
+      <xs:enumeration value="WOAction" />
+      <xs:enumeration value="Landmark" />
+      <xs:enumeration value="Provider" />
+      <xs:enumeration value="ReportTimeSet" />
+      <xs:enumeration value="TenantCoi" />
+      <xs:enumeration value="Model" />
+      <xs:enumeration value="Theme" />
+      <xs:enumeration value="CustomerInvoice" />
+      <xs:enumeration value="Payment" />
+      <xs:enumeration value="MhLocation" />
+      <xs:enumeration value="MhProduct" />
+      <xs:enumeration value="PmRmTemplate" />
+      <xs:enumeration value="Document" />
+      <xs:enumeration value="WoProxy" />
+      <xs:enumeration value="Proposal" />
+      <xs:enumeration value="PlWoItem" />
+      <xs:enumeration value="Insurance" />
+      <xs:enumeration value="InvTemplate" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EntityWithComposedIdSpecifierOfBlob" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySpecifier" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BlobEntitySpecifier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityWithComposedIdSpecifierOfBlob">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element xmlns:q1="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="TypeId" type="q1:char" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EntityWithOptimisticLockSpecifier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySpecifier">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ConcurrencyId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EntityWithComposedIdAndOptimisticLockSpecifierOfAlertSubscription" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityWithOptimisticLockSpecifier" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AlertSubscriptionEntitySpecifier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityWithComposedIdAndOptimisticLockSpecifierOfAlertSubscription">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AlertTypeId" type="tns:AlertType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="AlertType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Emergency" />
+      <xs:enumeration value="ApptReminder" />
+      <xs:enumeration value="ApptChanged" />
+      <xs:enumeration value="FlaggedTech" />
+      <xs:enumeration value="EscalationExpired" />
+      <xs:enumeration value="AssignedWo" />
+      <xs:enumeration value="BadSurevy" />
+      <xs:enumeration value="OverdueWoPrior" />
+      <xs:enumeration value="OverdueWo" />
+      <xs:enumeration value="NewWo" />
+      <xs:enumeration value="FlaggedScope" />
+      <xs:enumeration value="WoCancelled" />
+      <xs:enumeration value="WorkPlanComplete" />
+      <xs:enumeration value="WoUnassigned" />
+      <xs:enumeration value="WoOnHold" />
+      <xs:enumeration value="WoPriorityChange" />
+      <xs:enumeration value="VisitOverdue" />
+      <xs:enumeration value="ImpairmentOverdue" />
+      <xs:enumeration value="ImpairmentWellOverdue" />
+      <xs:enumeration value="TenantCoiExpires" />
+      <xs:enumeration value="QuoteReview" />
+      <xs:enumeration value="CustomerNote" />
+      <xs:enumeration value="CWoCreated" />
+      <xs:enumeration value="CWoPutOnHold" />
+      <xs:enumeration value="CWoCancelled" />
+      <xs:enumeration value="CWoPickedUp" />
+      <xs:enumeration value="CWoRejected" />
+      <xs:enumeration value="CApproveQuote" />
+      <xs:enumeration value="CVerifyWork" />
+      <xs:enumeration value="CWoCompleted" />
+      <xs:enumeration value="CSendWo" />
+      <xs:enumeration value="CProviderMsg" />
+      <xs:enumeration value="CCustomerEstimate" />
+      <xs:enumeration value="CVendorInvoice" />
+      <xs:enumeration value="CCost" />
+      <xs:enumeration value="CApptChange" />
+      <xs:enumeration value="ProposalCurrent" />
+      <xs:enumeration value="ProposalEnds" />
+      <xs:enumeration value="ProposalSkipped" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PropertySetBase" abstract="true" />
+  <xs:complexType name="PropertySet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PropertySetBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Properties" type="tns:ArrayOfString" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AllProperties">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PropertySetBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RetrieveResult" type="tns:CorrigoEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CorrigoEntity" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PerformDeletion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CorrigoEntityWithComposedIdOfAssetTreeEntitySpecifierInvTree" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AssetTree">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithComposedIdOfAssetTreeEntitySpecifierInvTree">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ChildId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Child" type="tns:Location" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Distance" type="xs:unsignedByte" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Location">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="tns:Address2" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ModelId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Orphan" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:AssetType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RootId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTemplate" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Info" type="tns:AssetInfo" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Documents" type="tns:ArrayOfDocument" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsOffline" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsLocked" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Attributes" type="tns:ArrayOfAssetAttribute" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Address2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:StreetAddrType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Street" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Street2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Zip" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="GeoStatusId" type="tns:GeoStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Latitude" type="xs:double" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Longitude" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CorrigoEntityWithOptimisticLock" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ConcurrencyId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AssetTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RootAssetId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Portfolio">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:PortfolioType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentPortfolioId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UseBizHours" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UseHolidays" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UseOnCall" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UseEscalation" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PortfolioType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Grouping" />
+      <xs:enumeration value="Primary" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Warranty">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTemplate" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Organization" type="tns:Organization" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StatusId" type="tns:WarrantyStatus" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PrimaryContact" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TemplateId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkOrder" type="tns:WorkOrder" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AutoCoverage" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LaborCoverageTypeId" type="tns:SchedInterval" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LaborCoverageLength" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PartsCoverageTypeId" type="tns:SchedInterval" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PartsCoverageLength" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WarrantorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WarrantorId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Asset" type="tns:Location" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TimeZone" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkZone" type="tns:WorkZone" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactAddresses" type="tns:ArrayOfContactInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Organization">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfCustomField2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Notes" type="tns:ArrayOfNote" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactAddresses" type="tns:ArrayOfContactInfo" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="tns:Address2" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCustomField2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomField2" nillable="true" type="tns:CustomField2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomField2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Descriptor" type="tns:CustomFieldDescriptor" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ObjectId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ObjectTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CustomFieldDescriptor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Length" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Type" type="tns:CfType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfCustomFieldOption" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RemovableCorrigoEntity" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="IsRemoved" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Space">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Asset" type="tns:Location" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MoveOutDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkZone" type="tns:WorkZone" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StatusId" type="tns:LeasingSpaceStatus" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Addresses" type="tns:ArrayOfAddress2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Instructions" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WorkZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Asset" type="tns:Location" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TimeZone" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LanguageId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WoNumberPrefix" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Entity" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SchedulingWindow" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NoIncompletePunchList" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AccessOptionsMask" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AdvanceNotice" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxRegion" type="tns:TaxRegion" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WoNumberDigits" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RoundApptTimeTo" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkPlanAutoCancel" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkPlanChildResolution" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkPlanAutoDependency" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CpThemeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DefaultAccess" type="tns:PTEType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AutoAssignEnabled" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BackupRoutingId" type="tns:BackupRouting" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BillingAccount" type="tns:BillingAccount" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Contract" type="tns:Contract" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NoIncompleteItem" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UiShowProvidersFirst" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsOffline" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactAddresses" type="tns:ArrayOfContactInfo" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfCustomField2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Portfolios" type="tns:ArrayOfLinkPortfolioAndWorkZone" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Teams" type="tns:ArrayOfLinkTeamAndWorkZone" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BizHours" type="tns:ArrayOfBusinessHours" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EscalationRules" type="tns:ArrayOfEscalationRule" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SpecDispatchRules" type="tns:ArrayOfSpecDispatchRule" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OnCallRules" type="tns:ArrayOfOnCallRule" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Responsibilities" type="tns:ArrayOfResponsibility" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UseBizHours" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UseHolidays" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UseOnCall" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UseEscalation" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TaxRegion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SimpleLookupWithOptimisticLockCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfTaxRegionItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SimpleLookupWithOptimisticLockCorrigoEntity" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfTaxRegionItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxRegionItem" nillable="true" type="tns:TaxRegionItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TaxRegionItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="TaxRegionId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxCode" type="tns:TaxCode" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TaxRate" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TaxCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExtId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PTEType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="PTE" />
+      <xs:enumeration value="Appointment" />
+      <xs:enumeration value="CallFirst" />
+      <xs:enumeration value="NotApplicable" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BackupRouting">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unassigned" />
+      <xs:enumeration value="OnCall" />
+      <xs:enumeration value="Default" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="BillingAccount">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableWithOriginalCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="PortalImageSetId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CpThemeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsBillAcct" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PayTerms" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PayDays" type="xs:short" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PayInstr" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsCreditHold" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AccrualMargin" type="xs:short" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SalesRep" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTaxExempt" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CorporateEntity" type="tns:CorporateEntity" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="tns:Address" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsInactive" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PayDayWeekday" type="xs:unsignedByte" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PayDayNumber" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BillingContact" type="tns:Contact" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RemovableWithOriginalCorrigoEntity" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAsOriginal" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CorporateEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Address">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Street" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Zip" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Street2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="xs:int" />
+          <xs:element xmlns:q2="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="TypeId" type="q2:char" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Latitude" type="xs:double" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Longitude" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Contact">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:LeaseContactType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CanViewAnyRequest" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CanCreateRequest" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PriorityThreshold" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfCustomField2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactAddresses" type="tns:ArrayOfContactInfo" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GroupsBridge" type="tns:ArrayOfLinkContactAndGroup" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Username" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MustResetPassword" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NoAlertEmails" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UnlimitedRequest" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UnlimitedAuthorization" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="tns:ArrayOfContactMoneyValues" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="LeaseContactType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Alternate" />
+      <xs:enumeration value="Emergency" />
+      <xs:enumeration value="Primary" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactInfo" nillable="true" type="tns:ContactInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContactInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AddrTypeId" type="tns:ContactAddrType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsAlert" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsReport" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ContactAddrType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="PrimPhone" />
+      <xs:enumeration value="PrimEmail" />
+      <xs:enumeration value="AltPhone" />
+      <xs:enumeration value="Pager" />
+      <xs:enumeration value="EmergencyEMail" />
+      <xs:enumeration value="EmergencyPhone" />
+      <xs:enumeration value="AltEmail" />
+      <xs:enumeration value="EMail1" />
+      <xs:enumeration value="EMail2" />
+      <xs:enumeration value="EMail3" />
+      <xs:enumeration value="HomePhone" />
+      <xs:enumeration value="OfficePhone" />
+      <xs:enumeration value="MobilePhone" />
+      <xs:enumeration value="WAP" />
+      <xs:enumeration value="Fax" />
+      <xs:enumeration value="Contact" />
+      <xs:enumeration value="Website" />
+      <xs:enumeration value="CssEmail" />
+      <xs:enumeration value="CssPhone" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfLinkContactAndGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkContactAndGroup" nillable="true" type="tns:LinkContactAndGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LinkContactAndGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ContactId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerGroupId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsBillingContact" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfContactMoneyValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactMoneyValues" nillable="true" type="tns:ContactMoneyValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContactMoneyValues">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityMoneyValues">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="AuthorizationLimit" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RequestLimit" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NotificationThreshold" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CorrigoEntityMoneyValues" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CurrencyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="TWD" />
+      <xs:enumeration value="CZK" />
+      <xs:enumeration value="EUR" />
+      <xs:enumeration value="USD" />
+      <xs:enumeration value="ILS" />
+      <xs:enumeration value="JPY" />
+      <xs:enumeration value="KRW" />
+      <xs:enumeration value="PLN" />
+      <xs:enumeration value="BRL" />
+      <xs:enumeration value="RON" />
+      <xs:enumeration value="RUB" />
+      <xs:enumeration value="THB" />
+      <xs:enumeration value="TRY" />
+      <xs:enumeration value="IDR" />
+      <xs:enumeration value="VND" />
+      <xs:enumeration value="AMD" />
+      <xs:enumeration value="ZAR" />
+      <xs:enumeration value="INR" />
+      <xs:enumeration value="MYR" />
+      <xs:enumeration value="LKR" />
+      <xs:enumeration value="PHP" />
+      <xs:enumeration value="NGN" />
+      <xs:enumeration value="CNY" />
+      <xs:enumeration value="CHF" />
+      <xs:enumeration value="GBP" />
+      <xs:enumeration value="MXN" />
+      <xs:enumeration value="BND" />
+      <xs:enumeration value="BDT" />
+      <xs:enumeration value="EGP" />
+      <xs:enumeration value="HKD" />
+      <xs:enumeration value="AUD" />
+      <xs:enumeration value="SGD" />
+      <xs:enumeration value="CAD" />
+      <xs:enumeration value="MOP" />
+      <xs:enumeration value="NZD" />
+      <xs:enumeration value="CRC" />
+      <xs:enumeration value="OMR" />
+      <xs:enumeration value="COP" />
+      <xs:enumeration value="ARS" />
+      <xs:enumeration value="LBP" />
+      <xs:enumeration value="KWD" />
+      <xs:enumeration value="CLP" />
+      <xs:enumeration value="AED" />
+      <xs:enumeration value="UYU" />
+      <xs:enumeration value="BHD" />
+      <xs:enumeration value="QAR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="UserPayRateMoneyValues">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityMoneyValues">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Rate" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TaskMoneyValues">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityMoneyValues">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Nte" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SpecialtyMoneyValues">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityMoneyValues">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Nte" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AvgCostVendor" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AvgCostTech" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AvgCostAll" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RoleMoneyValues">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityMoneyValues">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="NteLimit" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Contract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SimpleLookupCorrigoEntity" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SimpleLookupCorrigoEntity" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkPortfolioAndWorkZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkPortfolioAndWorkZone" nillable="true" type="tns:LinkPortfolioAndWorkZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LinkPortfolioAndWorkZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkZoneId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PortfolioId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsPrimary" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkTeamAndWorkZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkTeamAndWorkZone" nillable="true" type="tns:LinkTeamAndWorkZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LinkTeamAndWorkZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="TeamId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkZoneId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsDefault" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfBusinessHours">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessHours" nillable="true" type="tns:BusinessHours" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BusinessHours">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PortfolioChildCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="DayIdxDayOfWeek" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FinishTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PortfolioChildCorrigoEntity" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Responsibility">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PortfolioChildCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ResponsibilityTypeId" type="tns:DutyType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="DutyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="DefaultAssignee" />
+      <xs:enumeration value="PrimaryContact" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="OnCallRule">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PortfolioChildCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="DayOfWeek" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BizHoursUserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AfterHoursUserId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EscalationRule">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PortfolioChildCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NotifyAfter" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SpecDispatchRule">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PortfolioChildCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="SpecialtyId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Index" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Holiday">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PortfolioChildCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtHoliday" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEscalationRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EscalationRule" nillable="true" type="tns:EscalationRule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSpecDispatchRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecDispatchRule" nillable="true" type="tns:SpecDispatchRule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfOnCallRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OnCallRule" nillable="true" type="tns:OnCallRule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfResponsibility">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Responsibility" nillable="true" type="tns:Responsibility" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LeasingSpaceStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Historical" />
+      <xs:enumeration value="Current" />
+      <xs:enumeration value="OnNotice" />
+      <xs:enumeration value="Pending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfAddress2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address2" nillable="true" type="tns:Address2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Customer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkZone" type="tns:WorkZone" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Dba" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Instructions" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TenantCode" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TaxExempt" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Spaces" type="tns:ArrayOfSpace" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Contacts" type="tns:ArrayOfContact" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfCustomField2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Notes" type="tns:ArrayOfNote" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Addresses" type="tns:ArrayOfAddress2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Contract" type="tns:Contract" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GroupsBridge" type="tns:ArrayOfLinkCustomerAndGroup" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSpace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Space" nillable="true" type="tns:Space" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact" nillable="true" type="tns:Contact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfNote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Note" nillable="true" type="tns:Note" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Note">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NoteTypeLookup" type="tns:CustomerNoteType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsResolved" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="tns:Actor" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UpdatedAt" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="tns:Actor" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NoteText" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CustomerNoteType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Actor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithComposedIdOfActorEntitySpecifierActor">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:ActorType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CorrigoEntityWithComposedIdOfActorEntitySpecifierActor" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkCustomerAndGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkCustomerAndGroup" nillable="true" type="tns:LinkCustomerAndGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LinkCustomerAndGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerGroupId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsBillingAccount" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsParentRemoved" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Team">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkZones" type="tns:ArrayOfLinkTeamAndWorkZone" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Employees" type="tns:ArrayOfLinkUserAndTeam" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkUserAndTeam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkUserAndTeam" nillable="true" type="tns:LinkUserAndTeam" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LinkUserAndTeam">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EmployeeBridgeCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TeamId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EmployeeBridgeCorrigoEntity" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LinkProviderAndService">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EmployeeBridgeCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ProviderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ServiceId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LinkUserAndWorkZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EmployeeBridgeCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkZoneId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LinkUserAndStockLocation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EmployeeBridgeCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StockLocationId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FullAccess" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LinkUserAndSpecialty">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EmployeeBridgeCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SpecialtyId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LinkUserAndCustomerGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EmployeeBridgeCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerGroupId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LinkUserAndPortfolio">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EmployeeBridgeCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PortfolioId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Employee">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Role" type="tns:Role" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AccessToAllWorkZones" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LanguageId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Username" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtPwdChange" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ProviderInvitedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Instructions" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WonMemberId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WonLocationId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WonServiceRadius" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsElectronicPayment" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ProviderStatusId" type="tns:EmployeeWonStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LabelId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FreeTextAllowed" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RadiusUnit" type="tns:DistanceUnit" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Password" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="JobTitle" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FederalId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExternalId" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ForcePasswordReset" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TaxWarnOnly" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DefaultPriceList" type="tns:PriceList" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PriceLists" type="tns:ArrayOfLinkProviderPriceList" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfCustomField2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Organization" type="tns:Organization" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BillAtZero" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactAddresses" type="tns:ArrayOfContactInfo" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="tns:Address2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Teams" type="tns:ArrayOfLinkUserAndTeam" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkZones" type="tns:ArrayOfLinkUserAndWorkZone" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Portfolios" type="tns:ArrayOfLinkUserAndPortfolio" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomerGroups" type="tns:ArrayOfLinkUserAndCustomerGroup" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Specialties" type="tns:ArrayOfLinkUserAndSpecialty" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PayRates" type="tns:ArrayOfUserPayRate" />
+          <xs:element minOccurs="0" maxOccurs="1" name="StockLocations" type="tns:ArrayOfLinkUserAndStockLocation" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Services" type="tns:ArrayOfLinkProviderAndService" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AlertSubscriptions" type="tns:ArrayOfAlertSubscription" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Role">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Rank" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UnlimitedNte" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="tns:ArrayOfRoleMoneyValues" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfRoleMoneyValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleMoneyValues" nillable="true" type="tns:RoleMoneyValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EmployeeWonStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NA" />
+      <xs:enumeration value="NotConnected" />
+      <xs:enumeration value="Suspended" />
+      <xs:enumeration value="Connected" />
+      <xs:enumeration value="Invited" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DistanceUnit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Kilometer" />
+      <xs:enumeration value="Mile" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PriceList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:PriceListType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PriceListType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Customer" />
+      <xs:enumeration value="Vendor" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfLinkProviderPriceList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkProviderPriceList" nillable="true" type="tns:LinkProviderPriceList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LinkProviderPriceList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ProviderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PortfolioId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PriceListId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Idx" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkUserAndWorkZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkUserAndWorkZone" nillable="true" type="tns:LinkUserAndWorkZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkUserAndPortfolio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkUserAndPortfolio" nillable="true" type="tns:LinkUserAndPortfolio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkUserAndCustomerGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkUserAndCustomerGroup" nillable="true" type="tns:LinkUserAndCustomerGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkUserAndSpecialty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkUserAndSpecialty" nillable="true" type="tns:LinkUserAndSpecialty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfUserPayRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserPayRate" nillable="true" type="tns:UserPayRate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UserPayRate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="LaborCodeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsDefault" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="tns:ArrayOfUserPayRateMoneyValues" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfUserPayRateMoneyValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserPayRateMoneyValues" nillable="true" type="tns:UserPayRateMoneyValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkUserAndStockLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkUserAndStockLocation" nillable="true" type="tns:LinkUserAndStockLocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLinkProviderAndService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkProviderAndService" nillable="true" type="tns:LinkProviderAndService" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAlertSubscription">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlertSubscription" nillable="true" type="tns:AlertSubscription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertSubscription">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithComposedIdAndOptimisticLockOfAlertSubscriptionEntitySpecifierAlertSubscription">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AlertTypeId" type="tns:AlertType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FullScopeSubscription" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SubscriptionScope" type="tns:ArrayOfAlertScope" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CorrigoEntityWithComposedIdAndOptimisticLockOfAlertSubscriptionEntitySpecifierAlertSubscription" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAlertScope">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlertScope" nillable="true" type="tns:AlertScope" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertScope">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AlertTypeId" type="tns:AlertType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ScopeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ScopeTypeId" type="tns:ActorType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PunchListMaster">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtUpdated" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="tns:Actor" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Tasks" type="tns:ArrayOfPunchListMasterItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfPunchListMasterItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PunchListMasterItem" nillable="true" type="tns:PunchListMasterItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PunchListMasterItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Idx" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Task">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ModelId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Preventive" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Routine" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Corrective" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Default" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Symptom" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CompletionTime" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Specialty" type="tns:Specialty" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PunchList" type="tns:PunchListMaster" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Priority" type="tns:WoPriority" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SelfHelpType" nillable="true" type="tns:TaskSelfHelpType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Instructions" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SelfHelpContent" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PeopleRequired" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SkillLevel" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GlAccount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="tns:ArrayOfTaskMoneyValues" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Specialty">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WONServiceId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Instructions" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxCode" type="tns:TaxCode" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="tns:ArrayOfSpecialtyMoneyValues" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSpecialtyMoneyValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialtyMoneyValues" nillable="true" type="tns:SpecialtyMoneyValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoPriority">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsEmergency" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AcknowledgeInMinutes" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RespondInMinutes" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DueInMinutes" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="TaskSelfHelpType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Html" />
+      <xs:enumeration value="Hyperlink" />
+      <xs:enumeration value="YouTube" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfTaskMoneyValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaskMoneyValues" nillable="true" type="tns:TaskMoneyValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Model">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AssetCategoryId" type="tns:AssetType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Public" type="xs:boolean" />
+          <xs:element xmlns:q3="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="SubComponentIdx" type="q3:char" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GlAccount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Instructions" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Tasks" type="tns:ArrayOfTask" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AllowAnonymousRequests" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="AssetType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Regular" />
+      <xs:enumeration value="Building" />
+      <xs:enumeration value="Unit" />
+      <xs:enumeration value="Community" />
+      <xs:enumeration value="RoomArea" />
+      <xs:enumeration value="Floor" />
+      <xs:enumeration value="Utility" />
+      <xs:enumeration value="Equipment" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Task" nillable="true" type="tns:Task" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LaborCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="InvoiceItem" type="tns:InvoiceDictionaryItem" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsDefault" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ShowForWo" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTimeCard" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsProductive" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsPaid" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsShortcut" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsDefTimeCard" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="InvoiceDictionaryItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:LookupCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxCode" type="tns:TaxCode" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CostCategory" type="tns:CostCategory" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GlExpense" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GlIncome" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LookupCorrigoEntity" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="IsRemoved" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ChargeCodeLookup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:LookupCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CostCategory">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Labor" />
+      <xs:enumeration value="Material" />
+      <xs:enumeration value="Misc" />
+      <xs:enumeration value="Vendor" />
+      <xs:enumeration value="SpotPurchase" />
+      <xs:enumeration value="AddCharges" />
+      <xs:enumeration value="Services" />
+      <xs:enumeration value="Shipping" />
+      <xs:enumeration value="Adjustments" />
+      <xs:enumeration value="Tax" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Disposition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsCompleted" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsCancelled" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OnCreate" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OnComplete" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OnCancel" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoActionReasonLookup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActionId" type="tns:WOActionType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ReasonId" type="xs:unsignedByte" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WOActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Create" />
+      <xs:enumeration value="PickUp" />
+      <xs:enumeration value="Start" />
+      <xs:enumeration value="OnHold" />
+      <xs:enumeration value="Complete" />
+      <xs:enumeration value="Cancel" />
+      <xs:enumeration value="Reopen" />
+      <xs:enumeration value="Assign" />
+      <xs:enumeration value="Attention" />
+      <xs:enumeration value="APInvStatus" />
+      <xs:enumeration value="Archived" />
+      <xs:enumeration value="Restored" />
+      <xs:enumeration value="Stop" />
+      <xs:enumeration value="AccessChanged" />
+      <xs:enumeration value="Billed" />
+      <xs:enumeration value="DueDateChanged" />
+      <xs:enumeration value="Note" />
+      <xs:enumeration value="Message" />
+      <xs:enumeration value="QuoteRequested" />
+      <xs:enumeration value="CostStatus" />
+      <xs:enumeration value="BillingRuleChanged" />
+      <xs:enumeration value="OwnerChanged" />
+      <xs:enumeration value="Signature" />
+      <xs:enumeration value="ApprovalStart" />
+      <xs:enumeration value="ApprovalEnd" />
+      <xs:enumeration value="ApGlAccountChanged" />
+      <xs:enumeration value="EstimateRejected" />
+      <xs:enumeration value="EstimateApproved" />
+      <xs:enumeration value="ItemAddRemove" />
+      <xs:enumeration value="WarrantyFlagChanged" />
+      <xs:enumeration value="AutoWarranty" />
+      <xs:enumeration value="OnSiteByChanged" />
+      <xs:enumeration value="AckByChanged" />
+      <xs:enumeration value="EstimateSubmitted" />
+      <xs:enumeration value="WonWoSend" />
+      <xs:enumeration value="WonWoRecall" />
+      <xs:enumeration value="WonWoUpdate" />
+      <xs:enumeration value="WonPaymentSend" />
+      <xs:enumeration value="Verified" />
+      <xs:enumeration value="CustomerNteChanged" />
+      <xs:enumeration value="PriorityChanged" />
+      <xs:enumeration value="SchedStartChanged" />
+      <xs:enumeration value="VendorNteChanged" />
+      <xs:enumeration value="WonDocAttach" />
+      <xs:enumeration value="QuoteSubmitted" />
+      <xs:enumeration value="FlagCleared" />
+      <xs:enumeration value="QuoteRejected" />
+      <xs:enumeration value="QuoteApproved" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AttributeDescriptor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Type" type="tns:CfType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsHistory" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DisplayInWorkOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfAttributeOption" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CfType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Integer" />
+      <xs:enumeration value="Decimal" />
+      <xs:enumeration value="Money" />
+      <xs:enumeration value="Phone" />
+      <xs:enumeration value="Date" />
+      <xs:enumeration value="Time" />
+      <xs:enumeration value="Boolean" />
+      <xs:enumeration value="Url" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfAttributeOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttributeOption" nillable="true" type="tns:AttributeOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AttributeOption">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Idx" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RepairCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Codes" type="tns:ArrayOfRepairCode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfRepairCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RepairCode" nillable="true" type="tns:RepairCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WorkOrderType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:WOType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Abbr" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsDefSR" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsDefBasic" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WOType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Basic" />
+      <xs:enumeration value="PMRM" />
+      <xs:enumeration value="Turn" />
+      <xs:enumeration value="Request" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TimePeriod">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RemovableCorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="dtStart" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="dtEnd" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsFinancial" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTime" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCustomFieldOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomFieldOption" nillable="true" type="tns:CustomFieldOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomFieldOption">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Idx" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WarrantyStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Expired" />
+      <xs:enumeration value="Active" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WorkOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeCategory" type="tns:WOType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkOrderCost" type="tns:WorkOrderCost" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Priority" type="tns:WoPriority" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StatusId" type="tns:WorkOrderStatus" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RequestorContact" type="tns:Contact" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Access" type="tns:PTEType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MainAsset" type="tns:Location" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ShortLocation" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaskRefinement" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkZone" type="tns:WorkZone" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Employee" type="tns:Employee" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Duration" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="VendorNte" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Specialty" type="tns:Specialty" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PoNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SubType" type="tns:WorkOrderType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RepairCode" type="tns:RepairCode" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WonId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsWarranty" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Flag" type="tns:WoActionReasonLookup" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TimeZone" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LastActionDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtCreated" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtScheduledStart" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtDue" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtAcknowledgeBy" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AcknowledgeByUtc" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LastActionDateUtc" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CreatedDateUtc" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ScheduledStartUtc" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DueDateUtc" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtOnSiteBy" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtUtcOnSiteBy" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastAction" type="tns:WoLastAction" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="tns:Address2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfWoItem" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EquipmentWorkedOn" type="tns:ArrayOfWoEquipment" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Notes" type="tns:ArrayOfWoNote" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CompletionNote" type="tns:WoNote" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactAddress" type="tns:ContactInfo" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Assignments" type="tns:ArrayOfWoAssignment" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PunchListItems" type="tns:ArrayOfWoPunchListItem" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Documents" type="tns:ArrayOfDocument" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfCustomField2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Verifications" type="tns:ArrayOfWoVerification" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Quote" type="tns:WoQuote" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CheckInOuts" type="tns:ArrayOfWoOnSite" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ActionLogRecords" type="tns:ArrayOfWoActionLog" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Estimate" type="tns:WoEstimate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WorkOrderCost">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BillToType" type="tns:BillToType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CostsTotal" type="tns:MoneyValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ApStateId" type="tns:ApState" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ApStatusId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="JobCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Contract" type="tns:Contract" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AuthorizationCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PaymentAmount" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PaymentNotes" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CheckCutDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CheckClearDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GlAccount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VendorInvoiceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VendorInvoiceReceivedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="VendorInvoiceTotal" type="tns:MoneyValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsPreBilled" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExpensesTotal" type="tns:MoneyValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BillingRule" type="tns:BillingRule" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TaxStatus" type="tns:TaxValidationStatus" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CustomerNte" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfFinancialItem" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxValidationNote" type="tns:Blob" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ServiceFeesTotal" type="tns:MoneyValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CostStatusId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CostState" type="tns:CostState" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ChargeCode" type="tns:ChargeCodeLookup" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BillingAccount" type="tns:BillingAccount" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExternalId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="BillToType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Customer" />
+      <xs:enumeration value="WorkZone" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MoneyValue">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ApState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Received" />
+      <xs:enumeration value="Paid" />
+      <xs:enumeration value="Waiting" />
+      <xs:enumeration value="Authorized" />
+      <xs:enumeration value="Exported" />
+      <xs:enumeration value="Disputed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BillingRule">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="VendorAndServiceFee" />
+      <xs:enumeration value="Contract" />
+      <xs:enumeration value="NotBilled" />
+      <xs:enumeration value="ServiceFee" />
+      <xs:enumeration value="All" />
+      <xs:enumeration value="CostsAndFees" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TaxValidationStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Failure" />
+      <xs:enumeration value="Provider" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfFinancialItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinancialItem" nillable="true" type="tns:FinancialItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FinancialItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WoId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Amount" type="tns:MoneyValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CostCategoryId" type="tns:CostCategory" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Rate" type="tns:MoneyValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Duration" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="InvoiceItem" type="tns:InvoiceDictionaryItem" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Exclude" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Product" type="tns:Product" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Employee" type="tns:Employee" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Quantity" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LaborCode" type="tns:LaborCode" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:WoCostLineType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxAmount" type="tns:MoneyValue" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Product">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="InvoiceItem" type="tns:InvoiceDictionaryItem" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PartName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WoCostLineType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Cost" />
+      <xs:enumeration value="Vendor" />
+      <xs:enumeration value="ServiceFee" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Blob">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithComposedIdOfBlobEntitySpecifierBlob">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Body" type="xs:base64Binary" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FileName" type="xs:string" />
+          <xs:element xmlns:q4="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="TypeId" type="q4:char" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CorrigoEntityWithComposedIdOfBlobEntitySpecifierBlob" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CostState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Submitted" />
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Exported" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WorkOrderStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Open" />
+      <xs:enumeration value="Paused" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Closed" />
+      <xs:enumeration value="Attention" />
+      <xs:enumeration value="New" />
+      <xs:enumeration value="OnHold" />
+      <xs:enumeration value="InProgress" />
+      <xs:enumeration value="Completed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WoLastAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastAction" type="tns:WoActionLog" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EmergencyReason" type="tns:WoActionReasonLookup" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Reason" type="tns:WoActionReasonLookup" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BillStatus" type="tns:BillStatus" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Invoice" type="tns:Invoice" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BilledTotal" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="XNumber" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoActionLog">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:WOActionType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Actor" type="tns:Actor" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActionDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActionReasonId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsBackDate" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UiTypeId" type="tns:UIType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TimeZone" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SystemDateUtc" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ObjectId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Properties" type="tns:ArrayOfWoActionLogProp" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="UIType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Corp" />
+      <xs:enumeration value="CallCenter" />
+      <xs:enumeration value="Wireless" />
+      <xs:enumeration value="Resident" />
+      <xs:enumeration value="Monitor" />
+      <xs:enumeration value="System" />
+      <xs:enumeration value="IVR" />
+      <xs:enumeration value="Offline" />
+      <xs:enumeration value="IntegrationWS" />
+      <xs:enumeration value="WON" />
+      <xs:enumeration value="OTHER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfWoActionLogProp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoActionLogProp" nillable="true" type="tns:WoActionLogProp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoActionLogProp">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WoActionLogId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ValueInt" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ValueStr" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:WOActionProperty" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WOActionProperty">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="FlagId" />
+      <xs:enumeration value="SignedBy" />
+      <xs:enumeration value="SignedEmail" />
+      <xs:enumeration value="CostStatusId" />
+      <xs:enumeration value="CostStatus" />
+      <xs:enumeration value="Rating" />
+      <xs:enumeration value="ItemAdded" />
+      <xs:enumeration value="ItemRemoved" />
+      <xs:enumeration value="AssignmentRemoved" />
+      <xs:enumeration value="AssignmentAdded" />
+      <xs:enumeration value="InvoiceId" />
+      <xs:enumeration value="ApInvoiceId" />
+      <xs:enumeration value="ApInvoiceName" />
+      <xs:enumeration value="ByContactId" />
+      <xs:enumeration value="ScanType" />
+      <xs:enumeration value="PrevWoStatus" />
+      <xs:enumeration value="MsgAddressedTo" />
+      <xs:enumeration value="MsgAddress" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BillStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotBilled" />
+      <xs:enumeration value="ReadyToBeBilled" />
+      <xs:enumeration value="Billed" />
+      <xs:enumeration value="ReadyToBeBilled_Billed" />
+      <xs:enumeration value="BilledAndModified" />
+      <xs:enumeration value="ReadyToBeBilled_BilledAndModified" />
+      <xs:enumeration value="Billed_BilledAndModified" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Invoice">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TimeSetId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Period" type="tns:TimePeriod" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Group" type="tns:BillingAccount" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="State" type="tns:CiInvoiceState" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PoNumber" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtDue" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GlAccount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AmtBase" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AmtTax" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AmtTotal" type="tns:MoneyValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsMultiline" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxTransactionId" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTaxDirty" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LineItems" type="tns:ArrayOfInvoiceLine" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExtNumber" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtPosted" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CiInvoiceState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Draft" />
+      <xs:enumeration value="Posted" />
+      <xs:enumeration value="Credit" />
+      <xs:enumeration value="CreditUsed" />
+      <xs:enumeration value="Paid" />
+      <xs:enumeration value="PaidInFull" />
+      <xs:enumeration value="Approved" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfInvoiceLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvoiceLine" nillable="true" type="tns:InvoiceLine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InvoiceLine">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="InvoiceItem" type="tns:InvoiceDictionaryItem" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkOrder" type="tns:WorkOrder" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Location" type="tns:Location" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Customer" type="tns:Customer" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Type" type="tns:CiItemType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtService" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Qty" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Rate" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxRate" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AmtTax" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AmtTotal" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxCode" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CiItemType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WorkOrder" />
+      <xs:enumeration value="GroupHeader" />
+      <xs:enumeration value="GroupChild" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfWoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoItem" nillable="true" type="tns:WoItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SortOrderIdx" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Disposition" type="tns:Disposition" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AssetLocation" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Asset" type="tns:Location" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Task" type="tns:Task" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfWoEquipment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoEquipment" nillable="true" type="tns:WoEquipment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoEquipment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WoId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Asset" type="tns:Location" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RefrigerantUsed" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Type" type="tns:WoEquipmentType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WoEquipmentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="New" />
+      <xs:enumeration value="Known" />
+      <xs:enumeration value="NotRelated" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfWoNote">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoNote" nillable="true" type="tns:WoNote" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoNote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Body" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NoteTypeId" type="tns:WONoteType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="tns:Actor" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WONoteType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Completion" />
+      <xs:enumeration value="Public" />
+      <xs:enumeration value="Private" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfWoAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoAssignment" nillable="true" type="tns:WoAssignment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoAssignment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsPrimary" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EmployeeId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfWoPunchListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoPunchListItem" nillable="true" type="tns:WoPunchListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoPunchListItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Idx" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Done" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Exception" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Document" nillable="true" type="tns:Document" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Document">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DocType" type="tns:DocumentType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UpdatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ExtensionId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsShared" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsPublic" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StorageTypeId" type="tns:DocumentStorageType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DocUrl" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MimeType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="tns:Actor" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WonId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WonMemberId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Blob" type="tns:Blob" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="DocumentStorageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Local" />
+      <xs:enumeration value="URL" />
+      <xs:enumeration value="Cloud" />
+      <xs:enumeration value="WonDocument" />
+      <xs:enumeration value="WonNote" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfWoVerification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoVerification" nillable="true" type="tns:WoVerification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoVerification">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Idx" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WoRatingId" type="tns:WoRating" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EditedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Actor" type="tns:Actor" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WoRating">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="NotVerified" />
+      <xs:enumeration value="Negative" />
+      <xs:enumeration value="Neutral" />
+      <xs:enumeration value="Positive" />
+      <xs:enumeration value="NotCompleted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WoQuote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WoId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Amount" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Reason" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StatusId" type="tns:QuoteStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="QuoteStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="NotSubmitted" />
+      <xs:enumeration value="Requested" />
+      <xs:enumeration value="WaitingForApproval" />
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Rejected" />
+      <xs:enumeration value="InProposal" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfWoOnSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoOnSite" nillable="true" type="tns:WoOnSite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoOnSite">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EmployeeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TimeZone" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtCheckIn" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InCheckTypeId" type="tns:OnSiteValidationType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="InValidationValue" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InLatitude" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InLongitude" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InInvItemId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InDistance" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InStatusId" type="tns:OnSiteValidationResult" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtCheckOut" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OutCheckTypeId" type="tns:OnSiteValidationType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OutValidationValue" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OutLatitude" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OutLongitude" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OutInvItemId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OutDistance" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OutStatusId" type="tns:OnSiteValidationResult" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="OnSiteValidationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Barcode" />
+      <xs:enumeration value="Gps" />
+      <xs:enumeration value="Ivr" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OnSiteValidationResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Unverified" />
+      <xs:enumeration value="Invalid" />
+      <xs:enumeration value="Valid" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfWoActionLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WoActionLog" nillable="true" type="tns:WoActionLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoEstimate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Amount" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StatusId" type="tns:QuoteStatus" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Reason" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ContactId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="SchedInterval">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="Week" />
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="Quarter" />
+      <xs:enumeration value="Year" />
+      <xs:enumeration value="Custom" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PriceListItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="VendorRate" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RateType" type="tns:RateType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VendorType" type="tns:VendorType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PriceListId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Rate" type="tns:MoneyValue" />
+          <xs:element minOccurs="0" maxOccurs="1" name="InvoiceItem" type="tns:InvoiceDictionaryItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="RateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fixed" />
+      <xs:enumeration value="Amount" />
+      <xs:enumeration value="Percentage" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VendorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Editable" />
+      <xs:enumeration value="NonEditable" />
+      <xs:enumeration value="Hidden" />
+      <xs:enumeration value="UseVendorPrLst" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WpTree">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ChildWoId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DependOnWorkOrder" type="tns:WorkOrder" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Level" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Number" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ParentWorkOrder" type="tns:WorkOrder" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RootWorkOrder" type="tns:WorkOrder" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Payment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Group" type="tns:BillingAccount" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Number" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="State" type="tns:PaymentState" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Method" type="tns:PaymentMethod" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtStamp" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AmtPayment" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AmtBalance" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtPosted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TimeSetId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfPaymentItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PaymentState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Draft" />
+      <xs:enumeration value="Credit" />
+      <xs:enumeration value="Posted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PaymentMethod">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Check" />
+      <xs:enumeration value="Cash" />
+      <xs:enumeration value="CreditCard" />
+      <xs:enumeration value="EFT" />
+      <xs:enumeration value="AccountCredit" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfPaymentItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentItem" nillable="true" type="tns:PaymentItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PaymentItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ObjectTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ObjectId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsCredit" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AmtBalance" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AmtUsed" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RefInvoice" type="tns:Invoice" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RefPayment" type="tns:Payment" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AssetAttribute">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithOptimisticLock">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Descriptor" type="tns:AttributeDescriptor" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AssetId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TopAssetId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="StreetAddrType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Primary" />
+      <xs:enumeration value="Home" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GeoStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Failed" />
+      <xs:enumeration value="Protected" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AssetInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="AssetId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CommunityId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TagId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CheckPhone" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAssetAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetAttribute" nillable="true" type="tns:AssetAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ToDoItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="tns:ActorType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtUtcDue" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Done" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EmployeeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CreatedEmployeeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CompletedEmployeeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DtUtcCompleted" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PunchListMasterNote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Idx" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ContactAddress">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="TypeId" type="tns:ContactAddrType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsDefault" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsAlert" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsLocked" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsReport" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CustomField">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Descriptor" type="tns:CustomFieldDescriptor" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ObjectId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CorrigoEntityWithComposedIdOfGLAccountEntitySpecifierGlAccount" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntity" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GLAccount">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CorrigoEntityWithComposedIdOfGLAccountEntitySpecifierGlAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DisplayAs" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsIncome" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CorrigoNetOptions" type="tns:CorrigoNetOptions" />
+  <xs:complexType name="CorrigoNetOptions">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ImposeConcurrencyId" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="UpdateLastModified" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CanDeleteMissingEntity" type="xs:boolean" />
+    </xs:sequence>
+    <xs:anyAttribute />
+  </xs:complexType>
+  <xs:element name="RetrieveMultiple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="queryExpression" type="tns:QueryBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="QueryBase" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="EntityType" type="tns:EntityType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PropertySet" type="tns:PropertySetBase" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Orders" type="tns:ArrayOfOrderExpression" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Count" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FirstResultIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfOrderExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderExpression" nillable="true" type="tns:OrderExpression" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrderExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PropertyName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="OrderType" type="tns:OrderType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="OrderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ascending" />
+      <xs:enumeration value="Descending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="QueryExpression">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Criteria" type="tns:FilterExpression" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Distinct" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FilterExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Conditions" type="tns:ArrayOfConditionExpression" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FilterOperator" type="tns:LogicalOperator" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Filters" type="tns:ArrayOfFilterExpression" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfConditionExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConditionExpression" nillable="true" type="tns:ConditionExpression" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConditionExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PropertyName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Operator" type="tns:ConditionOperator" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfAnyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ConditionOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Between" />
+      <xs:enumeration value="Equal" />
+      <xs:enumeration value="GreaterOrEqual" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="In" />
+      <xs:enumeration value="LessOrEqual" />
+      <xs:enumeration value="LessThan" />
+      <xs:enumeration value="Like" />
+      <xs:enumeration value="NotBetween" />
+      <xs:enumeration value="NotEqual" />
+      <xs:enumeration value="NotIn" />
+      <xs:enumeration value="NotLike" />
+      <xs:enumeration value="NotNull" />
+      <xs:enumeration value="Null" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfAnyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LogicalOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="And" />
+      <xs:enumeration value="Or" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfFilterExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FilterExpression" nillable="true" type="tns:FilterExpression" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryByProperty">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Conditions" type="tns:ArrayOfPropertyValuePair" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfPropertyValuePair">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PropertyValuePair" nillable="true" type="tns:PropertyValuePair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PropertyValuePair">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="PropertyName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Value" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCorrigoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CorrigoEntity" nillable="true" type="tns:CorrigoEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveMultipleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RetrieveMultipleResult" type="tns:ArrayOfCorrigoEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Execute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="commandRequest" type="tns:CommandRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CommandRequest" abstract="true" />
+  <xs:complexType name="GetPreferredAssigneesRoutine">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="SpecialtyId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkZoneId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PostalCode" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TimeStamp" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RecordCount" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UpdateRoundRobin" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AddChildWorkOrderRoutine">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="WoItemIds" type="tns:ArrayOfInt" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfInt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="int" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConvertMoneyValuesCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfMoneyValue" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TargetCurrencyTypeId" type="tns:CurrencyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfMoneyValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MoneyValue" nillable="true" type="tns:MoneyValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RetrieveWithCurrencyTypeCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="TargetCurrencyTypeId" type="tns:CurrencyType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ParentEntitySpecifiers" type="tns:ArrayOfEntitySpecifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEntitySpecifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntitySpecifier" nillable="true" type="tns:EntitySpecifier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WorkZoneOnlineCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkZoneId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WorkZoneOfflineCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkZoneId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DeactivateCustomers" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WorkZoneDefaultCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WorkZoneCreateCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkZone" type="tns:WorkZone" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AssetTemplateId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SkipDefaultSettings" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AssetMatchByTaskCodeCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentAssetId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AssetCategories" type="tns:ArrayOfAssetType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaskCode" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RecordCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAssetType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetType" type="tns:AssetType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SpaceCreateCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CustomerId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MoveOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Instructions" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UnitId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NewUnitSpecifier" type="tns:NewUnitSpecifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="NewUnitSpecifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="BuildingName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuildingFloorPlan" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FloorName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FloorFloorPlan" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UnitName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UnitFloorPlan" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="StreetAddress" type="tns:Address2" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UnitInfo" type="tns:AssetInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoAutoAssignRoutine">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkOrder" type="tns:WorkOrder" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Zip" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetCompanyWsdkUrlCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="CompanyName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Protocol" type="tns:Protocols" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="Protocols">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HTTP" />
+      <xs:enumeration value="HTTPS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WoScheduleRoutine">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkOrder" type="tns:WorkOrder" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Options" type="tns:WoScheduleOptions" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OutputPropertySet" type="tns:PropertySet" />
+          <xs:element minOccurs="0" maxOccurs="1" name="InputPropertySet" type="tns:PropertySet" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WoScheduleOptions">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None" />
+          <xs:enumeration value="SkipWarranty" />
+          <xs:enumeration value="SkipScheduling" />
+          <xs:enumeration value="SkipFinancial" />
+          <xs:enumeration value="SkipPTE" />
+          <xs:enumeration value="SkipDueDate" />
+          <xs:enumeration value="SkipOnSiteBy" />
+          <xs:enumeration value="SkipAcknowledgeBy" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:complexType name="BaseWoActionCommand" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ActionDate" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StatusId" type="tns:WOStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ConcurrencyId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActionReasonId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WOStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Open" />
+      <xs:enumeration value="Paused" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Attention" />
+      <xs:enumeration value="New" />
+      <xs:enumeration value="OnHold" />
+      <xs:enumeration value="InProgress" />
+      <xs:enumeration value="Completed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WoCreateCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkOrder" type="tns:WorkOrder" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WpTree" type="tns:WpTree" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EmployeeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KeepUnassigned" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ComputeSchedule" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ComputeAssignment" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EmergencyDisabled" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SkipBillToLogic" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SkipPunchLists" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExternalNumber" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoFlagCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CostStatusChangeCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CostStatusId" type="tns:CostStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KeepCommentIntact" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrentStatusId" type="tns:CostStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FinancialConcurrencyId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CostStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Submitted" />
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Exported" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ApStatusChangeCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="VendorInvoiceStatusId" type="tns:APInvoiceStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KeepCommentIntact" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CurrentStatusId" type="tns:APInvoiceStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FinancialConcurrencyId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="APInvoiceStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Received" />
+      <xs:enumeration value="Paid" />
+      <xs:enumeration value="Waiting" />
+      <xs:enumeration value="Authorized" />
+      <xs:enumeration value="Exported" />
+      <xs:enumeration value="Disputed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ApSubmitPaymentCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ApStatusChangeCommand">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="PaymentAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CheckCutDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoAssignCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Assignees" type="tns:ArrayOfInt" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Mode" type="tns:WoChangeAssigmentMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="WoChangeAssigmentMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Primary" />
+      <xs:enumeration value="AddSecondary" />
+      <xs:enumeration value="RemoveSecondary" />
+      <xs:enumeration value="Snapshot" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WoCompleteCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="RepairCodeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CompletionNoteOption" type="tns:CompletionNoteOptions" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CompletionNoteOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ignore" />
+      <xs:enumeration value="Replace" />
+      <xs:enumeration value="FillEmpty" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WoReopenCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoCancelCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoOnHoldCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoPauseCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoStartCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoPickUpCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseWoActionCommand" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CompositeCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTransactional" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Commands" type="tns:ArrayOfCommandRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCommandRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommandRequest" nillable="true" type="tns:CommandRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RestoreCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="EntitySpecifier" type="tns:EntitySpecifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DeleteCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="EntitySpecifier" type="tns:EntitySpecifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="UpdateCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Entity" type="tns:CorrigoEntity" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PropertySet" type="tns:PropertySetBase" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CreateCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Entity" type="tns:CorrigoEntity" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PostPaymentCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="PaymentId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Timestamp" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoLastModificationCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="UpdateInvoiceStateCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="InvoiceId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="State" type="tns:CiInvoiceState" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Timestamp" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="NestedEntityOperationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="EntityPath" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EntitySpecifier" type="tns:EntitySpecifier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CommandResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorInfo" type="tns:ErrorInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ErrorInfo">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Number" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Type" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetPreferredAssigneesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Employees" type="tns:ArrayOfEmployee" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddChildWorkOrderResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkOrder" type="tns:WorkOrder" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkPlanLink" type="tns:WpTree" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ConvertMoneyValuesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfMoneyValue" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RetrieveWithCurrencyTypeResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfCorrigoEntityMoneyValues" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCorrigoEntityMoneyValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CorrigoEntityMoneyValues" nillable="true" type="tns:CorrigoEntityMoneyValues" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WorkZoneCommandResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="WorkZone" type="tns:WorkZone" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MatchAssetsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Locations" type="tns:ArrayOfLocation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Location" nillable="true" type="tns:Location" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SpaceCreateCommandResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="NewSpace" type="tns:Space" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EmployeeResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="EmployeeId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LoginResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ActorTypeId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Success" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetCompanyWsdkUrlResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CompanyName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Protocol" type="tns:Protocols" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FinancialStatusChangeResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Financial" type="tns:WorkOrderCost" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WoActionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Wo" type="tns:WorkOrder" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedPropertySet" type="tns:PropertySet" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CompositeCommandResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Responses" type="tns:ArrayOfCommandResponse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCommandResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommandResponse" nillable="true" type="tns:CommandResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OperationCommandResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="EntitySpecifier" type="tns:EntitySpecifier" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NestedEntitiesOperationResults" type="tns:ArrayOfNestedEntityOperationResult" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfNestedEntityOperationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NestedEntityOperationResult" nillable="true" type="tns:NestedEntityOperationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WoLastModificationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommandResponse">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="DtLastModified" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WorkOrderId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExecuteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ExecuteResult" type="tns:CommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteMultiple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="requests" type="tns:ArrayOfCommandRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteMultipleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CommandResponse" type="tns:ArrayOfCommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyWsdkUrl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CompanyName" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Protocol" type="tns:Protocols" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyWsdkUrlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetCompanyWsdkUrlResult" type="tns:CommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogOut">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="LogOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="LogOutResult" type="tns:CommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogInStatus">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="LogInStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="LogInStatusResult" type="tns:CommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogInCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="username" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="password" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="companyname" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogInCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="LogInCompanyResult" type="tns:CommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommandResponse" nillable="true" type="tns:CommandResponse" />
+</xs:schema>
