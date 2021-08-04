@@ -18,7 +18,7 @@ namespace CommonIntegrationScenarios.VendorInvoicing
             // Update the status of specified invoices to "Exported"
             // 
             int[] invoiceIDs = approvedInvoices.Select(i => i.Id).Take(2).ToArray();
-            InvoiceScenario.UpdateInvoiceStatus(corrigoService, invoiceIDs, APInvoiceStatus.Exported);
+            InvoiceScenario.UpdateInvoiceStatus(corrigoService, invoiceIDs, ApState.Exported);
 
             //
             // Vendor Invoice Payment

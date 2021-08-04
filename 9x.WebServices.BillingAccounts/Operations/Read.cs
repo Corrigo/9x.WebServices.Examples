@@ -70,17 +70,17 @@ namespace _9x.WebServices.BillingAccounts.Operations
 
             Console.WriteLine(string.Concat("BillingAccount.Id=".PadRight(padRightNumber), toReturn.Id.ToString()));
             Console.WriteLine(string.Concat("BillingAccount.DisplayAs=".PadRight(padRightNumber), toReturn.DisplayAs ?? ""));
-            Console.WriteLine(string.Concat("BillingAccount.PortalImageSetId=".PadRight(padRightNumber), !toReturn.PortalImageSetId.HasValue ? "" : toReturn.PortalImageSetId.ToString()));
+            //Console.WriteLine(string.Concat("BillingAccount.PortalImageSetId=".PadRight(padRightNumber), !toReturn..HasValue ? "" : toReturn.PortalImageSetId.ToString()));
 
-            Console.WriteLine(string.Concat("BillingAccount.CpThemeId=".PadRight(padRightNumber), !toReturn.CpThemeId.HasValue ? "" : toReturn.CpThemeId.ToString()));
+            Console.WriteLine(string.Concat("BillingAccount.CpThemeId=".PadRight(padRightNumber), toReturn.CpThemeId.ToString()));
 
             Console.WriteLine(string.Concat("BillingAccount.IsBillAcct=".PadRight(padRightNumber), toReturn.IsBillAcct));
             Console.WriteLine(string.Concat("BillingAccount.Number=".PadRight(padRightNumber), toReturn.Number ?? ""));
 
-            Console.WriteLine(string.Concat("BillingAccount.PayTerms=".PadRight(padRightNumber), toReturn.PayTerms ?? ""));
-            Console.WriteLine(string.Concat("BillingAccount.PayDays=".PadRight(padRightNumber), toReturn.PayDays));
+            Console.WriteLine(string.Concat("BillingAccount.PayTerms=".PadRight(padRightNumber), toReturn.PaymentTerms ?? ""));
+            Console.WriteLine(string.Concat("BillingAccount.PayDays=".PadRight(padRightNumber), toReturn.PaymentNumberOfDays));
 
-            Console.WriteLine(string.Concat("BillingAccount.PayInstr=".PadRight(padRightNumber), toReturn.PayInstr ?? ""));
+            Console.WriteLine(string.Concat("BillingAccount.PayInstr=".PadRight(padRightNumber), toReturn.PaymentInstrustions ?? ""));
 
             Console.WriteLine(string.Concat("BillingAccount.IsCreditHold=".PadRight(padRightNumber), toReturn.IsCreditHold));
             Console.WriteLine(string.Concat("BillingAccount.AccrualMargin= ".PadRight(padRightNumber), toReturn.AccrualMargin));
@@ -88,10 +88,10 @@ namespace _9x.WebServices.BillingAccounts.Operations
             Console.WriteLine(string.Concat("BillingAccount.IsTaxExempt=".PadRight(padRightNumber), toReturn.IsTaxExempt));
 
 
-            if (toReturn.CorporateEntity != null)
+            if (toReturn.CorpEntity != null)
             {
-                Console.WriteLine(string.Concat("BillingAccount.CorporateEntity.Id=".PadRight(padRightNumber), toReturn.CorporateEntity.Id.ToString()));
-                Console.WriteLine(string.Concat("BillingAccount.CorporateEntity.DisplayAs=".PadRight(padRightNumber), toReturn.CorporateEntity.DisplayAs ?? ""));
+                Console.WriteLine(string.Concat("BillingAccount.CorporateEntity.Id=".PadRight(padRightNumber), toReturn.CorpEntity.Id.ToString()));
+                Console.WriteLine(string.Concat("BillingAccount.CorporateEntity.DisplayAs=".PadRight(padRightNumber), toReturn.CorpEntity.DisplayAs ?? ""));
             }
 
             if (toReturn.Address != null)
@@ -103,15 +103,15 @@ namespace _9x.WebServices.BillingAccounts.Operations
                 Console.WriteLine(string.Concat("BillingAccount.Address.Street=".PadRight(padRightNumber), toReturn.Address.Street ?? ""));
             }
 
-            Console.WriteLine(string.Concat("BillingAccount.IsInactive=".PadRight(padRightNumber), toReturn.IsInactive));
-            Console.WriteLine(string.Concat("BillingAccount.PayDayWeekday=".PadRight(padRightNumber), toReturn.PayDayWeekday));
+            //Console.WriteLine(string.Concat("BillingAccount.IsInactive=".PadRight(padRightNumber), toReturn.ac));
+            Console.WriteLine(string.Concat("BillingAccount.PayDayWeekday=".PadRight(padRightNumber), toReturn.PayDayType));
             Console.WriteLine(string.Concat("BillingAccount.PayDayNumber=".PadRight(padRightNumber), toReturn.PayDayNumber));
-
-            if (toReturn.BillingContact != null)
-            {
-                Console.WriteLine(string.Concat("BillingAccount.BillingContact.Id=".PadRight(padRightNumber), toReturn.BillingContact.Id.ToString()));
-                Console.WriteLine(string.Concat("BillingAccount.BillingContact.DisplayAs=".PadRight(padRightNumber), toReturn.BillingContact.DisplayAs ?? ""));
-            }
+            Console.WriteLine(string.Concat("BillingAccount.BillingContact.DisplayAs=".PadRight(padRightNumber), toReturn.DisplayAs ?? ""));
+            //if (toReturn.BillingContact != null)
+            //{
+            //    Console.WriteLine(string.Concat("BillingAccount.BillingContact.Id=".PadRight(padRightNumber), toReturn.Contacts.Id.ToString()));
+            //    Console.WriteLine(string.Concat("BillingAccount.BillingContact.DisplayAs=".PadRight(padRightNumber), toReturn.DisplayAs ?? ""));
+            //}
 
             Console.WriteLine();
 
@@ -138,7 +138,7 @@ namespace _9x.WebServices.BillingAccounts.Operations
             foreach (BillingAccount item in list)
             {
                 i++;
-                Console.WriteLine(string.Concat(i.ToString().PadLeft(4), "|", item.Id.ToString().PadLeft(4), "|", item.IsInactive.ToString().PadRight(8), "|", item.DisplayAs.PadRight(50), "|", item.Number.ToString().PadRight(10)));
+                Console.WriteLine(string.Concat(i.ToString().PadLeft(4), "|", item.Id.ToString().PadLeft(4), "|", item.DisplayAs.PadRight(50), "|", item.Number.ToString().PadRight(10)));
             }
 
             Console.WriteLine();
@@ -185,7 +185,7 @@ namespace _9x.WebServices.BillingAccounts.Operations
             foreach (BillingAccount item in list)
             {
                 i++;
-                Console.WriteLine(string.Concat(i.ToString().PadLeft(4), "|", item.Id.ToString().PadLeft(4), "|", item.IsInactive.ToString().PadRight(8), "|", item.DisplayAs.PadRight(50), "|", item.Number.ToString().PadRight(10)));
+                Console.WriteLine(string.Concat(i.ToString().PadLeft(4), "|", item.Id.ToString().PadLeft(4), "|", item.DisplayAs.PadRight(50), "|", item.Number.ToString().PadRight(10)));
             }
 
             Console.WriteLine();

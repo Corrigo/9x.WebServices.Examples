@@ -24,7 +24,7 @@ namespace _9x.WebServices.WorkOrders.Workflows
 			{
 				WorkOrderId = workOrderId,
 				Comment = "test assignment",
-				Mode = WoChangeAssigmentMode.Primary,
+				Mode = ChangeAssignmentMode.Primary,
 				Assignees = new int[] { 3 }                // is taken from Eployee db table
 			};
 
