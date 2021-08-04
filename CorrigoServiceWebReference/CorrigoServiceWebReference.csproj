@@ -71,10 +71,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://v91.qa.corrigo.com/wsdk/CorrigoService.asmx">
+    <WebReferenceUrl Include="http://am-ce97a.corrigo.com/wsdk/CorrigoService.asmx%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\CorrigoGA\</RelPath>
-      <UpdateFromURL>http://v91.qa.corrigo.com/wsdk/CorrigoService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://am-ce97a.corrigo.com/wsdk/CorrigoService.asmx%3fwsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -97,7 +97,6 @@
     <None Include="Web References\CorrigoGA\CorrigoEntity.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\CorrigoGA\CorrigoService.disco" />
     <None Include="Web References\CorrigoGA\CorrigoService.wsdl" />
     <None Include="Web References\CorrigoGA\CorrigoService0.wsdl" />
     <None Include="Web References\CorrigoGA\Reference.map">

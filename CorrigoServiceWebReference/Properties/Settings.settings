@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="CorrigoServiceWebReference_CorrigoGA_CorrigoService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://wt90gap.corrigo.com/wsdk/CorrigoService.asmx</Value>
+      <Value Profile="(Default)">http://am-ce97a.corrigo.com/wsdk/CorrigoService.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>
