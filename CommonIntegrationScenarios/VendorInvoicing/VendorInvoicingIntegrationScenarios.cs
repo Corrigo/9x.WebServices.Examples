@@ -27,7 +27,7 @@ namespace CommonIntegrationScenarios.VendorInvoicing
                                 "DisplayAs",
                                 "Description",
                                 "ForecastGroupId",
-                                "ApStateId",//
+                                "ApStateId",
                                 "ReadyForExport",
                                 "SetOnExport",
                                 "ChildWoDefault"
@@ -36,10 +36,10 @@ namespace CommonIntegrationScenarios.VendorInvoicing
             var query = new QueryByProperty
             {
                 EntityType = EntityType.ApInvoiceStatus,
-                PropertySet = _propertySet,//new AllProperties(),
+                PropertySet = _propertySet,
                 Conditions = new[]
                     {
-                        new PropertyValuePair {PropertyName = "ApInvoiceStatus", Value = ApState.Exported},
+                        new PropertyValuePair {PropertyName = "ApStateId", Value = ApState.Exported},
                     },
             };
             var invoiceStatuses = corrigoService.RetrieveMultiple(query).Cast<ApInvoiceStatus>().ToArray();
