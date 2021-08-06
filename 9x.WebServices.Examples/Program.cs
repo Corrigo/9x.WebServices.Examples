@@ -17,19 +17,18 @@ namespace _9x.WebServices.Examples
 {
 	class Program
 	{
-		private const string Company = "Integrations 9.1 DB";
-		private const string UserName = "ewi";
-		private const string Password = "Corrigo2!";
+        private const string _url = "http://qa-am-ent-f2.corrigo-qa.com/wsdk/CorrigoService.asmx";
+        private const string _company = "Integrations Tests";
+        private const string _userName = "wsdk";
+        private const string _password = "1234";
 
-		static readonly CorrigoClientProvider clientProvider = new CorrigoClientProvider();
+        static readonly CorrigoClientProvider clientProvider = new CorrigoClientProvider();
 		static void Main(string[] args)
 		{
 			try
 			{
-				//url for qa companies: https://v90g.qa.corrigo.com/wsdk/CorrigoService.asmx
-				var service = clientProvider.GetCorrigoService(
-					"http://v91.qa.corrigo.com/wsdk/CorrigoService.asmx",
-					Company, UserName, Password);
+                //url for qa companies: https://v90g.qa.corrigo.com/wsdk/CorrigoService.asmx
+                var service = clientProvider.GetCorrigoService(_url, _company, _userName, _password);
 
                 #region different test cases - to execute - uncomment
                 //var id = CustomerExamples.CreateRetreive(service);
