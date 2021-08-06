@@ -107,6 +107,9 @@ namespace _9x.WebServices.Examples
                 //WorkOrderAssignmentExamples.UpdateAssignment(service, assignmentId);
                 //WorkOrderAssignmentExamples.DeleteAssignment(service, assignmentId);
 
+                var flagId = WorkOrderFlagsExamples.CreateFlag(service, WoActionLogExamples.GetLatestWOs(service, 1)[0].Id);
+                var flags = WorkOrderFlagsExamples.ReadFlags(service);
+
                 //WorkOrderActionReasonLookupExamples.ReadActionReasonLookup(service, WoActionLogExamples.GetLatestWOs(service, 1)[0].Id);
 
                 //ActorExamples.CreateAsset(service);

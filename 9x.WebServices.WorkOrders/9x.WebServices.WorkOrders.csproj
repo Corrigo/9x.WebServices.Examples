@@ -64,6 +64,8 @@
     <Compile Include="Operations\Estimate\Delete.cs" />
     <Compile Include="Operations\Estimate\Read.cs" />
     <Compile Include="Operations\Estimate\Update.cs" />
+    <Compile Include="Operations\Flags\Create.cs" />
+    <Compile Include="Operations\Flags\Read.cs" />
     <Compile Include="Operations\Items\Create.cs" />
     <Compile Include="Operations\LastAction\Create.cs" />
     <Compile Include="Operations\Notes\Create.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="WorkOrderActionReasonLookupExamples.cs" />
     <Compile Include="WorkOrderCostsExamples.cs" />
     <Compile Include="WorkOrderEstimateExamples.cs" />
+    <Compile Include="WorkOrderFlagsExamples.cs" />
     <Compile Include="WorkOrderItemExamples.cs" />
     <Compile Include="WorkOrderNotesExamples.cs" />
     <Compile Include="WorkOrderLastActionExamples.cs" />
