@@ -27,7 +27,10 @@ namespace _9x.WebServices.WorkZones
                 Delete.Execute(service, workZone.Id); // WorkZone is NonDeletable
                 Update.Restore(service, workZone); // WorkZone is not restorable
 
-                Update.Execute(service, workZone); 
+                Update.Execute(service, workZone);
+
+                //after we've got/created the root, we can gradually add asset branhes and sub-trees
+                Create.CreateAssetHierarchy(service, workZone.Asset.Id);
             }
 
 
