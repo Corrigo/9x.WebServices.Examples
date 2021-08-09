@@ -18,7 +18,7 @@ namespace _9x.WebServices.WorkOrders
 		/// </summary>
 		/// <param name="service"></param>
 		/// <returns></returns>
-		public static WoFlag[] ReadFlags(CorrigoService service)
+		public static CorrigoEntity[] ReadFlags(CorrigoService service)
 			=> Read.RetrieveMultiple(service);
 
 	}

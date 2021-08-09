@@ -44,7 +44,8 @@ namespace _9x.WebServices.WorkZones.Operations
                             "IsOffline",
                             "LanguageId",
                             "NoIncompleteItem",
-                            "NoIncompletePunchList",
+                            //"NoIncompletePunchList",
+                            //WorkZone entity does not expose "NoIncompletePunchList" property.
                             "Number",
                             "OnCallRules.*",
                             "Portfolios.*",

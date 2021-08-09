@@ -17,9 +17,10 @@ namespace _9x.WebServices.WorkZones.Operations
 
             //
             // Get Asset Template Id by its name.
-            // Template name can be spotted by navigation Url: https://v91.qa.corrigo.com/corpnet/assets/templatemanager.aspx
-            //
-            string assetTemplateName = "SK_WrokZoneTemplate";
+            // Template name can be spotted by navigation Url: https://qa-am-ent-f1.corrigo-qa.com/corpnet/assets/templatemanager.aspx
+            //for _company = "Integrations Tests";
+            //string assetTemplateName = "Oleksii";created by UI
+            string assetTemplateName = "Workzone";
 
             var assetTemplates = service.RetrieveMultiple(
                 new QueryByProperty
@@ -47,7 +48,10 @@ namespace _9x.WebServices.WorkZones.Operations
                 WoNumberPrefix = Guid.NewGuid().ToString().Split('-')[0],
                 TimeZone = 4, //(GMT-08:00) Pacific Time (US & Canada) 
                 AutoAssignEnabled = true,
-                DefaultAccess = PTEType.Unknown
+                DefaultAccess = PTEType.Unknown,
+                SlotsCount = 3,
+                LatestSlot = 1
+                //LatestSlot should be greater than or equal to 1.|Supported values for SlotsCount are 3, 5, 7 and 10
             };
 
 

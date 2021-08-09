@@ -9,7 +9,7 @@ namespace _9x.WebServices.WorkOrders.Operations.Flags
 {
 	internal static class Read
 	{
-		public static WoFlag[] RetrieveMultiple(CorrigoService service, int countNumber = 200)
+		public static CorrigoEntity[] RetrieveMultiple(CorrigoService service, int countNumber = 200)
 		{
 			string[] properties = { "WoId", "FlagId", "UtcStamp", "Comment" };
             var list = service.RetrieveMultiple(
@@ -23,7 +23,7 @@ namespace _9x.WebServices.WorkOrders.Operations.Flags
                     },
                     Conditions = new PropertyValuePair[0],
                     
-                }) as WoFlag[];
+                });
 
 			return list;
 		}
