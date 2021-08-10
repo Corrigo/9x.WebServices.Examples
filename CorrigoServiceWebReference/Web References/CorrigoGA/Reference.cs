@@ -1313,6 +1313,9 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         IncidentUpdate,
+        
+        /// <remarks/>
+        CpPwdExpiration,
     }
     
     /// <remarks/>
@@ -3118,9 +3121,6 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         UZS,
-        
-        /// <remarks/>
-        NGNL,
     }
     
     /// <remarks/>
@@ -8824,6 +8824,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private LsNoteAccess customerNoteAccessIdField;
         
+        private bool noPwdExpirationAlertField;
+        
         private ContactMoneyValues[] currenciesField;
         
         /// <remarks/>
@@ -9033,6 +9035,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
             }
             set {
                 this.customerNoteAccessIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool NoPwdExpirationAlert {
+            get {
+                return this.noPwdExpirationAlertField;
+            }
+            set {
+                this.noPwdExpirationAlertField = value;
             }
         }
         
@@ -14565,6 +14577,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private TaxCode taxCodeReferenceField;
         
+        private System.Nullable<bool> nonBillableField;
+        
+        private string merchantNameField;
+        
+        private bool checkForNonBillableField;
+        
         /// <remarks/>
         public int WoId {
             get {
@@ -14773,6 +14791,37 @@ namespace CorrigoServiceWebReference.CorrigoGA {
             }
             set {
                 this.taxCodeReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> NonBillable {
+            get {
+                return this.nonBillableField;
+            }
+            set {
+                this.nonBillableField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string MerchantName {
+            get {
+                return this.merchantNameField;
+            }
+            set {
+                this.merchantNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool CheckForNonBillable {
+            get {
+                return this.checkForNonBillableField;
+            }
+            set {
+                this.checkForNonBillableField = value;
             }
         }
     }

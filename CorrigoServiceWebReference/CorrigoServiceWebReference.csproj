@@ -71,10 +71,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://qa-am-ent-f2.corrigo-qa.com/wsdk/CorrigoService.asmx%3fwsdl">
+    <WebReferenceUrl Include="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\CorrigoGA\</RelPath>
-      <UpdateFromURL>http://qa-am-ent-f2.corrigo-qa.com/wsdk/CorrigoService.asmx%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx%3fwsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

@@ -359,6 +359,7 @@
       <xs:enumeration value="ActiveIncident" />
       <xs:enumeration value="OpenIncident" />
       <xs:enumeration value="IncidentUpdate" />
+      <xs:enumeration value="CpPwdExpiration" />
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="PropertySetBase" abstract="true" />
@@ -515,7 +516,6 @@
       <xs:enumeration value="RSD" />
       <xs:enumeration value="AZN" />
       <xs:enumeration value="UZS" />
-      <xs:enumeration value="NGNL" />
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="MaterialTransactionItem">
@@ -1778,6 +1778,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="SupervisorId" type="xs:int" />
           <xs:element minOccurs="1" maxOccurs="1" name="LanguageId" type="xs:int" />
           <xs:element minOccurs="1" maxOccurs="1" name="CustomerNoteAccessId" type="tns:LsNoteAccess" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NoPwdExpirationAlert" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="tns:ArrayOfContactMoneyValues" />
         </xs:sequence>
       </xs:extension>
@@ -2777,6 +2778,9 @@
           <xs:element minOccurs="1" maxOccurs="1" name="WithholdingTaxRateUndefined" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="StockLocation" type="tns:StockLocation" />
           <xs:element minOccurs="0" maxOccurs="1" name="TaxCodeReference" type="tns:TaxCode" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NonBillable" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MerchantName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CheckForNonBillable" type="xs:boolean" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
