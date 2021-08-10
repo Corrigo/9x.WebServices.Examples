@@ -22,7 +22,14 @@ namespace _9x.WebServices.WorkOrders.Operations.Flags
                         Properties = properties
                     },
                     Conditions = new PropertyValuePair[0],
-                    
+                    Orders = new[]
+                    {
+                        new OrderExpression
+                        {
+                            OrderType = OrderType.Descending,
+                            PropertyName = "UtcStamp"
+                        }
+                    },
                 });
 
 			return list;

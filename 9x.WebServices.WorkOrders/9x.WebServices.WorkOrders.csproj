@@ -66,6 +66,7 @@
     <Compile Include="Operations\Estimate\Update.cs" />
     <Compile Include="Operations\Flags\Create.cs" />
     <Compile Include="Operations\Flags\Read.cs" />
+    <Compile Include="Operations\Flags\Update.cs" />
     <Compile Include="Operations\Items\Create.cs" />
     <Compile Include="Operations\LastAction\Create.cs" />
     <Compile Include="Operations\Notes\Create.cs" />
