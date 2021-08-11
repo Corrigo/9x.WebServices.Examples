@@ -39,6 +39,20 @@ namespace _9x.WebServices.WorkZones
             Read.RetrieveByQuery(service);
 
         }
+
+        public static void Online(CorrigoService service, int workZoneId)
+        {
+            var offline = WorkZoneCommands.WzOnline(service, workZoneId);
+        }
+        public static void Offline(CorrigoService service, int workZoneId)
+        {
+            var offline = WorkZoneCommands.WzOffline(service, workZoneId);
+        }
+
+        public static void DeleteWz(CorrigoService service, int workZoneId)
+        {
+            var offline = WorkZoneCommands.WzDelete(service, workZoneId);
+        }
     }
 
 }
