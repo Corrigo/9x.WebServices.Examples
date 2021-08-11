@@ -17,7 +17,7 @@ namespace _9x.WebServices.WorkZones.Operations
 
             //
             // Get Asset Template Id by its name.
-            // Template name can be spotted by navigation Url: https://qa-am-ent-f1.corrigo-qa.com/corpnet/assets/templatemanager.aspx
+            // Template name can be spotted by navigation Url: /corpnet/assets/templatemanager.aspx
             //for _company = "Integrations Tests";
             //string assetTemplateName = "Oleksii";created by UI
             string assetTemplateName = "Workzone";

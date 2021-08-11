@@ -8,27 +8,22 @@ using _9x.WebServices.WorkOrders;
 using _9x.WebServices.WorkOrders.Workflows;
 using _9xWebServices.Spaces;
 using CorrigoServiceWebReference;
+using CorrigoServiceWebReference.CorrigoGA;
 using OneTransactionCommands;
 using System;
 using System.Diagnostics;
-
+using System.Linq;
 
 namespace _9x.WebServices.Examples
 {
 	class Program
 	{
-        private const string _url = "http://qa-am-ent-f2.corrigo-qa.com/wsdk/CorrigoService.asmx";
-        private const string _company = "Integrations Tests";
-        private const string _userName = "wsdk";
-        private const string _password = "1234";
-
         static readonly CorrigoClientProvider clientProvider = new CorrigoClientProvider();
 		static void Main(string[] args)
 		{
 			try
 			{
-                //url for qa companies: https://v90g.qa.corrigo.com/wsdk/CorrigoService.asmx
-                var service = clientProvider.GetCorrigoService(_url, _company, _userName, _password);
+                var service = clientProvider.GetCorrigoService(Credentials.Url, Credentials.Company, Credentials.UserName, Credentials.Password);
 
                 #region different test cases - to execute - uncomment
                 //var id = CustomerExamples.CreateRetreive(service);
@@ -103,19 +98,24 @@ namespace _9x.WebServices.Examples
                 //UnitSpaceContactWorkOrder.Create(service, 34, "SpaceAsset");//"SpaceAsset"=>see by navigation path Assets>TemplateManager> Type="Unit"
 
                 //var assignmentId = WorkOrderAssignmentExamples.CreateAssignment(service, WoActionLogExamples.GetLatestWOs(service, 1)[0].Id);
-                //WorkOrderAssignmentExamples.ReadAssignment(service, assignmentId);
+                //var assignments = WorkOrderAssignmentExamples.ReadAssignment(service, assignmentId);
+                //var wos = WoActionLogExamples.GetLatestWOs(service, 3);
                 //WorkOrderAssignmentExamples.UpdateAssignment(service, assignmentId);
                 //WorkOrderAssignmentExamples.DeleteAssignment(service, assignmentId);
 
-                var flagId = WorkOrderFlagsExamples.CreateFlag(service, WoActionLogExamples.GetLatestWOs(service, 1)[0].Id);
-                var flags = WorkOrderFlagsExamples.ReadFlags(service);
+                //var flagId = WorkOrderFlagsExamples.CreateFlag(service, WoActionLogExamples.GetLatestWOs(service, 1)[0].Id);
+                //var wos = WoActionLogExamples.GetLatestWOs(service, 50);
+                //var flags = WorkOrderFlagsExamples.ReadFlags(service);
+                //var woset = WorkOrderFlagsExamples.SetupFlags(service, 579, new[] { 3368 });
+                //var woclear = WorkOrderFlagsExamples.ClearFlags(service, 579, new[] { 3368 });
+                //var flags1 = WorkOrderFlagsExamples.ReadFlags(service);
 
                 //WorkOrderActionReasonLookupExamples.ReadActionReasonLookup(service, WoActionLogExamples.GetLatestWOs(service, 1)[0].Id);
 
                 //ActorExamples.CreateAsset(service);
                 //ActorExamples.CreateCompanyProp(service);
                 //ActorExamples.CreateLeaseUser(service);
-                //ActorExamples.ReadActor(service, 3);
+                ActorExamples.ReadActor(service, 15);
 
                 //var locationId = LocationExamples.CreateLocation(service);
                 //LocationExamples.ReadLocation(service, locationId);

@@ -27,7 +27,7 @@ namespace _9x.WebServices.Documents
                     DocType = "Link",
                     MimeType = "url",
                     Title = "CorrigoService.asmx",
-                    Description = "https://v91.qa.corrigo.com/wsdk/CorrigoService.asmx"
+                    Description = Credentials.Url
                 });
 
             Document documentTxtFile = !isCreateUpdateDelete ? null :
