@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx?wsdl" filename="CorrigoService.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx?schema=schema2" filename="schema2.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx?wsdl=wsdl1" filename="CorrigoService0.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx?schema=schema1" filename="schema1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://webreference.corrigo/wsdk/CorrigoService.asmx?wsdl" filename="CorrigoService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://webreference.corrigo/wsdk/CorrigoService.asmx?schema=schema2" filename="schema2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://webreference.corrigo/wsdk/CorrigoService.asmx?wsdl=wsdl1" filename="CorrigoService0.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://webreference.corrigo/wsdk/CorrigoService.asmx?schema=schema1" filename="schema1.xsd" />
   </Results>
 </DiscoveryClientResultsFile>

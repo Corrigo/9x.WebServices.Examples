@@ -26,7 +26,7 @@ namespace CorrigoServiceWebReference.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://webreference.corrigo/wsdk/CorrigoService.asmx")]
         public string CorrigoServiceWebReference_CorrigoGA_CorrigoService {
             get {
                 return ((string)(this["CorrigoServiceWebReference_CorrigoGA_CorrigoService"]));

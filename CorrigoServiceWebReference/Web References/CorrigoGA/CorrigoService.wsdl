@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:i0="http://corrigo.com/webservices/6.x" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://corrigo.com/integration/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://corrigo.com/integration/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsdl:import namespace="http://corrigo.com/webservices/6.x" location="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx?wsdl=wsdl1" />
+  <wsdl:import namespace="http://corrigo.com/webservices/6.x" location="http://webreference.corrigo/wsdk/CorrigoService.asmx?wsdl=wsdl1" />
   <wsdl:types>
     <s:schema targetNamespace="http://corrigo.com/integration/">
-      <s:include schemaLocation="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx?schema=schema1" />
-      <s:import schemaLocation="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx?schema=schema2" namespace="http://microsoft.com/wsdl/types/" />
+      <s:include schemaLocation="http://webreference.corrigo/wsdk/CorrigoService.asmx?schema=schema1" />
+      <s:import schemaLocation="http://webreference.corrigo/wsdk/CorrigoService.asmx?schema=schema2" namespace="http://microsoft.com/wsdl/types/" />
     </s:schema>
   </wsdl:types>
   <wsdl:service name="CorrigoService">
     <wsdl:port name="CorrigoService" binding="i0:CorrigoService">
-      <soap:address location="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx" />
+      <soap:address location="http://webreference.corrigo/wsdk/CorrigoService.asmx" />
     </wsdl:port>
     <wsdl:port name="CorrigoService1" binding="i0:CorrigoService1">
-      <soap12:address location="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx" />
+      <soap12:address location="http://webreference.corrigo/wsdk/CorrigoService.asmx" />
     </wsdl:port>
     <wsdl:port name="CorrigoService2" binding="i0:CorrigoService2">
-      <http:address location="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx" />
+      <http:address location="http://webreference.corrigo/wsdk/CorrigoService.asmx" />
     </wsdl:port>
     <wsdl:port name="CorrigoService3" binding="i0:CorrigoService3">
-      <http:address location="http://qa-am-ent-f1.corrigo-qa.com/wsdk/CorrigoService.asmx" />
+      <http:address location="http://webreference.corrigo/wsdk/CorrigoService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
