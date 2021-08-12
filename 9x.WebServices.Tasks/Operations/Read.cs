@@ -92,12 +92,6 @@ namespace _9x.WebServices.Tasks.Operations
                 Console.WriteLine(string.Concat("Task.Specialty.Instructions=".PadRight(padRightNumber), toReturn.Specialty.Instructions));
             }
 
-            //if (toReturn.PunchList != null)
-            //{
-            //    Console.WriteLine(string.Concat("Task.PunchList.Id=".PadRight(padRightNumber), toReturn.PunchList.Id.ToString()));
-            //    Console.WriteLine(string.Concat("Task.PunchList.DisplayAs=".PadRight(padRightNumber), toReturn.PunchList.DisplayAs ?? ""));                
-            //}
-
             if (toReturn.Priority != null)
             {
                 Console.WriteLine(string.Concat("Task.Priority.Id=".PadRight(padRightNumber), toReturn.Priority.Id.ToString()));

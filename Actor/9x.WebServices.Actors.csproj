@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActorExamples.cs" />
     <Compile Include="Operations\Create.cs" />
     <Compile Include="Operations\Read.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

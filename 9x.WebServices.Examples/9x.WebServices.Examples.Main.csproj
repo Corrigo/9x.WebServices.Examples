@@ -136,10 +136,6 @@
       <Project>{c3ecbaf4-014a-4504-af3e-fef73c68e964}</Project>
       <Name>9x.WebServices.WorkZones</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Actor\9x.WebServices.Actors.csproj">
-      <Project>{698A6CED-4D88-4871-A1A0-C1D2B714DBB9}</Project>
-      <Name>9x.WebServices.Actors</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CorrigoServiceWebReference\CorrigoServiceWebReference.csproj">
       <Project>{1849279D-221B-4C26-95B4-7D3F7AE8D536}</Project>
       <Name>CorrigoServiceWebReference</Name>
