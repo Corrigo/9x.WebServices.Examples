@@ -17,6 +17,10 @@ namespace _9x.WebServices.WorkOrders
 		{
 			return Read.Execute(service, id);
 		}
+		public static CorrigoEntity[] RetrieveAllWorkOrders(CorrigoService service)
+		{
+			return Read.GetAll(service);
+		}
 
 		public static WoActionResponse DeleteWorkOrder(CorrigoService service, int id)
 		{

@@ -12,7 +12,17 @@ namespace _9x.WebServices.WorkOrders
 		/// <param name="workOrderId"></param>
 		/// <returns></returns>
 		public static int? CreateFlag(CorrigoService service, int workOrderId)
-			=> Create.Execute(service, workOrderId);
+			=> Create.ExecuteCreateCommand(service, workOrderId);
+
+		/// <summary>
+		/// Creates Flag via WoFlagCommand, links to WO
+		/// </summary>
+		/// <param name="service"></param>
+		/// <param name="workOrderId"></param>
+		/// <returns></returns>
+		public static WorkOrder CreateFlagWo(CorrigoService service, int workOrderId, int flagId)
+			=> Create.ExecuteWoFlagCommand(service, workOrderId, flagId);
+
 		/// <summary>
 		/// Returns all flags
 		/// Ordered - latest is 1st
@@ -24,11 +34,11 @@ namespace _9x.WebServices.WorkOrders
 			=> Read.RetrieveMultiple(service);
 
 		/// <summary>
-		/// Flags property is readonly, set and clear by separate command
+		/// Links set of flags to WO
 		/// </summary>
 		/// <param name="service"></param>
 		/// <param name="workOrderId"></param>
-		/// <param name="flagIds"></param>
+		/// <param name="flagIds">Reason Ids</param>
 		/// <returns>Updated WO</returns>
 		public static WorkOrder SetupFlags(CorrigoService service, int workOrderId, int[] flagIds)
 			=> Update.SetFlags(service, workOrderId, flagIds);
@@ -38,7 +48,7 @@ namespace _9x.WebServices.WorkOrders
 		/// </summary>
 		/// <param name="service"></param>
 		/// <param name="workOrderId"></param>
-		/// <param name="flagIds"></param>
+		/// <param name="flagIds">Reason Ids</param>
 		/// <returns>Updated WO</returns>
 		public static WorkOrder ClearFlags(CorrigoService service, int workOrderId, int[] flagIds)
 			=> Update.ClearFlags(service, workOrderId, flagIds);

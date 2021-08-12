@@ -44,6 +44,9 @@ namespace _9x.WebServices.Examples
                 //_9x.WebServices.Tasks.TaskExamples.CRUDExample(service);
                 //_9x.WebServices.Specialties.SpecialtyExamples.CRUDExample(service);
                 //_9x.WebServices.WorkZones.WorkZoneExamples.CRUDExample(service);
+                //WorkZones.WorkZoneExamples.DeleteWz(service, 28);
+                //WorkZones.WorkZoneExamples.Offline(service, 28);
+                //WorkZones.WorkZoneExamples.Online(service, 28);
                 //_9x.WebServices.Contracts.ContractExamples.CRUDExample(service);
                 //_9x.WebServices.Addresses.Address2Examples.CRUDExample(service);
                 //_9x.WebServices.Contacts.ContactExamples.CRUDExample(service);
@@ -104,18 +107,16 @@ namespace _9x.WebServices.Examples
                 //WorkOrderAssignmentExamples.DeleteAssignment(service, assignmentId);
 
                 //var flagId = WorkOrderFlagsExamples.CreateFlag(service, WoActionLogExamples.GetLatestWOs(service, 1)[0].Id);
-                //var wos = WoActionLogExamples.GetLatestWOs(service, 50);
-                //var flags = WorkOrderFlagsExamples.ReadFlags(service);
-                //var woset = WorkOrderFlagsExamples.SetupFlags(service, 579, new[] { 3368 });
-                //var woclear = WorkOrderFlagsExamples.ClearFlags(service, 579, new[] { 3368 });
-                //var flags1 = WorkOrderFlagsExamples.ReadFlags(service);
+                //var wos = WorkOrderOperationExamples.RetrieveAllWorkOrders(service);
+                var wo = WorkOrderOperationExamples.RetrieveWorkOrder(service, 583);
+                var flags = WorkOrderFlagsExamples.ReadFlags(service);
+                wo = WorkOrderFlagsExamples.CreateFlagWo(service, 583, 3332);
+                wo = WorkOrderOperationExamples.RetrieveWorkOrder(service, 583);
+                var woset = WorkOrderFlagsExamples.SetupFlags(service, 583, new[] { 3368, 3366 });
+                var woclear = WorkOrderFlagsExamples.ClearFlags(service, 583, new[] { 3368, 3336, 1798 });
+                var flags1 = WorkOrderFlagsExamples.ReadFlags(service);
 
                 //WorkOrderActionReasonLookupExamples.ReadActionReasonLookup(service, WoActionLogExamples.GetLatestWOs(service, 1)[0].Id);
-
-                //ActorExamples.CreateAsset(service);
-                //ActorExamples.CreateCompanyProp(service);
-                //ActorExamples.CreateLeaseUser(service);
-                ActorExamples.ReadActor(service, 15);
 
                 //var locationId = LocationExamples.CreateLocation(service);
                 //LocationExamples.ReadLocation(service, locationId);

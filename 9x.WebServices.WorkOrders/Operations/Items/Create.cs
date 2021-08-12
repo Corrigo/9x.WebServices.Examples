@@ -96,4 +96,11 @@ namespace _9x.WebServices.WorkOrders.Operations.Items
 			return response.NestedEntitiesOperationResults.Select(r => r.EntitySpecifier).ToArray();
 		}
 	}
+
+    internal static class Get
+    {
+        public static WorkOrder GetOrder(CorrigoService service, int woid) {
+            return Read.GetOrder(service, woid);
+        }
+    }
 }

@@ -10,11 +10,11 @@ namespace _9x.WebServices.WorkOrders.Operations.Flags
 {
     internal static class Create
     {
-        public static int? Execute(CorrigoService service, int workOrderId)
+        public static int? ExecuteCreateCommand(CorrigoService service, int workOrderId)
         {
             Console.WriteLine();
             Debug.Print("Creating Flags");
-            Console.WriteLine("Creating Flags");
+            Console.WriteLine("Creating CreateCommand");
 
             var toCreate = new WoFlag
             {
@@ -33,5 +33,19 @@ namespace _9x.WebServices.WorkOrders.Operations.Flags
             return response.EntitySpecifier?.Id;
         }
 
+        public static WorkOrder ExecuteWoFlagCommand(CorrigoService service, int workOrderId, int flagId)
+        {
+            Console.WriteLine();
+            Debug.Print("Creating Flags");
+            Console.WriteLine("Creating WoFlagCommand");
+
+            var command = new WoFlagCommand { WorkOrderId = workOrderId, ActionDate = DateTime.Now, ActionReasonId = flagId, StatusId = WOStatus.New };
+            var response = service.Execute(command) as WoActionResponse;
+
+            Debug.Print(response.ErrorInfo?.Description
+                ?? $"Successfully created WoFlag for Wo with id {workOrderId}");
+
+            return response.Wo;
+        }
     }
 }
