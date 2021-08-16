@@ -9,9 +9,9 @@ namespace _9x.WebServices.Customers
 		{
 			var createdCustomerId = Create.Execute(service);
 
-			var customer = Read.Execute(service, createdCustomerId);
+			//var customer = Read.Execute(service, createdCustomerId);
 
-			return customer.Id;
+			return createdCustomerId;// customer.Id;
 		}
 
 		public static void RetreiveUpdate (CorrigoService service, int id)

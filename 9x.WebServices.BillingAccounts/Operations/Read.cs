@@ -158,7 +158,7 @@ namespace _9x.WebServices.BillingAccounts.Operations
                         {
                             new ConditionExpression
                             {
-                                PropertyName = "IsInactive",
+                                PropertyName = "IsBillAcct",
                                 Operator = ConditionOperator.Equal,
                                 Values = new object[] {"True"}
                             }

@@ -18,10 +18,10 @@ namespace _9x.WebServices.BillingAccounts
         {
             if (service == null) return;
             
-            Console.WriteLine("BillingAccount is Readonly - NonCreatable, NonDeletable, NonUpdatable");
+            Console.WriteLine("BillingAccount is Readonly - ?");
 
 
-            BillingAccount ba = Create.Execute(service);
+            BillingAccount ba = Create.Execute(service);//Can create
 
             
             var billingAccounts = Read.RetrieveMultiple(service);
@@ -32,9 +32,9 @@ namespace _9x.WebServices.BillingAccounts
             {
                 Read.Retrieve(service, billingAccounts[0].Id);
 
-                Delete.Execute(service, billingAccounts[0].Id); // BillingAccount is Readonly - NonCreatable, NonDeletable, NonUpdatable
-                Update.Restore(service, (BillingAccount) billingAccounts[0]); // BillingAccount is Readonly - NonCreatable, NonDeletable, NonUpdatable
-                Update.Execute(service, (BillingAccount)billingAccounts[0]); // BillingAccount is Readonly - NonCreatable, NonDeletable, NonUpdatable
+                Delete.Execute(service, billingAccounts[0].Id); // Doesn't affect and no error response
+                Update.Restore(service, (BillingAccount) billingAccounts[0]); // Doesn't affect and no error response
+                Update.Execute(service, (BillingAccount)billingAccounts[0]); // Doesn't affect and no error response
             }
         }
     }

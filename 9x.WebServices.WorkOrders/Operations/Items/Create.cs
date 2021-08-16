@@ -10,7 +10,7 @@ namespace _9x.WebServices.WorkOrders.Operations.Items
 	{
 		public static EntitySpecifier[] Execute(CorrigoService service, int woid)
 		{
-			var wo = Read.Execute(service, woid);
+			var wo = WorkOrderItemExamples.GetOrder(service, woid);
 
 		    int startIndex = wo.Items.Max(i => i.SortOrderIdx);
 
@@ -52,38 +52,6 @@ namespace _9x.WebServices.WorkOrders.Operations.Items
 
             wo.Items = items.ToArray();
 
-            //      wo.Items = new[]
-            //{
-            //    new WoItem
-            //    {
-            //        WorkOrderId = woid,
-            //        SortOrderIdx = startIndex + 2,
-            //        Disposition = new Disposition
-            //        {
-            //            DisplayAs = "disposition 2",
-            //            IsCompleted = false,
-            //            IsCancelled = false,
-            //            OnCreate = false,
-            //            OnComplete = true,
-            //            OnCancel = false
-            //        },
-            //        AssetLocation = "location 2",
-            //        Asset = new Location {Id = wo.Items[0].Asset.Id},
-            //        Task = new Task {Id = wo.Items[0].Task.Id},
-            //        Comment = "comment 2"
-            //    },
-            //    new WoItem
-            //    {
-            //        WorkOrderId = woid,
-            //        SortOrderIdx = startIndex + 1,
-            //        Disposition = new Disposition(),
-            //        AssetLocation = "location 1",
-            //        Asset = new Location {Id = wo.Items[0].Asset.Id},
-            //        Task = new Task {Id = wo.Items[0].Task.Id},
-            //        Comment = "comment 1"
-            //    }
-            //};
-
             var command = new UpdateCommand
 			{
 				Entity = wo,
@@ -97,10 +65,5 @@ namespace _9x.WebServices.WorkOrders.Operations.Items
 		}
 	}
 
-    internal static class Get
-    {
-        public static WorkOrder GetOrder(CorrigoService service, int woid) {
-            return Read.GetOrder(service, woid);
-        }
-    }
+
 }

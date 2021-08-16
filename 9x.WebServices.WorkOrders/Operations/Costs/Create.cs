@@ -1,4 +1,5 @@
-﻿using CorrigoServiceWebReference.CorrigoGA;
+﻿using _9x.WebServices.WorkOrders.Operations.Items;
+using CorrigoServiceWebReference.CorrigoGA;
 using System.Diagnostics;
 
 namespace _9x.WebServices.WorkOrders.Operations.Costs
@@ -7,7 +8,8 @@ namespace _9x.WebServices.WorkOrders.Operations.Costs
 	{
 		public static WorkOrderCostId Execute (CorrigoService service)
 		{
-			var workOrder = CreateWorkOrder(service);
+			//var workOrder = CreateWorkOrder(service);
+			var workOrder = Operations.Read.Execute(service, 583);
 			workOrder.WorkOrderCost.CustomerNte.Value = 28.98m;
             workOrder.WorkOrderCost.CustomerNte.CurrencyTypeId = CurrencyType.USD;
             //workOrder.WorkOrderCost.CostState = CostState.Pending;

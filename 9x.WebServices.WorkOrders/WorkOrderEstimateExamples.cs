@@ -9,6 +9,8 @@ namespace _9x.WebServices.WorkOrders
 			=> Create.Execute(service, woid);
 		public static WoEstimate ReadEstimate (CorrigoService service, int estimateId)
 			=> Read.Retrieve(service, estimateId);
+		public static CorrigoEntity[] ReadEstimates(CorrigoService service)
+			=> Read.RetrieveAll(service); 
 		public static void DeleteEstimate (CorrigoService service, int woid)
 			=> Delete.Execute(service, woid);
 
