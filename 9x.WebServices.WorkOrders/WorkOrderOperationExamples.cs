@@ -9,13 +9,18 @@ namespace _9x.WebServices.WorkOrders
 	{
 		public static void CreateWorkOrderAndUpdateCustomFields(CorrigoService service)
 		{
-			WorkOrder createdWo = Create.Execute(service, true, true);
-			var cfResponse = Update.SetCustomFieldValueToWO(service, createdWo);
+			//WorkOrder createdWo = Create.Execute(service, true, true);
+			var wo = RetrieveWorkOrder(service, 583);
+			var cfResponse = Update.SetCustomFieldValueToWO(service, wo);
 		}
 
 		public static WorkOrder RetrieveWorkOrder(CorrigoService service, int id)
 		{
 			return Read.Execute(service, id);
+		}
+		public static CorrigoEntity[] RetrieveAllWorkOrders(CorrigoService service)
+		{
+			return Read.GetAll(service);
 		}
 
 		public static WoActionResponse DeleteWorkOrder(CorrigoService service, int id)

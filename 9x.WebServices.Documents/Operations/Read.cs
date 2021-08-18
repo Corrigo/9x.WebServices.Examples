@@ -114,7 +114,7 @@ namespace _9x.WebServices.Documents.Operations
             return toReturn;
         }
 
-        public static CorrigoEntity[] RetrieveMultiple(CorrigoService service)
+        public static CorrigoEntity[] RetrieveMultiple(CorrigoService service, int count = 10)
         {
             var list = service.RetrieveMultiple(
                 new QueryByProperty
@@ -143,7 +143,7 @@ namespace _9x.WebServices.Documents.Operations
                             "Blob.*"
                         }
                     },
-
+                    Count = count,
                     Conditions = new PropertyValuePair[0],
                     Orders = new[]
                     {

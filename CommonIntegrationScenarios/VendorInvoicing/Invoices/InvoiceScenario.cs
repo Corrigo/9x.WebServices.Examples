@@ -82,14 +82,14 @@ namespace CommonIntegrationScenarios.VendorInvoicing.Invoices
         /// <returns></returns>
         public static CommandResponse[] UpdateInvoiceStatus(CorrigoService corrigoService, 
                                                             int[] invoiceIDs,
-                                                            APInvoiceStatus invoiceStatus)
+                                                            ApState invoiceStatus)
         {
             CommandRequest[] commands = invoiceIDs.Select(i =>
                 new ApStatusChangeCommand
 
                 {
                     WorkOrderId = i, // Invoice Id is equal to Work Order Id.
-                    VendorInvoiceStatusId = invoiceStatus
+                    VendorInvoiceStatusId = (int)invoiceStatus
                 }).ToArray();
 
             CommandResponse[] commandResponses = corrigoService.ExecuteMultiple(commands);

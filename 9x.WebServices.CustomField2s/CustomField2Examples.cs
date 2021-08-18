@@ -3,6 +3,7 @@ using CorrigoServiceWebReference.CorrigoGA;
 using _9x.WebServices.CustomField2s.Operations;
 using System;
 using System.Linq;
+using _9x.WebServices.WorkOrders;
 
 namespace _9x.WebServices.CustomField2s
 {
@@ -31,8 +32,9 @@ namespace _9x.WebServices.CustomField2s
             }
 
             //Get latest WO
-            CorrigoEntity[] latestWO = GetLatestWOs(service, 1);
-            if (!latestWO.Any())
+            //var wo = _9x.WebServices.WorkOrders.Operations.Read.Execute(service, 583); 
+            var wo = GetLatestWOs(service, 20).FirstOrDefault(w => w.Id == 583);
+            if (wo == null)
             {
                 Console.WriteLine("No existing Work Order was found");
                 return;
@@ -41,19 +43,19 @@ namespace _9x.WebServices.CustomField2s
             //
             // Retrieve Custom field specified by descriptor for given Work Order.
             //
-            CustomField2 cf = Read.Retrieve(service, latestWO[0], customFieldDescriptor);
+            CustomField2 cf = Read.Retrieve(service, wo, customFieldDescriptor);
 
             if (cf == null && isCreateUpdateDelete)
             {
                 //
                 // Create Custom field specified by descriptor for given Work Order.
                 //
-                cf = Create.Execute(service, latestWO[0], customFieldDescriptor);
+                cf = Create.Execute(service, wo, customFieldDescriptor);
             }
 
             if (cf != null && isCreateUpdateDelete)
             {
-                cf = Read.Retrieve(service, latestWO[0], customFieldDescriptor);
+                cf = Read.Retrieve(service, wo, customFieldDescriptor);
 
                 //
                 // Update Custom field

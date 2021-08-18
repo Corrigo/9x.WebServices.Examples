@@ -4,7 +4,7 @@ namespace _9x.WebServices.WorkOrders.Operations
 {
 	internal class Read
 	{
-		public static WorkOrder Execute (CorrigoService service, int workOrderId)
+		public static WorkOrder Execute(CorrigoService service, int workOrderId)
 		{
 			var targetProperties = new string[]
 			{
@@ -25,10 +25,10 @@ namespace _9x.WebServices.WorkOrders.Operations
 
 				//"Employee",
 				"Employee.ActorTypeId",
-                "Items.*"
+				"Items.*"
 			};
 
-			var workOrder = (WorkOrder) service.Retrieve(
+			var workOrder = (WorkOrder)service.Retrieve(
 				new EntitySpecifier
 				{
 					EntityType = EntityType.WorkOrder,
@@ -38,5 +38,28 @@ namespace _9x.WebServices.WorkOrders.Operations
 
 			return workOrder;
 		}
-	}
+
+		public static CorrigoEntity[] GetAll(CorrigoService service)
+		{
+			return service.RetrieveMultiple(
+				new QueryExpression
+				{
+					EntityType = EntityType.WorkOrder,
+					PropertySet = new AllProperties(),
+					Orders = new[]
+					{
+						new OrderExpression
+						{
+							OrderType = OrderType.Descending,
+							PropertyName = "CreatedDateUtc"
+						}
+					},
+				});
+		}
+
+        public static WorkOrder GetOrder(CorrigoService service, int woId)
+        {
+            return service.Retrieve(new EntitySpecifier { EntityType = EntityType.WorkOrder, Id = woId }, new AllProperties()) as WorkOrder;
+        }
+    }
 }

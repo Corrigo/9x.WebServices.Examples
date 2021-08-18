@@ -23,7 +23,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="CorrigoService", Namespace="http://corrigo.com/webservices/6.x")]
@@ -385,7 +385,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -398,6 +398,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private bool updateLastModifiedField;
         
         private bool canDeleteMissingEntityField;
+        
+        private IsolationLevel lockOnDataRetrievalField;
         
         private System.Xml.XmlAttribute[] anyAttrField;
         
@@ -432,6 +434,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public IsolationLevel LockOnDataRetrieval {
+            get {
+                return this.lockOnDataRetrievalField;
+            }
+            set {
+                this.lockOnDataRetrievalField = value;
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlAnyAttributeAttribute()]
         public System.Xml.XmlAttribute[] AnyAttr {
             get {
@@ -444,7 +456,26 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum IsolationLevel {
+        
+        /// <remarks/>
+        Default,
+        
+        /// <remarks/>
+        ReadUncommitted,
+        
+        /// <remarks/>
+        ReadCommitted,
+        
+        /// <remarks/>
+        Snapshot,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -505,7 +536,15 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConvertMoneyValuesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AddChildWorkOrderResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPreferredAssigneesResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetLicensedProvidersResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerifyWorkResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SendWorkOrderResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCardActionResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInvoiceStateCommandResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateWoPrintoutResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MaterialTransactionCommitResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetProcedureStepsDocumentsResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -526,7 +565,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -559,7 +598,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -603,7 +642,9 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GLAccountEntitySpecifier))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityWithComposedIdSpecifierOfAssetTree))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTreeEntitySpecifier))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityWithComposedIdSpecifierOfInvoiceLog))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceLogEntitySpecifier))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -637,7 +678,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum EntityType {
@@ -736,9 +777,6 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         WoPriority,
         
         /// <remarks/>
-        WoPunchListItem,
-        
-        /// <remarks/>
         WoLastAction,
         
         /// <remarks/>
@@ -749,15 +787,6 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         ContactAddress,
-        
-        /// <remarks/>
-        PunchListMaster,
-        
-        /// <remarks/>
-        PunchListMasterItem,
-        
-        /// <remarks/>
-        PunchListMasterNote,
         
         /// <remarks/>
         Address2,
@@ -956,12 +985,126 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         AssetTemplate,
+        
+        /// <remarks/>
+        AssetSystem,
+        
+        /// <remarks/>
+        ProductCategory,
+        
+        /// <remarks/>
+        LinkProductAndSupplier,
+        
+        /// <remarks/>
+        ProductMoneyValues,
+        
+        /// <remarks/>
+        ApInvoiceStatus,
+        
+        /// <remarks/>
+        TimeCardWeek,
+        
+        /// <remarks/>
+        TimeCard,
+        
+        /// <remarks/>
+        TimeCardItem,
+        
+        /// <remarks/>
+        ProviderCoi,
+        
+        /// <remarks/>
+        ResponsibilityType,
+        
+        /// <remarks/>
+        ToDoType,
+        
+        /// <remarks/>
+        ApprovalTemplateStep,
+        
+        /// <remarks/>
+        ApprovalTemplate,
+        
+        /// <remarks/>
+        ProcedureTemplateStep,
+        
+        /// <remarks/>
+        ProcedureFlagReason,
+        
+        /// <remarks/>
+        ProcedureTemplate,
+        
+        /// <remarks/>
+        WoProcedureStep,
+        
+        /// <remarks/>
+        WoProcedure,
+        
+        /// <remarks/>
+        StockLocation,
+        
+        /// <remarks/>
+        ReplenishmentOrder,
+        
+        /// <remarks/>
+        ReplenishmentOrderItem,
+        
+        /// <remarks/>
+        ApprovalScope,
+        
+        /// <remarks/>
+        CustomFieldAutocompleteOption,
+        
+        /// <remarks/>
+        TimeOff,
+        
+        /// <remarks/>
+        SlaValuesOverride,
+        
+        /// <remarks/>
+        Turn,
+        
+        /// <remarks/>
+        LinkModelAndAttribute,
+        
+        /// <remarks/>
+        BillToOption,
+        
+        /// <remarks/>
+        PrintoutTemplate,
+        
+        /// <remarks/>
+        InvoiceLog,
+        
+        /// <remarks/>
+        QuoteOrEstimateItem,
+        
+        /// <remarks/>
+        MaterialTransaction,
+        
+        /// <remarks/>
+        MaterialTransactionItem,
+        
+        /// <remarks/>
+        StockLocationInventoryDetails,
+        
+        /// <remarks/>
+        InternalCostStatus,
+        
+        /// <remarks/>
+        WoFlag,
+        
+        /// <remarks/>
+        ProcedureCategory,
+        
+        /// <remarks/>
+        LinkProcedureCategoryAndTemplate,
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityWithComposedIdAndOptimisticLockSpecifierOfAlertSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AlertSubscriptionEntitySpecifier))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -983,7 +1126,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AlertSubscriptionEntitySpecifier))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -992,7 +1135,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1025,7 +1168,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum AlertType {
@@ -1100,6 +1243,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         CustomerNote,
         
         /// <remarks/>
+        OnSiteLatePrior,
+        
+        /// <remarks/>
+        BadVerify,
+        
+        /// <remarks/>
         CWoCreated,
         
         /// <remarks/>
@@ -1149,11 +1298,29 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         ProposalSkipped,
+        
+        /// <remarks/>
+        PwdExpiration,
+        
+        /// <remarks/>
+        AssetStatus,
+        
+        /// <remarks/>
+        ActiveIncident,
+        
+        /// <remarks/>
+        OpenIncident,
+        
+        /// <remarks/>
+        IncidentUpdate,
+        
+        /// <remarks/>
+        CpPwdExpiration,
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BlobEntitySpecifier))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1162,7 +1329,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1207,7 +1374,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum ActorType {
@@ -1322,11 +1489,50 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         InvTemplate,
+        
+        /// <remarks/>
+        ReportSubscription,
+        
+        /// <remarks/>
+        Requestor,
+        
+        /// <remarks/>
+        ProcTemplateStep,
+        
+        /// <remarks/>
+        Procedure,
+        
+        /// <remarks/>
+        MhOrder,
+        
+        /// <remarks/>
+        AssetSystem,
+        
+        /// <remarks/>
+        WorkTemplate,
+        
+        /// <remarks/>
+        WtWoProxy,
+        
+        /// <remarks/>
+        Incident,
+        
+        /// <remarks/>
+        Visit,
+        
+        /// <remarks/>
+        DutyType,
+        
+        /// <remarks/>
+        Estimate,
+        
+        /// <remarks/>
+        Quote,
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ActorEntitySpecifier))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1335,7 +1541,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1357,7 +1563,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GLAccountEntitySpecifier))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1366,7 +1572,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1388,7 +1594,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTreeEntitySpecifier))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1397,7 +1603,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1430,7 +1636,50 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceLogEntitySpecifier))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public abstract partial class EntityWithComposedIdSpecifierOfInvoiceLog : EntitySpecifier {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class InvoiceLogEntitySpecifier : EntityWithComposedIdSpecifierOfInvoiceLog {
+        
+        private int invoiceIdField;
+        
+        private int idxField;
+        
+        /// <remarks/>
+        public int InvoiceId {
+            get {
+                return this.invoiceIdField;
+            }
+            set {
+                this.invoiceIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Idx {
+            get {
+                return this.idxField;
+            }
+            set {
+                this.idxField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1463,7 +1712,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1484,7 +1733,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1517,7 +1766,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1570,6 +1819,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private WoActionReasonLookup flagField;
         
+        private int flagIdField;
+        
         private int timeZoneField;
         
         private CurrencyType currencyTypeIdField;
@@ -1614,7 +1865,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private WoAssignment[] assignmentsField;
         
-        private WoPunchListItem[] punchListItemsField;
+        private WoProcedure[] proceduresField;
         
         private Document[] documentsField;
         
@@ -1629,6 +1880,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private WoActionLog[] actionLogRecordsField;
         
         private WoEstimate estimateField;
+        
+        private Employee ownerField;
+        
+        private IsmStatus inductionAndSafetyStatusIDField;
+        
+        private WoFlag[] flagsField;
         
         /// <remarks/>
         public string Number {
@@ -1861,6 +2118,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public int FlagId {
+            get {
+                return this.flagIdField;
+            }
+            set {
+                this.flagIdField = value;
+            }
+        }
+        
+        /// <remarks/>
         public int TimeZone {
             get {
                 return this.timeZoneField;
@@ -2089,12 +2356,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public WoPunchListItem[] PunchListItems {
+        public WoProcedure[] Procedures {
             get {
-                return this.punchListItemsField;
+                return this.proceduresField;
             }
             set {
-                this.punchListItemsField = value;
+                this.proceduresField = value;
             }
         }
         
@@ -2167,10 +2434,40 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.estimateField = value;
             }
         }
+        
+        /// <remarks/>
+        public Employee Owner {
+            get {
+                return this.ownerField;
+            }
+            set {
+                this.ownerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public IsmStatus InductionAndSafetyStatusID {
+            get {
+                return this.inductionAndSafetyStatusIDField;
+            }
+            set {
+                this.inductionAndSafetyStatusIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WoFlag[] Flags {
+            get {
+                return this.flagsField;
+            }
+            set {
+                this.flagsField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WOType {
@@ -2192,7 +2489,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2201,7 +2498,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private CurrencyType currencyTypeIdField;
         
-        private BillToType billToTypeField;
+        private BillToOption billToOptionField;
         
         private MoneyValue costsTotalField;
         
@@ -2249,6 +2546,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private Blob taxValidationNoteField;
         
+        private TaxDetail[] taxDetailsField;
+        
         private MoneyValue serviceFeesTotalField;
         
         private int costStatusIdField;
@@ -2272,12 +2571,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public BillToType BillToType {
+        public BillToOption BillToOption {
             get {
-                return this.billToTypeField;
+                return this.billToOptionField;
             }
             set {
-                this.billToTypeField = value;
+                this.billToOptionField = value;
             }
         }
         
@@ -2516,6 +2815,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public TaxDetail[] TaxDetails {
+            get {
+                return this.taxDetailsField;
+            }
+            set {
+                this.taxDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
         public MoneyValue ServiceFeesTotal {
             get {
                 return this.serviceFeesTotalField;
@@ -2577,7 +2886,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum CurrencyType {
@@ -2586,10 +2895,46 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         Unknown,
         
         /// <remarks/>
+        VUV,
+        
+        /// <remarks/>
+        FJD,
+        
+        /// <remarks/>
+        PGK,
+        
+        /// <remarks/>
+        TOP,
+        
+        /// <remarks/>
+        CFP,
+        
+        /// <remarks/>
+        SBD,
+        
+        /// <remarks/>
+        WST,
+        
+        /// <remarks/>
+        MUR,
+        
+        /// <remarks/>
+        BMD,
+        
+        /// <remarks/>
+        SAR,
+        
+        /// <remarks/>
+        BGN,
+        
+        /// <remarks/>
         TWD,
         
         /// <remarks/>
         CZK,
+        
+        /// <remarks/>
+        DKK,
         
         /// <remarks/>
         EUR,
@@ -2599,6 +2944,9 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         ILS,
+        
+        /// <remarks/>
+        HUF,
         
         /// <remarks/>
         JPY,
@@ -2619,10 +2967,19 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         RUB,
         
         /// <remarks/>
+        HRK,
+        
+        /// <remarks/>
+        SEK,
+        
+        /// <remarks/>
         THB,
         
         /// <remarks/>
         TRY,
+        
+        /// <remarks/>
+        PKR,
         
         /// <remarks/>
         IDR,
@@ -2641,6 +2998,18 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         MYR,
+        
+        /// <remarks/>
+        KZT,
+        
+        /// <remarks/>
+        KES,
+        
+        /// <remarks/>
+        KHR,
+        
+        /// <remarks/>
+        MMK,
         
         /// <remarks/>
         LKR,
@@ -2667,6 +3036,9 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         BND,
         
         /// <remarks/>
+        NOK,
+        
+        /// <remarks/>
         BDT,
         
         /// <remarks/>
@@ -2685,6 +3057,9 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         CAD,
         
         /// <remarks/>
+        DZD,
+        
+        /// <remarks/>
         MOP,
         
         /// <remarks/>
@@ -2694,10 +3069,25 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         CRC,
         
         /// <remarks/>
+        MAD,
+        
+        /// <remarks/>
+        TND,
+        
+        /// <remarks/>
         OMR,
         
         /// <remarks/>
+        VES,
+        
+        /// <remarks/>
         COP,
+        
+        /// <remarks/>
+        PEN,
+        
+        /// <remarks/>
+        JOD,
         
         /// <remarks/>
         ARS,
@@ -2722,107 +3112,30 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         QAR,
+        
+        /// <remarks/>
+        RSD,
+        
+        /// <remarks/>
+        AZN,
+        
+        /// <remarks/>
+        UZS,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum BillToType {
-        
-        /// <remarks/>
-        None,
-        
-        /// <remarks/>
-        Customer,
-        
-        /// <remarks/>
-        WorkZone,
-        
-        /// <remarks/>
-        Other,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class MoneyValue {
-        
-        private CurrencyType currencyTypeIdField;
-        
-        private decimal valueField;
-        
-        /// <remarks/>
-        public CurrencyType CurrencyTypeId {
-            get {
-                return this.currencyTypeIdField;
-            }
-            set {
-                this.currencyTypeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum ApState {
-        
-        /// <remarks/>
-        None,
-        
-        /// <remarks/>
-        Received,
-        
-        /// <remarks/>
-        Paid,
-        
-        /// <remarks/>
-        Waiting,
-        
-        /// <remarks/>
-        Authorized,
-        
-        /// <remarks/>
-        Exported,
-        
-        /// <remarks/>
-        Disputed,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class Contract : SimpleLookupCorrigoEntity {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contract))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public abstract partial class SimpleLookupCorrigoEntity : CorrigoEntity {
+    public partial class BillToOption : CorrigoEntity {
         
         private string displayAsField;
+        
+        private string codeField;
+        
+        private BillToTypeRule typeIdField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -2833,127 +3146,198 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.displayAsField = value;
             }
         }
+        
+        /// <remarks/>
+        public string Code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BillToTypeRule TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum BillToTypeRule {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        LogicDisabled,
+        
+        /// <remarks/>
+        WoDisabled,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Address))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdOfGLAccountEntitySpecifierGlAccount))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GLAccount))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomField))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactAddress))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PunchListMasterNote))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToDoItem))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetInfo))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdOfAssetTreeEntitySpecifierInvTree))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTree))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrintoutTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCardWeek))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoAssignment))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoNote))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoActionLogProp))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoActionLog))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoLastAction))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdOfBlobEntitySpecifierBlob))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Blob))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Product))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BillToOption))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkModelAndAttribute))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoPriority))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PunchListMasterItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkTeamAndWorkZone))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkPortfolioAndWorkZone))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimpleLookupCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Note))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkContactAndGroup))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkCustomerAndGroup))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EmployeeBridgeCorrigoEntity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndPortfolio))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndCustomerGroup))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndSpecialty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndStockLocation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndWorkZone))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkProviderAndService))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndTeam))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkCustomerAndGroup))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndCustomerGroup))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdOfBlobEntitySpecifierBlob))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Blob))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdOfActorEntitySpecifierActor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Actor))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Note))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkTeamAndWorkZone))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkPortfolioAndWorkZone))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimpleLookupCorrigoEntity))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contract))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkContactAndGroup))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contact))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Address))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetSystem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetInfo))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Location))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkProcedureCategoryAndTemplate))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomField2))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithOptimisticLock))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetAttribute))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Payment))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WpTree))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceListItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Warranty))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Portfolio))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProviderCoi))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCard))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCardItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToDoType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReplenishmentOrder))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReplenishmentOrderItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomFieldAutocompleteOption))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeOff))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Turn))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoFlag))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoEstimate))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoOnSite))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(QuoteOrEstimateItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoQuote))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoVerification))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DocumentType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Document))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoPunchListItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoEquipment))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoItem))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceLine))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Invoice))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StockLocation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FinancialItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkOrderCost))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkOrder))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeOption))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupCorrigoEntity))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChargeCodeLookup))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceDictionaryItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceLine))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AlertScope))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdAndOptimisticLockOfAlertSubscriptionEntitySpecifierAlertSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AlertSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserPayRate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Organization))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkProviderPriceList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Role))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApprovalTemplateStep))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApprovalTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApprovalScope))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResponsibilityType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PortfolioChildCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessHours))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Holiday))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecDispatchRule))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EscalationRule))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OnCallRule))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Responsibility))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessHours))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RoleMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecialtyMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaskMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserPayRateMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SlaValuesOverride))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactInfo))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorporateEntity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxRegionItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimpleLookupWithOptimisticLockCorrigoEntity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxRegion))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkZone))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetAttribute))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DocumentType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Document))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Address2))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeOption))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RoleMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaskMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserPayRateMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecialtyMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactMoneyValues))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomFieldOption))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkProductAndSupplier))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceDictionaryItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChargeCodeLookup))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RemovableCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RemovableWithOriginalCorrigoEntity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimePeriod))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkOrderType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepairCode))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoActionReasonLookup))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Disposition))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LaborCode))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Model))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Specialty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Task))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PunchListMaster))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Employee))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Team))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerNoteType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApInvoiceStatus))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureCategory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contact))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Customer))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RemovableWithOriginalCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerNoteType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BillingAccount))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxCode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkZone))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Space))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoProcedure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureFlagReason))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureTemplateStep))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoProcedureStep))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomFieldDescriptor))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Organization))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Warranty))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Portfolio))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTemplate))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Address2))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Location))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdOfAssetTreeEntitySpecifierInvTree))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTree))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductCategory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxCode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Product))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Invoice))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdOfInvoiceLogEntitySpecifierCiLog))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceLog))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MaterialTransaction))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MaterialTransactionItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StockLocationInventoryDetails))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternalCostStatus))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2986,8 +3370,149 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class Address : CorrigoEntity {
+        
+        private string streetField;
+        
+        private string cityField;
+        
+        private string stateField;
+        
+        private string zipField;
+        
+        private string street2Field;
+        
+        private int actorTypeIdField;
+        
+        private char typeIdField;
+        
+        private int actorIdField;
+        
+        private double latitudeField;
+        
+        private double longitudeField;
+        
+        private string countryField;
+        
+        /// <remarks/>
+        public string Street {
+            get {
+                return this.streetField;
+            }
+            set {
+                this.streetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string City {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Zip {
+            get {
+                return this.zipField;
+            }
+            set {
+                this.zipField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Street2 {
+            get {
+                return this.street2Field;
+            }
+            set {
+                this.street2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ActorTypeId {
+            get {
+                return this.actorTypeIdField;
+            }
+            set {
+                this.actorTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public char TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ActorId {
+            get {
+                return this.actorIdField;
+            }
+            set {
+                this.actorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public double Latitude {
+            get {
+                return this.latitudeField;
+            }
+            set {
+                this.latitudeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public double Longitude {
+            get {
+                return this.longitudeField;
+            }
+            set {
+                this.longitudeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GLAccount))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2996,7 +3521,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3041,7 +3566,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3086,7 +3611,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3098,6 +3623,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private int lengthField;
         
         private CfType typeField;
+        
+        private CfSharingMode sharedWithProviderField;
+        
+        private CfSharingMode sharedByRequestorField;
+        
+        private int cpnRequestorIdField;
         
         private string nameField;
         
@@ -3134,6 +3665,36 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public CfSharingMode SharedWithProvider {
+            get {
+                return this.sharedWithProviderField;
+            }
+            set {
+                this.sharedWithProviderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CfSharingMode SharedByRequestor {
+            get {
+                return this.sharedByRequestorField;
+            }
+            set {
+                this.sharedByRequestorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int CpnRequestorId {
+            get {
+                return this.cpnRequestorIdField;
+            }
+            set {
+                this.cpnRequestorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
         public string Name {
             get {
                 return this.nameField;
@@ -3155,7 +3716,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum CfType {
@@ -3189,10 +3750,32 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         Url,
+        
+        /// <remarks/>
+        Text,
+        
+        /// <remarks/>
+        StringAutocomplete,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum CfSharingMode {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        ReadOnly,
+        
+        /// <remarks/>
+        ReadWrite,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3237,83 +3820,110 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetAttribute))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Payment))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WpTree))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceListItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Warranty))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Portfolio))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProviderCoi))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCard))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCardItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToDoType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReplenishmentOrder))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReplenishmentOrderItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomFieldAutocompleteOption))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeOff))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Turn))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoFlag))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoEstimate))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoOnSite))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(QuoteOrEstimateItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoQuote))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoVerification))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DocumentType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Document))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoPunchListItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoEquipment))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoItem))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceLine))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Invoice))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StockLocation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FinancialItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkOrderCost))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkOrder))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeOption))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupCorrigoEntity))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChargeCodeLookup))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceDictionaryItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceLine))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AlertScope))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityWithComposedIdAndOptimisticLockOfAlertSubscriptionEntitySpecifierAlertSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AlertSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserPayRate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Organization))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkProviderPriceList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Role))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApprovalTemplateStep))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApprovalTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApprovalScope))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResponsibilityType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PortfolioChildCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessHours))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Holiday))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecDispatchRule))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EscalationRule))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OnCallRule))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Responsibility))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessHours))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RoleMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecialtyMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaskMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserPayRateMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SlaValuesOverride))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactInfo))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorporateEntity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxRegionItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimpleLookupWithOptimisticLockCorrigoEntity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxRegion))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkZone))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetAttribute))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DocumentType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Document))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Address2))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeOption))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrigoEntityMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RoleMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaskMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserPayRateMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecialtyMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactMoneyValues))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomFieldOption))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkProductAndSupplier))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceDictionaryItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChargeCodeLookup))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RemovableCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RemovableWithOriginalCorrigoEntity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimePeriod))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkOrderType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepairCode))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoActionReasonLookup))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Disposition))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LaborCode))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Model))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Specialty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Task))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PunchListMaster))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Employee))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Team))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerNoteType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApInvoiceStatus))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureCategory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contact))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Customer))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RemovableWithOriginalCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerNoteType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BillingAccount))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxCode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkZone))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Space))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoProcedure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureFlagReason))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureTemplateStep))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoProcedureStep))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomFieldDescriptor))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Organization))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Warranty))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Portfolio))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTemplate))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Address2))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductCategory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxCode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Product))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Invoice))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3334,52 +3944,28 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class AssetAttribute : CorrigoEntityWithOptimisticLock {
-        
-        private AttributeDescriptor descriptorField;
-        
-        private int assetIdField;
-        
-        private int topAssetIdField;
+    public partial class PaymentItem : CorrigoEntityWithOptimisticLock {
         
         private CurrencyType currencyTypeIdField;
         
-        private string valueField;
+        private ActorType objectTypeIdField;
         
-        /// <remarks/>
-        public AttributeDescriptor Descriptor {
-            get {
-                return this.descriptorField;
-            }
-            set {
-                this.descriptorField = value;
-            }
-        }
+        private int objectIdField;
         
-        /// <remarks/>
-        public int AssetId {
-            get {
-                return this.assetIdField;
-            }
-            set {
-                this.assetIdField = value;
-            }
-        }
+        private bool isCreditField;
         
-        /// <remarks/>
-        public int TopAssetId {
-            get {
-                return this.topAssetIdField;
-            }
-            set {
-                this.topAssetIdField = value;
-            }
-        }
+        private MoneyValue amtBalanceField;
+        
+        private MoneyValue amtUsedField;
+        
+        private Invoice refInvoiceField;
+        
+        private Payment refPaymentField;
         
         /// <remarks/>
         public CurrencyType CurrencyTypeId {
@@ -3392,7 +3978,100 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public string Value {
+        public ActorType ObjectTypeId {
+            get {
+                return this.objectTypeIdField;
+            }
+            set {
+                this.objectTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ObjectId {
+            get {
+                return this.objectIdField;
+            }
+            set {
+                this.objectIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsCredit {
+            get {
+                return this.isCreditField;
+            }
+            set {
+                this.isCreditField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue AmtBalance {
+            get {
+                return this.amtBalanceField;
+            }
+            set {
+                this.amtBalanceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue AmtUsed {
+            get {
+                return this.amtUsedField;
+            }
+            set {
+                this.amtUsedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Invoice RefInvoice {
+            get {
+                return this.refInvoiceField;
+            }
+            set {
+                this.refInvoiceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Payment RefPayment {
+            get {
+                return this.refPaymentField;
+            }
+            set {
+                this.refPaymentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class MoneyValue {
+        
+        private CurrencyType currencyTypeIdField;
+        
+        private decimal valueField;
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal Value {
             get {
                 return this.valueField;
             }
@@ -3403,162 +4082,270 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class AttributeDescriptor : RemovableCorrigoEntity {
+    public partial class Invoice : CorrigoEntityWithOptimisticLock {
         
-        private CfType typeField;
+        private CurrencyType currencyTypeIdField;
         
-        private string nameField;
+        private int timeSetIdField;
         
-        private bool isHistoryField;
+        private TimePeriod periodField;
         
-        private bool displayInWorkOrderField;
+        private BillingAccount groupField;
         
-        private AttributeOption[] optionsField;
+        private string numberField;
+        
+        private CiInvoiceState stateField;
+        
+        private string poNumberField;
+        
+        private System.Nullable<System.DateTime> dtDueField;
+        
+        private string glAccountField;
+        
+        private string commentsField;
+        
+        private MoneyValue amtBaseField;
+        
+        private MoneyValue amtTaxField;
+        
+        private MoneyValue amtTotalField;
+        
+        private bool isMultilineField;
+        
+        private string taxTransactionIdField;
+        
+        private bool isTaxDirtyField;
+        
+        private InvoiceLine[] lineItemsField;
+        
+        private string extNumberField;
+        
+        private System.Nullable<System.DateTime> dtPostedField;
+        
+        private bool isManuallySentField;
+        
+        private DraftProcessStep draftProcessStepIdField;
         
         /// <remarks/>
-        public CfType Type {
+        public CurrencyType CurrencyTypeId {
             get {
-                return this.typeField;
+                return this.currencyTypeIdField;
             }
             set {
-                this.typeField = value;
+                this.currencyTypeIdField = value;
             }
         }
         
         /// <remarks/>
-        public string Name {
+        public int TimeSetId {
             get {
-                return this.nameField;
+                return this.timeSetIdField;
             }
             set {
-                this.nameField = value;
+                this.timeSetIdField = value;
             }
         }
         
         /// <remarks/>
-        public bool IsHistory {
+        public TimePeriod Period {
             get {
-                return this.isHistoryField;
+                return this.periodField;
             }
             set {
-                this.isHistoryField = value;
+                this.periodField = value;
             }
         }
         
         /// <remarks/>
-        public bool DisplayInWorkOrder {
+        public BillingAccount Group {
             get {
-                return this.displayInWorkOrderField;
+                return this.groupField;
             }
             set {
-                this.displayInWorkOrderField = value;
+                this.groupField = value;
             }
         }
         
         /// <remarks/>
-        public AttributeOption[] Options {
+        public string Number {
             get {
-                return this.optionsField;
+                return this.numberField;
             }
             set {
-                this.optionsField = value;
+                this.numberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CiInvoiceState State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PoNumber {
+            get {
+                return this.poNumberField;
+            }
+            set {
+                this.poNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> DtDue {
+            get {
+                return this.dtDueField;
+            }
+            set {
+                this.dtDueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string GlAccount {
+            get {
+                return this.glAccountField;
+            }
+            set {
+                this.glAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comments {
+            get {
+                return this.commentsField;
+            }
+            set {
+                this.commentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue AmtBase {
+            get {
+                return this.amtBaseField;
+            }
+            set {
+                this.amtBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue AmtTax {
+            get {
+                return this.amtTaxField;
+            }
+            set {
+                this.amtTaxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue AmtTotal {
+            get {
+                return this.amtTotalField;
+            }
+            set {
+                this.amtTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsMultiline {
+            get {
+                return this.isMultilineField;
+            }
+            set {
+                this.isMultilineField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string TaxTransactionId {
+            get {
+                return this.taxTransactionIdField;
+            }
+            set {
+                this.taxTransactionIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsTaxDirty {
+            get {
+                return this.isTaxDirtyField;
+            }
+            set {
+                this.isTaxDirtyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public InvoiceLine[] LineItems {
+            get {
+                return this.lineItemsField;
+            }
+            set {
+                this.lineItemsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ExtNumber {
+            get {
+                return this.extNumberField;
+            }
+            set {
+                this.extNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> DtPosted {
+            get {
+                return this.dtPostedField;
+            }
+            set {
+                this.dtPostedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsManuallySent {
+            get {
+                return this.isManuallySentField;
+            }
+            set {
+                this.isManuallySentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DraftProcessStep DraftProcessStepId {
+            get {
+                return this.draftProcessStepIdField;
+            }
+            set {
+                this.draftProcessStepIdField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class AttributeOption : CorrigoEntityWithOptimisticLock {
-        
-        private int parentIdField;
-        
-        private int idxField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        public int ParentId {
-            get {
-                return this.parentIdField;
-            }
-            set {
-                this.parentIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Idx {
-            get {
-                return this.idxField;
-            }
-            set {
-                this.idxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimePeriod))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkOrderType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepairCode))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeDescriptor))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoActionReasonLookup))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Disposition))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LaborCode))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Model))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Specialty))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Task))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PunchListMaster))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Employee))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Team))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerNoteType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Customer))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RemovableWithOriginalCorrigoEntity))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BillingAccount))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxCode))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Space))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomFieldDescriptor))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public abstract partial class RemovableCorrigoEntity : CorrigoEntityWithOptimisticLock {
-        
-        private bool isRemovedField;
-        
-        /// <remarks/>
-        public bool IsRemoved {
-            get {
-                return this.isRemovedField;
-            }
-            set {
-                this.isRemovedField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3653,7 +4440,91 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RemovableWithOriginalCorrigoEntity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimePeriod))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkOrderType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RepairCode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoActionReasonLookup))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Disposition))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LaborCode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Model))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Specialty))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Task))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Employee))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Team))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApInvoiceStatus))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureCategory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contact))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Customer))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerNoteType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BillingAccount))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkZone))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Space))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoProcedure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureFlagReason))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProcedureTemplateStep))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoProcedureStep))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomFieldDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductCategory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxCode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Product))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public abstract partial class RemovableCorrigoEntity : CorrigoEntityWithOptimisticLock {
+        
+        private bool isRemovedField;
+        
+        /// <remarks/>
+        public bool IsRemoved {
+            get {
+                return this.isRemovedField;
+            }
+            set {
+                this.isRemovedField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public abstract partial class RemovableWithOriginalCorrigoEntity : RemovableCorrigoEntity {
+        
+        private string displayAsField;
+        
+        private string displayAsOriginalField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DisplayAsOriginal {
+            get {
+                return this.displayAsOriginalField;
+            }
+            set {
+                this.displayAsOriginalField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3722,7 +4593,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3767,7 +4638,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3836,7 +4707,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WOActionType {
@@ -3944,6 +4815,9 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         AckByChanged,
         
         /// <remarks/>
+        CustomerChanged,
+        
+        /// <remarks/>
         EstimateSubmitted,
         
         /// <remarks/>
@@ -3987,10 +4861,25 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         QuoteApproved,
+        
+        /// <remarks/>
+        VisitDeleted,
+        
+        /// <remarks/>
+        ApInvoiceCleared,
+        
+        /// <remarks/>
+        ProcedureAddRemove,
+        
+        /// <remarks/>
+        ApInvoiceTaxUpdate,
+        
+        /// <remarks/>
+        IsmStatusChanged,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4071,7 +4960,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4097,6 +4986,14 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private bool isShortcutField;
         
         private bool isDefTimeCardField;
+        
+        private string externalCodeField;
+        
+        private LaborCodeType typeIdField;
+        
+        private decimal rateField;
+        
+        private CurrencyType currencyTypeIdField;
         
         /// <remarks/>
         public InvoiceDictionaryItem InvoiceItem {
@@ -4197,10 +5094,50 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.isDefTimeCardField = value;
             }
         }
+        
+        /// <remarks/>
+        public string ExternalCode {
+            get {
+                return this.externalCodeField;
+            }
+            set {
+                this.externalCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LaborCodeType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal Rate {
+            get {
+                return this.rateField;
+            }
+            set {
+                this.rateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4269,7 +5206,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4281,6 +5218,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private string extIdField;
         
         private string descrField;
+        
+        private string countryField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -4311,10 +5250,20 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.descrField = value;
             }
         }
+        
+        /// <remarks/>
+        public string Country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum CostCategory {
@@ -4354,9 +5303,9 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChargeCodeLookup))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceDictionaryItem))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChargeCodeLookup))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4389,7 +5338,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4410,7 +5359,23 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum LaborCodeType {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Time,
+        
+        /// <remarks/>
+        Allowance,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4433,9 +5398,13 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private Task[] tasksField;
         
+        private LinkModelAndAttribute[] attributeDescriptorsField;
+        
         private string numberField;
         
         private bool allowAnonymousRequestsField;
+        
+        private ChargeCodeLookup chargeCodeField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -4518,6 +5487,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public LinkModelAndAttribute[] AttributeDescriptors {
+            get {
+                return this.attributeDescriptorsField;
+            }
+            set {
+                this.attributeDescriptorsField = value;
+            }
+        }
+        
+        /// <remarks/>
         public string Number {
             get {
                 return this.numberField;
@@ -4536,10 +5515,20 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.allowAnonymousRequestsField = value;
             }
         }
+        
+        /// <remarks/>
+        public ChargeCodeLookup ChargeCode {
+            get {
+                return this.chargeCodeField;
+            }
+            set {
+                this.chargeCodeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum AssetType {
@@ -4573,7 +5562,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4598,7 +5587,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private Specialty specialtyField;
         
-        private PunchListMaster punchListField;
+        private ProcedureTemplate procedureTemplateField;
         
         private WoPriority priorityField;
         
@@ -4617,6 +5606,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private string numberField;
         
         private TaskMoneyValues[] currenciesField;
+        
+        private ChargeCodeLookup chargeCodeField;
         
         /// <remarks/>
         public int ModelId {
@@ -4709,12 +5700,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public PunchListMaster PunchList {
+        public ProcedureTemplate ProcedureTemplate {
             get {
-                return this.punchListField;
+                return this.procedureTemplateField;
             }
             set {
-                this.punchListField = value;
+                this.procedureTemplateField = value;
             }
         }
         
@@ -4808,10 +5799,20 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.currenciesField = value;
             }
         }
+        
+        /// <remarks/>
+        public ChargeCodeLookup ChargeCode {
+            get {
+                return this.chargeCodeField;
+            }
+            set {
+                this.chargeCodeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4827,6 +5828,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private TaxCode taxCodeField;
         
         private SpecialtyMoneyValues[] currenciesField;
+        
+        private System.Nullable<bool> isNteAutoField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -4877,10 +5880,21 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.currenciesField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> IsNteAuto {
+            get {
+                return this.isNteAutoField;
+            }
+            set {
+                this.isNteAutoField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4942,11 +5956,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RoleMoneyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecialtyMoneyValues))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaskMoneyValues))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserPayRateMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductMoneyValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecialtyMoneyValues))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactMoneyValues))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4979,7 +5994,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5001,7 +6016,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5023,7 +6038,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5045,7 +6060,42 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ProductMoneyValues : CorrigoEntityMoneyValues {
+        
+        private System.Nullable<decimal> unitPriceField;
+        
+        private System.Nullable<decimal> lastPriceField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> UnitPrice {
+            get {
+                return this.unitPriceField;
+            }
+            set {
+                this.unitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> LastPrice {
+            get {
+                return this.lastPriceField;
+            }
+            set {
+                this.lastPriceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5093,20 +6143,22 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class PunchListMaster : RemovableCorrigoEntity {
+    public partial class ProcedureTemplate : RemovableCorrigoEntity {
         
         private string displayAsField;
         
-        private System.DateTime dtUpdatedField;
+        private bool allowMarkAllField;
         
-        private Actor updatedByField;
+        private bool allowNotApplicableField;
         
-        private PunchListMasterItem[] tasksField;
+        private ProcedureTemplateStep[] stepsField;
+        
+        private LinkProcedureCategoryAndTemplate[] procedureCategoriesField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -5119,50 +6171,102 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public System.DateTime DtUpdated {
+        public bool AllowMarkAll {
             get {
-                return this.dtUpdatedField;
+                return this.allowMarkAllField;
             }
             set {
-                this.dtUpdatedField = value;
+                this.allowMarkAllField = value;
             }
         }
         
         /// <remarks/>
-        public Actor UpdatedBy {
+        public bool AllowNotApplicable {
             get {
-                return this.updatedByField;
+                return this.allowNotApplicableField;
             }
             set {
-                this.updatedByField = value;
+                this.allowNotApplicableField = value;
             }
         }
         
         /// <remarks/>
-        public PunchListMasterItem[] Tasks {
+        public ProcedureTemplateStep[] Steps {
             get {
-                return this.tasksField;
+                return this.stepsField;
             }
             set {
-                this.tasksField = value;
+                this.stepsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LinkProcedureCategoryAndTemplate[] ProcedureCategories {
+            get {
+                return this.procedureCategoriesField;
+            }
+            set {
+                this.procedureCategoriesField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class Actor : CorrigoEntityWithComposedIdOfActorEntitySpecifierActor {
+    public partial class ProcedureTemplateStep : RemovableCorrigoEntity {
         
-        private ActorType typeIdField;
+        private int procedureTemplateIdField;
         
-        private string displayAsField;
+        private int indexField;
+        
+        private string descriptionField;
+        
+        private ProcedureStepType typeIdField;
+        
+        private bool isRequiredField;
+        
+        private CustomFieldDescriptor fieldDescriptorField;
+        
+        private AttributeDescriptor attrDescriptorField;
+        
+        private string instructionsField;
         
         /// <remarks/>
-        public ActorType TypeId {
+        public int ProcedureTemplateId {
+            get {
+                return this.procedureTemplateIdField;
+            }
+            set {
+                this.procedureTemplateIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureStepType TypeId {
             get {
                 return this.typeIdField;
             }
@@ -5172,45 +6276,158 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public string DisplayAs {
+        public bool IsRequired {
             get {
-                return this.displayAsField;
+                return this.isRequiredField;
             }
             set {
-                this.displayAsField = value;
+                this.isRequiredField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CustomFieldDescriptor FieldDescriptor {
+            get {
+                return this.fieldDescriptorField;
+            }
+            set {
+                this.fieldDescriptorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AttributeDescriptor AttrDescriptor {
+            get {
+                return this.attrDescriptorField;
+            }
+            set {
+                this.attrDescriptorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Instructions {
+            get {
+                return this.instructionsField;
+            }
+            set {
+                this.instructionsField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Actor))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public abstract partial class CorrigoEntityWithComposedIdOfActorEntitySpecifierActor : CorrigoEntity {
+    public enum ProcedureStepType {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Text,
+        
+        /// <remarks/>
+        Field,
+        
+        /// <remarks/>
+        Attribute,
+        
+        /// <remarks/>
+        Document,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class PunchListMasterItem : CorrigoEntity {
+    public partial class AttributeDescriptor : RemovableCorrigoEntity {
         
-        private string displayAsField;
+        private CfType typeField;
+        
+        private string nameField;
+        
+        private bool isHistoryField;
+        
+        private bool displayInWorkOrderField;
+        
+        private AttributeOption[] optionsField;
+        
+        /// <remarks/>
+        public CfType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsHistory {
+            get {
+                return this.isHistoryField;
+            }
+            set {
+                this.isHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool DisplayInWorkOrder {
+            get {
+                return this.displayInWorkOrderField;
+            }
+            set {
+                this.displayInWorkOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AttributeOption[] Options {
+            get {
+                return this.optionsField;
+            }
+            set {
+                this.optionsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class AttributeOption : CorrigoEntityWithOptimisticLock {
+        
+        private int parentIdField;
         
         private int idxField;
         
+        private string valueField;
+        
         /// <remarks/>
-        public string DisplayAs {
+        public int ParentId {
             get {
-                return this.displayAsField;
+                return this.parentIdField;
             }
             set {
-                this.displayAsField = value;
+                this.parentIdField = value;
             }
         }
         
@@ -5223,10 +6440,53 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.idxField = value;
             }
         }
+        
+        /// <remarks/>
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class LinkProcedureCategoryAndTemplate : CorrigoEntity {
+        
+        private int procedureCategoryIdField;
+        
+        private int procedureTemplateIdField;
+        
+        /// <remarks/>
+        public int ProcedureCategoryId {
+            get {
+                return this.procedureCategoryIdField;
+            }
+            set {
+                this.procedureCategoryIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ProcedureTemplateId {
+            get {
+                return this.procedureTemplateIdField;
+            }
+            set {
+                this.procedureTemplateIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5295,7 +6555,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum TaskSelfHelpType {
@@ -5311,7 +6571,40 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class LinkModelAndAttribute : CorrigoEntity {
+        
+        private int modelIdField;
+        
+        private int attributeDescriptorIdField;
+        
+        /// <remarks/>
+        public int ModelId {
+            get {
+                return this.modelIdField;
+            }
+            set {
+                this.modelIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int AttributeDescriptorId {
+            get {
+                return this.attributeDescriptorIdField;
+            }
+            set {
+                this.attributeDescriptorIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5380,6 +6673,10 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private bool billAtZeroField;
         
+        private bool isSupplierField;
+        
+        private ProviderlType providerTypeIdField;
+        
         private ContactInfo[] contactAddressesField;
         
         private Address2 addressField;
@@ -5401,6 +6698,10 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private LinkProviderAndService[] servicesField;
         
         private AlertSubscription[] alertSubscriptionsField;
+        
+        private bool taxExemptField;
+        
+        private int limitAssignmentByPortfolioIdField;
         
         /// <remarks/>
         public string FirstName {
@@ -5714,6 +7015,26 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public bool IsSupplier {
+            get {
+                return this.isSupplierField;
+            }
+            set {
+                this.isSupplierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProviderlType ProviderTypeId {
+            get {
+                return this.providerTypeIdField;
+            }
+            set {
+                this.providerTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
         public ContactInfo[] ContactAddresses {
             get {
                 return this.contactAddressesField;
@@ -5822,10 +7143,30 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.alertSubscriptionsField = value;
             }
         }
+        
+        /// <remarks/>
+        public bool TaxExempt {
+            get {
+                return this.taxExemptField;
+            }
+            set {
+                this.taxExemptField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int LimitAssignmentByPortfolioId {
+            get {
+                return this.limitAssignmentByPortfolioIdField;
+            }
+            set {
+                this.limitAssignmentByPortfolioIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5838,7 +7179,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private bool unlimitedNteField;
         
+        private bool ssoLoginOnlyField;
+        
         private RoleMoneyValues[] currenciesField;
+        
+        private bool isIsmRequiredField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -5871,6 +7216,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public bool SsoLoginOnly {
+            get {
+                return this.ssoLoginOnlyField;
+            }
+            set {
+                this.ssoLoginOnlyField = value;
+            }
+        }
+        
+        /// <remarks/>
         public RoleMoneyValues[] Currencies {
             get {
                 return this.currenciesField;
@@ -5879,10 +7234,20 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.currenciesField = value;
             }
         }
+        
+        /// <remarks/>
+        public bool IsIsmRequired {
+            get {
+                return this.isIsmRequiredField;
+            }
+            set {
+                this.isIsmRequiredField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum EmployeeWonStatus {
@@ -5904,7 +7269,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum DistanceUnit {
@@ -5920,7 +7285,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5965,7 +7330,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum PriceListType {
@@ -5978,7 +7343,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6035,7 +7400,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6104,7 +7469,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6185,7 +7550,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6303,7 +7668,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6324,7 +7689,50 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class Actor : CorrigoEntityWithComposedIdOfActorEntitySpecifierActor {
+        
+        private ActorType typeIdField;
+        
+        private string displayAsField;
+        
+        /// <remarks/>
+        public ActorType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Actor))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public abstract partial class CorrigoEntityWithComposedIdOfActorEntitySpecifierActor : CorrigoEntity {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6405,7 +7813,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum ContactAddrType {
@@ -6472,7 +7880,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6625,13 +8033,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum StreetAddrType {
         
         /// <remarks/>
         Unknown,
+        
+        /// <remarks/>
+        Alt,
         
         /// <remarks/>
         Primary,
@@ -6641,7 +8052,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum GeoStatus {
@@ -6657,7 +8068,23 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum ProviderlType {
+        
+        /// <remarks/>
+        Regular,
+        
+        /// <remarks/>
+        Supplier,
+        
+        /// <remarks/>
+        Landlord,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6691,13 +8118,13 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndPortfolio))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndCustomerGroup))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndSpecialty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndStockLocation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndWorkZone))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkProviderAndService))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndTeam))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinkUserAndCustomerGroup))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6706,7 +8133,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6739,40 +8166,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class LinkUserAndCustomerGroup : EmployeeBridgeCorrigoEntity {
-        
-        private int userIdField;
-        
-        private int customerGroupIdField;
-        
-        /// <remarks/>
-        public int UserId {
-            get {
-                return this.userIdField;
-            }
-            set {
-                this.userIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int CustomerGroupId {
-            get {
-                return this.customerGroupIdField;
-            }
-            set {
-                this.customerGroupIdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6805,7 +8199,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6850,7 +8244,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6883,7 +8277,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6916,7 +8310,40 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class LinkUserAndCustomerGroup : EmployeeBridgeCorrigoEntity {
+        
+        private int userIdField;
+        
+        private int customerGroupIdField;
+        
+        /// <remarks/>
+        public int UserId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                this.userIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int CustomerGroupId {
+            get {
+                return this.customerGroupIdField;
+            }
+            set {
+                this.customerGroupIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6973,7 +8400,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7030,7 +8457,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7088,7 +8515,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AlertSubscription))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7097,7 +8524,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7142,7 +8569,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7187,7 +8614,536 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ApInvoiceStatus : RemovableCorrigoEntity {
+        
+        private string displayAsField;
+        
+        private string descriptionField;
+        
+        private ForecastGroup forecastGroupIdField;
+        
+        private ApState apStateIdField;
+        
+        private bool readyForExportField;
+        
+        private bool setOnExportField;
+        
+        private bool childWoDefaultField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ForecastGroup ForecastGroupId {
+            get {
+                return this.forecastGroupIdField;
+            }
+            set {
+                this.forecastGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ApState ApStateId {
+            get {
+                return this.apStateIdField;
+            }
+            set {
+                this.apStateIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool ReadyForExport {
+            get {
+                return this.readyForExportField;
+            }
+            set {
+                this.readyForExportField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool SetOnExport {
+            get {
+                return this.setOnExportField;
+            }
+            set {
+                this.setOnExportField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool ChildWoDefault {
+            get {
+                return this.childWoDefaultField;
+            }
+            set {
+                this.childWoDefaultField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum ForecastGroup {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        Waiting,
+        
+        /// <remarks/>
+        Submitted,
+        
+        /// <remarks/>
+        AuthOrPaid,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum ApState {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        Received,
+        
+        /// <remarks/>
+        Paid,
+        
+        /// <remarks/>
+        Waiting,
+        
+        /// <remarks/>
+        Authorized,
+        
+        /// <remarks/>
+        Exported,
+        
+        /// <remarks/>
+        Disputed,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ProcedureCategory : RemovableCorrigoEntity {
+        
+        private string displayAsField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class Contact : RemovableCorrigoEntity {
+        
+        private string displayAsField;
+        
+        private string firstNameField;
+        
+        private string lastNameField;
+        
+        private LeaseContactType typeIdField;
+        
+        private int customerIdField;
+        
+        private bool canViewAnyRequestField;
+        
+        private bool canCreateRequestField;
+        
+        private int priorityThresholdField;
+        
+        private CustomField2[] customFieldsField;
+        
+        private ContactInfo[] contactAddressesField;
+        
+        private LinkContactAndGroup[] groupsBridgeField;
+        
+        private string usernameField;
+        
+        private string numberField;
+        
+        private bool mustResetPasswordField;
+        
+        private bool noAlertEmailsField;
+        
+        private string commentField;
+        
+        private bool unlimitedRequestField;
+        
+        private bool unlimitedAuthorizationField;
+        
+        private int supervisorIdField;
+        
+        private int languageIdField;
+        
+        private LsNoteAccess customerNoteAccessIdField;
+        
+        private bool noPwdExpirationAlertField;
+        
+        private ContactMoneyValues[] currenciesField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FirstName {
+            get {
+                return this.firstNameField;
+            }
+            set {
+                this.firstNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string LastName {
+            get {
+                return this.lastNameField;
+            }
+            set {
+                this.lastNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LeaseContactType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int CustomerId {
+            get {
+                return this.customerIdField;
+            }
+            set {
+                this.customerIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool CanViewAnyRequest {
+            get {
+                return this.canViewAnyRequestField;
+            }
+            set {
+                this.canViewAnyRequestField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool CanCreateRequest {
+            get {
+                return this.canCreateRequestField;
+            }
+            set {
+                this.canCreateRequestField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int PriorityThreshold {
+            get {
+                return this.priorityThresholdField;
+            }
+            set {
+                this.priorityThresholdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CustomField2[] CustomFields {
+            get {
+                return this.customFieldsField;
+            }
+            set {
+                this.customFieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ContactInfo[] ContactAddresses {
+            get {
+                return this.contactAddressesField;
+            }
+            set {
+                this.contactAddressesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LinkContactAndGroup[] GroupsBridge {
+            get {
+                return this.groupsBridgeField;
+            }
+            set {
+                this.groupsBridgeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                this.usernameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Number {
+            get {
+                return this.numberField;
+            }
+            set {
+                this.numberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool MustResetPassword {
+            get {
+                return this.mustResetPasswordField;
+            }
+            set {
+                this.mustResetPasswordField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool NoAlertEmails {
+            get {
+                return this.noAlertEmailsField;
+            }
+            set {
+                this.noAlertEmailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool UnlimitedRequest {
+            get {
+                return this.unlimitedRequestField;
+            }
+            set {
+                this.unlimitedRequestField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool UnlimitedAuthorization {
+            get {
+                return this.unlimitedAuthorizationField;
+            }
+            set {
+                this.unlimitedAuthorizationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SupervisorId {
+            get {
+                return this.supervisorIdField;
+            }
+            set {
+                this.supervisorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int LanguageId {
+            get {
+                return this.languageIdField;
+            }
+            set {
+                this.languageIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LsNoteAccess CustomerNoteAccessId {
+            get {
+                return this.customerNoteAccessIdField;
+            }
+            set {
+                this.customerNoteAccessIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool NoPwdExpirationAlert {
+            get {
+                return this.noPwdExpirationAlertField;
+            }
+            set {
+                this.noPwdExpirationAlertField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ContactMoneyValues[] Currencies {
+            get {
+                return this.currenciesField;
+            }
+            set {
+                this.currenciesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum LeaseContactType {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Alternate,
+        
+        /// <remarks/>
+        Emergency,
+        
+        /// <remarks/>
+        Primary,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class LinkContactAndGroup : CorrigoEntity {
+        
+        private int contactIdField;
+        
+        private int customerGroupIdField;
+        
+        private bool isBillingContactField;
+        
+        /// <remarks/>
+        public int ContactId {
+            get {
+                return this.contactIdField;
+            }
+            set {
+                this.contactIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int CustomerGroupId {
+            get {
+                return this.customerGroupIdField;
+            }
+            set {
+                this.customerGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsBillingContact {
+            get {
+                return this.isBillingContactField;
+            }
+            set {
+                this.isBillingContactField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum LsNoteAccess {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        View,
+        
+        /// <remarks/>
+        AddEdit,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7221,6 +9177,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private Contract contractField;
         
         private LinkCustomerAndGroup[] groupsBridgeField;
+        
+        private ApprovalScope[] approvalScopesField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -7361,15 +9319,25 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.groupsBridgeField = value;
             }
         }
+        
+        /// <remarks/>
+        public ApprovalScope[] ApprovalScopes {
+            get {
+                return this.approvalScopesField;
+            }
+            set {
+                this.approvalScopesField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class WorkZone : CorrigoEntityWithOptimisticLock {
+    public partial class WorkZone : RemovableCorrigoEntity {
         
         private string displayAsField;
         
@@ -7385,7 +9353,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private int schedulingWindowField;
         
-        private bool noIncompletePunchListField;
+        private bool noIncompleteProcedureField;
         
         private int accessOptionsMaskField;
         
@@ -7431,6 +9399,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private LinkPortfolioAndWorkZone[] portfoliosField;
         
+        private SlaValuesOverride[] slaValuesField;
+        
         private LinkTeamAndWorkZone[] teamsField;
         
         private BusinessHours[] bizHoursField;
@@ -7450,6 +9420,34 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private bool useOnCallField;
         
         private bool useEscalationField;
+        
+        private int defaultBillToLogicField;
+        
+        private bool turnKickOffAutoField;
+        
+        private short turnKickOffLagDaysField;
+        
+        private byte turnKickOffOnDaysField;
+        
+        private int earliestSlotField;
+        
+        private int latestSlotField;
+        
+        private int slotsCountField;
+        
+        private bool isPrecalculatedScheduleField;
+        
+        private bool allowTimePreferenceField;
+        
+        private int turnTemplateIdField;
+        
+        private int ismSpecGroupIdField;
+        
+        private string ismUrlField;
+        
+        private ExcludeCoi excludeNonCompliantProvidersField;
+        
+        private System.Nullable<bool> isNteAutoField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -7522,12 +9520,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public bool NoIncompletePunchList {
+        public bool NoIncompleteProcedure {
             get {
-                return this.noIncompletePunchListField;
+                return this.noIncompleteProcedureField;
             }
             set {
-                this.noIncompletePunchListField = value;
+                this.noIncompleteProcedureField = value;
             }
         }
         
@@ -7752,6 +9750,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public SlaValuesOverride[] SlaValues {
+            get {
+                return this.slaValuesField;
+            }
+            set {
+                this.slaValuesField = value;
+            }
+        }
+        
+        /// <remarks/>
         public LinkTeamAndWorkZone[] Teams {
             get {
                 return this.teamsField;
@@ -7850,10 +9858,151 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.useEscalationField = value;
             }
         }
+        
+        /// <remarks/>
+        public int DefaultBillToLogic {
+            get {
+                return this.defaultBillToLogicField;
+            }
+            set {
+                this.defaultBillToLogicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool TurnKickOffAuto {
+            get {
+                return this.turnKickOffAutoField;
+            }
+            set {
+                this.turnKickOffAutoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short TurnKickOffLagDays {
+            get {
+                return this.turnKickOffLagDaysField;
+            }
+            set {
+                this.turnKickOffLagDaysField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public byte TurnKickOffOnDays {
+            get {
+                return this.turnKickOffOnDaysField;
+            }
+            set {
+                this.turnKickOffOnDaysField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int EarliestSlot {
+            get {
+                return this.earliestSlotField;
+            }
+            set {
+                this.earliestSlotField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int LatestSlot {
+            get {
+                return this.latestSlotField;
+            }
+            set {
+                this.latestSlotField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SlotsCount {
+            get {
+                return this.slotsCountField;
+            }
+            set {
+                this.slotsCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsPrecalculatedSchedule {
+            get {
+                return this.isPrecalculatedScheduleField;
+            }
+            set {
+                this.isPrecalculatedScheduleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool AllowTimePreference {
+            get {
+                return this.allowTimePreferenceField;
+            }
+            set {
+                this.allowTimePreferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TurnTemplateId {
+            get {
+                return this.turnTemplateIdField;
+            }
+            set {
+                this.turnTemplateIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IsmSpecGroupId {
+            get {
+                return this.ismSpecGroupIdField;
+            }
+            set {
+                this.ismSpecGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string IsmUrl {
+            get {
+                return this.ismUrlField;
+            }
+            set {
+                this.ismUrlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ExcludeCoi ExcludeNonCompliantProviders {
+            get {
+                return this.excludeNonCompliantProvidersField;
+            }
+            set {
+                this.excludeNonCompliantProvidersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> IsNteAuto {
+            get {
+                return this.isNteAutoField;
+            }
+            set {
+                this.isNteAutoField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8018,7 +10167,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8034,6 +10183,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private string tagIdField;
         
         private string checkPhoneField;
+        
+        private AssetSystem assetSystemField;
         
         /// <remarks/>
         public int AssetId {
@@ -8084,10 +10235,53 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.checkPhoneField = value;
             }
         }
+        
+        /// <remarks/>
+        public AssetSystem AssetSystem {
+            get {
+                return this.assetSystemField;
+            }
+            set {
+                this.assetSystemField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class AssetSystem : CorrigoEntity {
+        
+        private string descriptionField;
+        
+        private string displayAsField;
+        
+        /// <remarks/>
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8313,7 +10507,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8346,7 +10540,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum DocumentStorageType {
@@ -8365,10 +10559,13 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         WonNote,
+        
+        /// <remarks/>
+        CloudShared,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8439,7 +10636,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Blob))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8448,7 +10645,76 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class AssetAttribute : CorrigoEntityWithOptimisticLock {
+        
+        private AttributeDescriptor descriptorField;
+        
+        private int assetIdField;
+        
+        private int topAssetIdField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        public AttributeDescriptor Descriptor {
+            get {
+                return this.descriptorField;
+            }
+            set {
+                this.descriptorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int AssetId {
+            get {
+                return this.assetIdField;
+            }
+            set {
+                this.assetIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TopAssetId {
+            get {
+                return this.topAssetIdField;
+            }
+            set {
+                this.topAssetIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8469,7 +10735,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8515,7 +10781,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxRegion))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8536,7 +10802,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum PTEType {
@@ -8558,7 +10824,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum BackupRouting {
@@ -8574,26 +10840,26 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class BillingAccount : RemovableWithOriginalCorrigoEntity {
+    public partial class BillingAccount : RemovableCorrigoEntity {
         
-        private System.Nullable<int> portalImageSetIdField;
+        private string displayAsField;
         
-        private System.Nullable<int> cpThemeIdField;
+        private int cpThemeIdField;
         
         private bool isBillAcctField;
         
         private string numberField;
         
-        private string payTermsField;
+        private string paymentTermsField;
         
-        private short payDaysField;
+        private short paymentNumberOfDaysField;
         
-        private string payInstrField;
+        private string paymentInstrustionsField;
         
         private bool isCreditHoldField;
         
@@ -8603,32 +10869,44 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private bool isTaxExemptField;
         
-        private CorporateEntity corporateEntityField;
+        private CorporateEntity corpEntityField;
         
-        private Address addressField;
+        private decimal balanceField;
         
-        private bool isInactiveField;
-        
-        private byte payDayWeekdayField;
+        private byte payDayTypeField;
         
         private byte payDayNumberField;
         
-        private Contact billingContactField;
+        private bool isSelfSelectField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        private LinkUserAndCustomerGroup[] usersField;
+        
+        private LinkCustomerAndGroup[] customersField;
+        
+        private LinkContactAndGroup[] contactsField;
+        
+        private CustomField2[] customFieldsField;
+        
+        private Address2 addressField;
+        
+        private Note[] notesField;
+        
+        private bool synchronizeNteField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Nullable<int> PortalImageSetId {
+        public string DisplayAs {
             get {
-                return this.portalImageSetIdField;
+                return this.displayAsField;
             }
             set {
-                this.portalImageSetIdField = value;
+                this.displayAsField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Nullable<int> CpThemeId {
+        public int CpThemeId {
             get {
                 return this.cpThemeIdField;
             }
@@ -8658,32 +10936,32 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public string PayTerms {
+        public string PaymentTerms {
             get {
-                return this.payTermsField;
+                return this.paymentTermsField;
             }
             set {
-                this.payTermsField = value;
+                this.paymentTermsField = value;
             }
         }
         
         /// <remarks/>
-        public short PayDays {
+        public short PaymentNumberOfDays {
             get {
-                return this.payDaysField;
+                return this.paymentNumberOfDaysField;
             }
             set {
-                this.payDaysField = value;
+                this.paymentNumberOfDaysField = value;
             }
         }
         
         /// <remarks/>
-        public string PayInstr {
+        public string PaymentInstrustions {
             get {
-                return this.payInstrField;
+                return this.paymentInstrustionsField;
             }
             set {
-                this.payInstrField = value;
+                this.paymentInstrustionsField = value;
             }
         }
         
@@ -8728,42 +11006,32 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public CorporateEntity CorporateEntity {
+        public CorporateEntity CorpEntity {
             get {
-                return this.corporateEntityField;
+                return this.corpEntityField;
             }
             set {
-                this.corporateEntityField = value;
+                this.corpEntityField = value;
             }
         }
         
         /// <remarks/>
-        public Address Address {
+        public decimal Balance {
             get {
-                return this.addressField;
+                return this.balanceField;
             }
             set {
-                this.addressField = value;
+                this.balanceField = value;
             }
         }
         
         /// <remarks/>
-        public bool IsInactive {
+        public byte PayDayType {
             get {
-                return this.isInactiveField;
+                return this.payDayTypeField;
             }
             set {
-                this.isInactiveField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public byte PayDayWeekday {
-            get {
-                return this.payDayWeekdayField;
-            }
-            set {
-                this.payDayWeekdayField = value;
+                this.payDayTypeField = value;
             }
         }
         
@@ -8778,18 +11046,98 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public Contact BillingContact {
+        public bool IsSelfSelect {
             get {
-                return this.billingContactField;
+                return this.isSelfSelectField;
             }
             set {
-                this.billingContactField = value;
+                this.isSelfSelectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LinkUserAndCustomerGroup[] Users {
+            get {
+                return this.usersField;
+            }
+            set {
+                this.usersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LinkCustomerAndGroup[] Customers {
+            get {
+                return this.customersField;
+            }
+            set {
+                this.customersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LinkContactAndGroup[] Contacts {
+            get {
+                return this.contactsField;
+            }
+            set {
+                this.contactsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CustomField2[] CustomFields {
+            get {
+                return this.customFieldsField;
+            }
+            set {
+                this.customFieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Address2 Address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Note[] Notes {
+            get {
+                return this.notesField;
+            }
+            set {
+                this.notesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool SynchronizeNte {
+            get {
+                return this.synchronizeNteField;
+            }
+            set {
+                this.synchronizeNteField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8822,231 +11170,20 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class Address : CorrigoEntity {
-        
-        private string streetField;
-        
-        private string cityField;
-        
-        private string stateField;
-        
-        private string zipField;
-        
-        private string street2Field;
-        
-        private int actorTypeIdField;
-        
-        private char typeIdField;
-        
-        private int actorIdField;
-        
-        private double latitudeField;
-        
-        private double longitudeField;
-        
-        private string countryField;
-        
-        /// <remarks/>
-        public string Street {
-            get {
-                return this.streetField;
-            }
-            set {
-                this.streetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string City {
-            get {
-                return this.cityField;
-            }
-            set {
-                this.cityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string State {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Zip {
-            get {
-                return this.zipField;
-            }
-            set {
-                this.zipField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Street2 {
-            get {
-                return this.street2Field;
-            }
-            set {
-                this.street2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int ActorTypeId {
-            get {
-                return this.actorTypeIdField;
-            }
-            set {
-                this.actorTypeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public char TypeId {
-            get {
-                return this.typeIdField;
-            }
-            set {
-                this.typeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int ActorId {
-            get {
-                return this.actorIdField;
-            }
-            set {
-                this.actorIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public double Latitude {
-            get {
-                return this.latitudeField;
-            }
-            set {
-                this.latitudeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public double Longitude {
-            get {
-                return this.longitudeField;
-            }
-            set {
-                this.longitudeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Country {
-            get {
-                return this.countryField;
-            }
-            set {
-                this.countryField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class Contact : CorrigoEntity {
-        
-        private string displayAsField;
-        
-        private string firstNameField;
-        
-        private string lastNameField;
-        
-        private LeaseContactType typeIdField;
+    public partial class LinkCustomerAndGroup : CorrigoEntity {
         
         private int customerIdField;
         
-        private bool canViewAnyRequestField;
+        private int customerGroupIdField;
         
-        private bool canCreateRequestField;
+        private bool isBillingAccountField;
         
-        private int priorityThresholdField;
-        
-        private CustomField2[] customFieldsField;
-        
-        private ContactInfo[] contactAddressesField;
-        
-        private LinkContactAndGroup[] groupsBridgeField;
-        
-        private string usernameField;
-        
-        private string numberField;
-        
-        private bool mustResetPasswordField;
-        
-        private bool noAlertEmailsField;
-        
-        private string commentField;
-        
-        private bool unlimitedRequestField;
-        
-        private bool unlimitedAuthorizationField;
-        
-        private ContactMoneyValues[] currenciesField;
-        
-        /// <remarks/>
-        public string DisplayAs {
-            get {
-                return this.displayAsField;
-            }
-            set {
-                this.displayAsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string FirstName {
-            get {
-                return this.firstNameField;
-            }
-            set {
-                this.firstNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string LastName {
-            get {
-                return this.lastNameField;
-            }
-            set {
-                this.lastNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public LeaseContactType TypeId {
-            get {
-                return this.typeIdField;
-            }
-            set {
-                this.typeIdField = value;
-            }
-        }
+        private bool isParentRemovedField;
         
         /// <remarks/>
         public int CustomerId {
@@ -9055,190 +11192,6 @@ namespace CorrigoServiceWebReference.CorrigoGA {
             }
             set {
                 this.customerIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool CanViewAnyRequest {
-            get {
-                return this.canViewAnyRequestField;
-            }
-            set {
-                this.canViewAnyRequestField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool CanCreateRequest {
-            get {
-                return this.canCreateRequestField;
-            }
-            set {
-                this.canCreateRequestField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int PriorityThreshold {
-            get {
-                return this.priorityThresholdField;
-            }
-            set {
-                this.priorityThresholdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CustomField2[] CustomFields {
-            get {
-                return this.customFieldsField;
-            }
-            set {
-                this.customFieldsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ContactInfo[] ContactAddresses {
-            get {
-                return this.contactAddressesField;
-            }
-            set {
-                this.contactAddressesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public LinkContactAndGroup[] GroupsBridge {
-            get {
-                return this.groupsBridgeField;
-            }
-            set {
-                this.groupsBridgeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Username {
-            get {
-                return this.usernameField;
-            }
-            set {
-                this.usernameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Number {
-            get {
-                return this.numberField;
-            }
-            set {
-                this.numberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool MustResetPassword {
-            get {
-                return this.mustResetPasswordField;
-            }
-            set {
-                this.mustResetPasswordField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool NoAlertEmails {
-            get {
-                return this.noAlertEmailsField;
-            }
-            set {
-                this.noAlertEmailsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Comment {
-            get {
-                return this.commentField;
-            }
-            set {
-                this.commentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool UnlimitedRequest {
-            get {
-                return this.unlimitedRequestField;
-            }
-            set {
-                this.unlimitedRequestField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool UnlimitedAuthorization {
-            get {
-                return this.unlimitedAuthorizationField;
-            }
-            set {
-                this.unlimitedAuthorizationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ContactMoneyValues[] Currencies {
-            get {
-                return this.currenciesField;
-            }
-            set {
-                this.currenciesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum LeaseContactType {
-        
-        /// <remarks/>
-        Unknown,
-        
-        /// <remarks/>
-        Alternate,
-        
-        /// <remarks/>
-        Emergency,
-        
-        /// <remarks/>
-        Primary,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class LinkContactAndGroup : CorrigoEntity {
-        
-        private int contactIdField;
-        
-        private int customerGroupIdField;
-        
-        private bool isBillingContactField;
-        
-        /// <remarks/>
-        public int ContactId {
-            get {
-                return this.contactIdField;
-            }
-            set {
-                this.contactIdField = value;
             }
         }
         
@@ -9253,28 +11206,45 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public bool IsBillingContact {
+        public bool IsBillingAccount {
             get {
-                return this.isBillingContactField;
+                return this.isBillingAccountField;
             }
             set {
-                this.isBillingContactField = value;
+                this.isBillingAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsParentRemoved {
+            get {
+                return this.isParentRemovedField;
+            }
+            set {
+                this.isParentRemovedField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BillingAccount))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public abstract partial class RemovableWithOriginalCorrigoEntity : RemovableCorrigoEntity {
+    public partial class Contract : SimpleLookupCorrigoEntity {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contract))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public abstract partial class SimpleLookupCorrigoEntity : CorrigoEntity {
         
         private string displayAsField;
-        
-        private string displayAsOriginalField;
         
         /// <remarks/>
         public string DisplayAs {
@@ -9285,20 +11255,10 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.displayAsField = value;
             }
         }
-        
-        /// <remarks/>
-        public string DisplayAsOriginal {
-            get {
-                return this.displayAsOriginalField;
-            }
-            set {
-                this.displayAsOriginalField = value;
-            }
-        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9343,7 +11303,104 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class SlaValuesOverride : PortfolioChildCorrigoEntity {
+        
+        private int priorityIdField;
+        
+        private int dueInMinutesField;
+        
+        private int respondInMinutesField;
+        
+        private int ackInMinutesField;
+        
+        /// <remarks/>
+        public int PriorityId {
+            get {
+                return this.priorityIdField;
+            }
+            set {
+                this.priorityIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int DueInMinutes {
+            get {
+                return this.dueInMinutesField;
+            }
+            set {
+                this.dueInMinutesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int RespondInMinutes {
+            get {
+                return this.respondInMinutesField;
+            }
+            set {
+                this.respondInMinutesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int AckInMinutes {
+            get {
+                return this.ackInMinutesField;
+            }
+            set {
+                this.ackInMinutesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessHours))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Holiday))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecDispatchRule))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EscalationRule))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OnCallRule))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Responsibility))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SlaValuesOverride))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public abstract partial class PortfolioChildCorrigoEntity : CorrigoEntityWithOptimisticLock {
+        
+        private int actorIdField;
+        
+        private ActorType actorTypeIdField;
+        
+        /// <remarks/>
+        public int ActorId {
+            get {
+                return this.actorIdField;
+            }
+            set {
+                this.actorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ActorType ActorTypeId {
+            get {
+                return this.actorTypeIdField;
+            }
+            set {
+                this.actorTypeIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9390,46 +11447,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Holiday))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecDispatchRule))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EscalationRule))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OnCallRule))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Responsibility))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessHours))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public abstract partial class PortfolioChildCorrigoEntity : CorrigoEntityWithOptimisticLock {
-        
-        private int actorIdField;
-        
-        private ActorType actorTypeIdField;
-        
-        /// <remarks/>
-        public int ActorId {
-            get {
-                return this.actorIdField;
-            }
-            set {
-                this.actorIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ActorType ActorTypeId {
-            get {
-                return this.actorTypeIdField;
-            }
-            set {
-                this.actorTypeIdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9462,7 +11480,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9507,7 +11525,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9540,7 +11558,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9585,56 +11603,92 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public partial class Responsibility : PortfolioChildCorrigoEntity {
         
-        private DutyType responsibilityTypeIdField;
+        private int assigneeIdField;
         
-        private int userIdField;
+        private ActorType assigneeTypeIdField;
+        
+        private ResponsibilityType responsibilityTypeField;
         
         /// <remarks/>
-        public DutyType ResponsibilityTypeId {
+        public int AssigneeId {
             get {
-                return this.responsibilityTypeIdField;
+                return this.assigneeIdField;
             }
             set {
-                this.responsibilityTypeIdField = value;
+                this.assigneeIdField = value;
             }
         }
         
         /// <remarks/>
-        public int UserId {
+        public ActorType AssigneeTypeId {
             get {
-                return this.userIdField;
+                return this.assigneeTypeIdField;
             }
             set {
-                this.userIdField = value;
+                this.assigneeTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ResponsibilityType ResponsibilityType {
+            get {
+                return this.responsibilityTypeField;
+            }
+            set {
+                this.responsibilityTypeField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ResponsibilityType : CorrigoEntityWithOptimisticLock {
+        
+        private string displayAsField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum DutyType {
+    public enum ExcludeCoi {
         
         /// <remarks/>
-        Unknown,
+        InheritGlobalSettings,
         
         /// <remarks/>
-        DefaultAssignee,
+        No,
         
         /// <remarks/>
-        PrimaryContact,
+        ExcludeAndBlock,
+        
+        /// <remarks/>
+        ExcludeAndWarn,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9658,6 +11712,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private Address2[] addressesField;
         
         private string instructionsField;
+        
+        private System.Nullable<System.DateTime> moveInDateField;
         
         /// <remarks/>
         public int CustomerId {
@@ -9751,10 +11807,21 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.instructionsField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> MoveInDate {
+            get {
+                return this.moveInDateField;
+            }
+            set {
+                this.moveInDateField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum LeasingSpaceStatus {
@@ -9776,289 +11843,755 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class LinkCustomerAndGroup : CorrigoEntity {
+    public partial class ApprovalScope : CorrigoEntityWithOptimisticLock {
         
-        private int customerIdField;
+        private int actorIdField;
         
-        private int customerGroupIdField;
+        private ActorType actorTypeIdField;
         
-        private bool isBillingAccountField;
+        private bool isDefaultField;
         
-        private bool isParentRemovedField;
+        private ApprovalTemplate approvalTemplateField;
         
         /// <remarks/>
-        public int CustomerId {
+        public int ActorId {
             get {
-                return this.customerIdField;
+                return this.actorIdField;
             }
             set {
-                this.customerIdField = value;
+                this.actorIdField = value;
             }
         }
         
         /// <remarks/>
-        public int CustomerGroupId {
+        public ActorType ActorTypeId {
             get {
-                return this.customerGroupIdField;
+                return this.actorTypeIdField;
             }
             set {
-                this.customerGroupIdField = value;
+                this.actorTypeIdField = value;
             }
         }
         
         /// <remarks/>
-        public bool IsBillingAccount {
+        public bool IsDefault {
             get {
-                return this.isBillingAccountField;
+                return this.isDefaultField;
             }
             set {
-                this.isBillingAccountField = value;
+                this.isDefaultField = value;
             }
         }
         
         /// <remarks/>
-        public bool IsParentRemoved {
+        public ApprovalTemplate ApprovalTemplate {
             get {
-                return this.isParentRemovedField;
+                return this.approvalTemplateField;
             }
             set {
-                this.isParentRemovedField = value;
+                this.approvalTemplateField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class PaymentItem : CorrigoEntityWithOptimisticLock {
+    public partial class ApprovalTemplate : CorrigoEntityWithOptimisticLock {
         
-        private ActorType objectTypeIdField;
+        private string displayAsField;
         
-        private int objectIdField;
-        
-        private bool isCreditField;
-        
-        private decimal amtBalanceField;
-        
-        private decimal amtUsedField;
-        
-        private Invoice refInvoiceField;
-        
-        private Payment refPaymentField;
+        private ApprovalTemplateStep[] stepsField;
         
         /// <remarks/>
-        public ActorType ObjectTypeId {
+        public string DisplayAs {
             get {
-                return this.objectTypeIdField;
+                return this.displayAsField;
             }
             set {
-                this.objectTypeIdField = value;
+                this.displayAsField = value;
             }
         }
         
         /// <remarks/>
-        public int ObjectId {
+        public ApprovalTemplateStep[] Steps {
             get {
-                return this.objectIdField;
+                return this.stepsField;
             }
             set {
-                this.objectIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool IsCredit {
-            get {
-                return this.isCreditField;
-            }
-            set {
-                this.isCreditField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal AmtBalance {
-            get {
-                return this.amtBalanceField;
-            }
-            set {
-                this.amtBalanceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal AmtUsed {
-            get {
-                return this.amtUsedField;
-            }
-            set {
-                this.amtUsedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Invoice RefInvoice {
-            get {
-                return this.refInvoiceField;
-            }
-            set {
-                this.refInvoiceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Payment RefPayment {
-            get {
-                return this.refPaymentField;
-            }
-            set {
-                this.refPaymentField = value;
+                this.stepsField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class Invoice : CorrigoEntityWithOptimisticLock {
+    public partial class ApprovalTemplateStep : CorrigoEntityWithOptimisticLock {
         
-        private CurrencyType currencyTypeIdField;
+        private int approvalTemplateIdField;
         
-        private int timeSetIdField;
+        private int stepNumberField;
         
-        private TimePeriod periodField;
+        private ActorType actorTypeIdField;
         
-        private BillingAccount groupField;
+        private int actorIdField;
         
-        private string numberField;
+        private ApprovalRule ruleIdField;
         
-        private CiInvoiceState stateField;
+        private int autoSkipHoursField;
         
-        private string poNumberField;
+        private bool isParallelField;
         
-        private System.Nullable<System.DateTime> dtDueField;
+        /// <remarks/>
+        public int ApprovalTemplateId {
+            get {
+                return this.approvalTemplateIdField;
+            }
+            set {
+                this.approvalTemplateIdField = value;
+            }
+        }
         
-        private string glAccountField;
+        /// <remarks/>
+        public int StepNumber {
+            get {
+                return this.stepNumberField;
+            }
+            set {
+                this.stepNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ActorType ActorTypeId {
+            get {
+                return this.actorTypeIdField;
+            }
+            set {
+                this.actorTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ActorId {
+            get {
+                return this.actorIdField;
+            }
+            set {
+                this.actorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ApprovalRule RuleId {
+            get {
+                return this.ruleIdField;
+            }
+            set {
+                this.ruleIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int AutoSkipHours {
+            get {
+                return this.autoSkipHoursField;
+            }
+            set {
+                this.autoSkipHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsParallel {
+            get {
+                return this.isParallelField;
+            }
+            set {
+                this.isParallelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum ApprovalRule {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Always,
+        
+        /// <remarks/>
+        AsNeeded,
+        
+        /// <remarks/>
+        WhenMore,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WoProcedure : RemovableCorrigoEntity {
+        
+        private int workOrderIdField;
+        
+        private ProcedureTemplate procedureTemplateField;
+        
+        private Location assetField;
+        
+        private string displayAsField;
+        
+        private ProcedureType typeIdField;
+        
+        private bool allowMarkAllField;
+        
+        private bool allowNotApplicableField;
+        
+        private bool isNotApplicableField;
+        
+        private ProcedureFlagReason flagField;
+        
+        private ProcedureStatus statusIdField;
+        
+        private int indexField;
+        
+        private WoProcedureStep[] stepsField;
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureTemplate ProcedureTemplate {
+            get {
+                return this.procedureTemplateField;
+            }
+            set {
+                this.procedureTemplateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Location Asset {
+            get {
+                return this.assetField;
+            }
+            set {
+                this.assetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool AllowMarkAll {
+            get {
+                return this.allowMarkAllField;
+            }
+            set {
+                this.allowMarkAllField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool AllowNotApplicable {
+            get {
+                return this.allowNotApplicableField;
+            }
+            set {
+                this.allowNotApplicableField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsNotApplicable {
+            get {
+                return this.isNotApplicableField;
+            }
+            set {
+                this.isNotApplicableField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureFlagReason Flag {
+            get {
+                return this.flagField;
+            }
+            set {
+                this.flagField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureStatus StatusId {
+            get {
+                return this.statusIdField;
+            }
+            set {
+                this.statusIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WoProcedureStep[] Steps {
+            get {
+                return this.stepsField;
+            }
+            set {
+                this.stepsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum ProcedureType {
+        
+        /// <remarks/>
+        Regular,
+        
+        /// <remarks/>
+        Legacy,
+        
+        /// <remarks/>
+        WON,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ProcedureFlagReason : RemovableCorrigoEntity {
+        
+        private string displayAsField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum ProcedureStatus {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Open,
+        
+        /// <remarks/>
+        NA,
+        
+        /// <remarks/>
+        Done,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WoProcedureStep : RemovableCorrigoEntity {
+        
+        private int workOrderIdField;
+        
+        private int indexField;
+        
+        private string commentField;
+        
+        private string descriptionField;
+        
+        private ProcedureStatus statusIdField;
+        
+        private int woProcedureIdField;
+        
+        private ProcedureTemplateStep procedureTemplateStepField;
+        
+        private ProcedureStepType typeIdField;
+        
+        private bool isWonField;
+        
+        private bool isRequiredField;
+        
+        private CustomFieldDescriptor fieldDescriptorField;
+        
+        private AttributeDescriptor attrDescriptorField;
+        
+        private CfType dataTypeIdField;
+        
+        private string dataValueField;
+        
+        private string dataLabelField;
+        
+        private ProcedureFlagReason flagField;
+        
+        private bool isNotApplicableField;
+        
+        private CurrencyType moneyIdField;
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureStatus StatusId {
+            get {
+                return this.statusIdField;
+            }
+            set {
+                this.statusIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int WoProcedureId {
+            get {
+                return this.woProcedureIdField;
+            }
+            set {
+                this.woProcedureIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureTemplateStep ProcedureTemplateStep {
+            get {
+                return this.procedureTemplateStepField;
+            }
+            set {
+                this.procedureTemplateStepField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureStepType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsWon {
+            get {
+                return this.isWonField;
+            }
+            set {
+                this.isWonField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsRequired {
+            get {
+                return this.isRequiredField;
+            }
+            set {
+                this.isRequiredField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CustomFieldDescriptor FieldDescriptor {
+            get {
+                return this.fieldDescriptorField;
+            }
+            set {
+                this.fieldDescriptorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AttributeDescriptor AttrDescriptor {
+            get {
+                return this.attrDescriptorField;
+            }
+            set {
+                this.attrDescriptorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CfType DataTypeId {
+            get {
+                return this.dataTypeIdField;
+            }
+            set {
+                this.dataTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DataValue {
+            get {
+                return this.dataValueField;
+            }
+            set {
+                this.dataValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DataLabel {
+            get {
+                return this.dataLabelField;
+            }
+            set {
+                this.dataLabelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ProcedureFlagReason Flag {
+            get {
+                return this.flagField;
+            }
+            set {
+                this.flagField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsNotApplicable {
+            get {
+                return this.isNotApplicableField;
+            }
+            set {
+                this.isNotApplicableField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType MoneyId {
+            get {
+                return this.moneyIdField;
+            }
+            set {
+                this.moneyIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ProductCategory : RemovableCorrigoEntity {
+        
+        private string displayAsField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class Product : RemovableCorrigoEntity {
+        
+        private InvoiceDictionaryItem invoiceItemField;
+        
+        private string displayAsField;
+        
+        private string partNameField;
+        
+        private string descriptionField;
+        
+        private bool discontinuedField;
+        
+        private MhUnit unitOfMeasureIdField;
         
         private string commentsField;
         
-        private MoneyValue amtBaseField;
+        private string manufacturerField;
         
-        private MoneyValue amtTaxField;
+        private string partNumberField;
         
-        private MoneyValue amtTotalField;
+        private string scanCodeField;
         
-        private bool isMultilineField;
+        private ProductCategory categoryField;
         
-        private string taxTransactionIdField;
+        private LinkProductAndSupplier[] suppliersField;
         
-        private bool isTaxDirtyField;
+        private CustomField2[] customFieldsField;
         
-        private InvoiceLine[] lineItemsField;
-        
-        private string extNumberField;
-        
-        private System.Nullable<System.DateTime> dtPostedField;
+        private ProductMoneyValues[] currenciesField;
         
         /// <remarks/>
-        public CurrencyType CurrencyTypeId {
+        public InvoiceDictionaryItem InvoiceItem {
             get {
-                return this.currencyTypeIdField;
+                return this.invoiceItemField;
             }
             set {
-                this.currencyTypeIdField = value;
+                this.invoiceItemField = value;
             }
         }
         
         /// <remarks/>
-        public int TimeSetId {
+        public string DisplayAs {
             get {
-                return this.timeSetIdField;
+                return this.displayAsField;
             }
             set {
-                this.timeSetIdField = value;
+                this.displayAsField = value;
             }
         }
         
         /// <remarks/>
-        public TimePeriod Period {
+        public string PartName {
             get {
-                return this.periodField;
+                return this.partNameField;
             }
             set {
-                this.periodField = value;
+                this.partNameField = value;
             }
         }
         
         /// <remarks/>
-        public BillingAccount Group {
+        public string Description {
             get {
-                return this.groupField;
+                return this.descriptionField;
             }
             set {
-                this.groupField = value;
+                this.descriptionField = value;
             }
         }
         
         /// <remarks/>
-        public string Number {
+        public bool Discontinued {
             get {
-                return this.numberField;
+                return this.discontinuedField;
             }
             set {
-                this.numberField = value;
+                this.discontinuedField = value;
             }
         }
         
         /// <remarks/>
-        public CiInvoiceState State {
+        public MhUnit UnitOfMeasureId {
             get {
-                return this.stateField;
+                return this.unitOfMeasureIdField;
             }
             set {
-                this.stateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PoNumber {
-            get {
-                return this.poNumberField;
-            }
-            set {
-                this.poNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Nullable<System.DateTime> DtDue {
-            get {
-                return this.dtDueField;
-            }
-            set {
-                this.dtDueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string GlAccount {
-            get {
-                return this.glAccountField;
-            }
-            set {
-                this.glAccountField = value;
+                this.unitOfMeasureIdField = value;
             }
         }
         
@@ -10073,99 +12606,178 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public MoneyValue AmtBase {
+        public string Manufacturer {
             get {
-                return this.amtBaseField;
+                return this.manufacturerField;
             }
             set {
-                this.amtBaseField = value;
+                this.manufacturerField = value;
             }
         }
         
         /// <remarks/>
-        public MoneyValue AmtTax {
+        public string PartNumber {
             get {
-                return this.amtTaxField;
+                return this.partNumberField;
             }
             set {
-                this.amtTaxField = value;
+                this.partNumberField = value;
             }
         }
         
         /// <remarks/>
-        public MoneyValue AmtTotal {
+        public string ScanCode {
             get {
-                return this.amtTotalField;
+                return this.scanCodeField;
             }
             set {
-                this.amtTotalField = value;
+                this.scanCodeField = value;
             }
         }
         
         /// <remarks/>
-        public bool IsMultiline {
+        public ProductCategory Category {
             get {
-                return this.isMultilineField;
+                return this.categoryField;
             }
             set {
-                this.isMultilineField = value;
+                this.categoryField = value;
             }
         }
         
         /// <remarks/>
-        public string TaxTransactionId {
+        public LinkProductAndSupplier[] Suppliers {
             get {
-                return this.taxTransactionIdField;
+                return this.suppliersField;
             }
             set {
-                this.taxTransactionIdField = value;
+                this.suppliersField = value;
             }
         }
         
         /// <remarks/>
-        public bool IsTaxDirty {
+        public CustomField2[] CustomFields {
             get {
-                return this.isTaxDirtyField;
+                return this.customFieldsField;
             }
             set {
-                this.isTaxDirtyField = value;
+                this.customFieldsField = value;
             }
         }
         
         /// <remarks/>
-        public InvoiceLine[] LineItems {
+        public ProductMoneyValues[] Currencies {
             get {
-                return this.lineItemsField;
+                return this.currenciesField;
             }
             set {
-                this.lineItemsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ExtNumber {
-            get {
-                return this.extNumberField;
-            }
-            set {
-                this.extNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Nullable<System.DateTime> DtPosted {
-            get {
-                return this.dtPostedField;
-            }
-            set {
-                this.dtPostedField = value;
+                this.currenciesField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum MhUnit {
+        
+        /// <remarks/>
+        Unit,
+        
+        /// <remarks/>
+        Kg,
+        
+        /// <remarks/>
+        Lb,
+        
+        /// <remarks/>
+        Liter,
+        
+        /// <remarks/>
+        Gal,
+        
+        /// <remarks/>
+        Ml,
+        
+        /// <remarks/>
+        Oz,
+        
+        /// <remarks/>
+        Meter,
+        
+        /// <remarks/>
+        Ft,
+        
+        /// <remarks/>
+        Box,
+        
+        /// <remarks/>
+        Set,
+        
+        /// <remarks/>
+        Package,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class LinkProductAndSupplier : CorrigoEntityWithOptimisticLock {
+        
+        private int productIdField;
+        
+        private int supplierIdField;
+        
+        private string partNumberField;
+        
+        private bool isDefaultField;
+        
+        /// <remarks/>
+        public int ProductId {
+            get {
+                return this.productIdField;
+            }
+            set {
+                this.productIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SupplierId {
+            get {
+                return this.supplierIdField;
+            }
+            set {
+                this.supplierIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PartNumber {
+            get {
+                return this.partNumberField;
+            }
+            set {
+                this.partNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsDefault {
+            get {
+                return this.isDefaultField;
+            }
+            set {
+                this.isDefaultField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum CiInvoiceState {
@@ -10193,7 +12805,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10220,13 +12832,15 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private MoneyValue rateField;
         
-        private MoneyValue taxRateField;
+        private decimal taxRateField;
         
         private MoneyValue amtTaxField;
         
         private MoneyValue amtTotalField;
         
         private string taxCodeField;
+        
+        private TaxCode taxCodeReferenceField;
         
         /// <remarks/>
         public CurrencyType CurrencyTypeId {
@@ -10330,7 +12944,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public MoneyValue TaxRate {
+        public decimal TaxRate {
             get {
                 return this.taxRateField;
             }
@@ -10368,10 +12982,20 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.taxCodeField = value;
             }
         }
+        
+        /// <remarks/>
+        public TaxCode TaxCodeReference {
+            get {
+                return this.taxCodeReferenceField;
+            }
+            set {
+                this.taxCodeReferenceField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum CiItemType {
@@ -10390,12 +13014,42 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum DraftProcessStep {
+        
+        /// <remarks/>
+        NA,
+        
+        /// <remarks/>
+        Pending,
+        
+        /// <remarks/>
+        ReadyToPost,
+        
+        /// <remarks/>
+        FailedTax,
+        
+        /// <remarks/>
+        FailedPost,
+        
+        /// <remarks/>
+        Disputed,
+        
+        /// <remarks/>
+        Recalled,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public partial class Payment : CorrigoEntityWithOptimisticLock {
+        
+        private CurrencyType currencyTypeIdField;
         
         private BillingAccount groupField;
         
@@ -10411,15 +13065,25 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private System.DateTime dtStampField;
         
-        private decimal amtPaymentField;
+        private MoneyValue amtPaymentField;
         
-        private decimal amtBalanceField;
+        private MoneyValue amtBalanceField;
         
         private System.Nullable<System.DateTime> dtPostedField;
         
         private int timeSetIdField;
         
         private PaymentItem[] itemsField;
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
         
         /// <remarks/>
         public BillingAccount Group {
@@ -10492,7 +13156,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public decimal AmtPayment {
+        public MoneyValue AmtPayment {
             get {
                 return this.amtPaymentField;
             }
@@ -10502,7 +13166,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public decimal AmtBalance {
+        public MoneyValue AmtBalance {
             get {
                 return this.amtBalanceField;
             }
@@ -10544,7 +13208,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum PaymentState {
@@ -10560,7 +13224,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum PaymentMethod {
@@ -10582,7 +13246,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10663,7 +13327,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10768,7 +13432,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum RateType {
@@ -10784,7 +13448,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum VendorType {
@@ -10803,7 +13467,2191 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class Warranty : CorrigoEntityWithOptimisticLock {
+        
+        private string displayAsField;
+        
+        private string additionalInfoField;
+        
+        private bool isTemplateField;
+        
+        private Organization organizationField;
+        
+        private WarrantyStatus statusIdField;
+        
+        private string primaryContactField;
+        
+        private int templateIdField;
+        
+        private WorkOrder workOrderField;
+        
+        private System.Nullable<System.DateTime> startDateField;
+        
+        private System.Nullable<System.DateTime> endDateField;
+        
+        private int autoCoverageField;
+        
+        private SchedInterval laborCoverageTypeIdField;
+        
+        private int laborCoverageLengthField;
+        
+        private SchedInterval partsCoverageTypeIdField;
+        
+        private int partsCoverageLengthField;
+        
+        private SchedInterval otherCoverageTypeIdField;
+        
+        private int otherCoveragerLengthField;
+        
+        private ActorType warrantorTypeIdField;
+        
+        private int warrantorIdField;
+        
+        private string commentField;
+        
+        private Location assetField;
+        
+        private int timeZoneField;
+        
+        private WorkZone workZoneField;
+        
+        private ContactInfo[] contactAddressesField;
+        
+        private bool isManufacturerField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string AdditionalInfo {
+            get {
+                return this.additionalInfoField;
+            }
+            set {
+                this.additionalInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsTemplate {
+            get {
+                return this.isTemplateField;
+            }
+            set {
+                this.isTemplateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Organization Organization {
+            get {
+                return this.organizationField;
+            }
+            set {
+                this.organizationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WarrantyStatus StatusId {
+            get {
+                return this.statusIdField;
+            }
+            set {
+                this.statusIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PrimaryContact {
+            get {
+                return this.primaryContactField;
+            }
+            set {
+                this.primaryContactField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TemplateId {
+            get {
+                return this.templateIdField;
+            }
+            set {
+                this.templateIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WorkOrder WorkOrder {
+            get {
+                return this.workOrderField;
+            }
+            set {
+                this.workOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> StartDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> EndDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int AutoCoverage {
+            get {
+                return this.autoCoverageField;
+            }
+            set {
+                this.autoCoverageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public SchedInterval LaborCoverageTypeId {
+            get {
+                return this.laborCoverageTypeIdField;
+            }
+            set {
+                this.laborCoverageTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int LaborCoverageLength {
+            get {
+                return this.laborCoverageLengthField;
+            }
+            set {
+                this.laborCoverageLengthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public SchedInterval PartsCoverageTypeId {
+            get {
+                return this.partsCoverageTypeIdField;
+            }
+            set {
+                this.partsCoverageTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int PartsCoverageLength {
+            get {
+                return this.partsCoverageLengthField;
+            }
+            set {
+                this.partsCoverageLengthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public SchedInterval OtherCoverageTypeId {
+            get {
+                return this.otherCoverageTypeIdField;
+            }
+            set {
+                this.otherCoverageTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int OtherCoveragerLength {
+            get {
+                return this.otherCoveragerLengthField;
+            }
+            set {
+                this.otherCoveragerLengthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ActorType WarrantorTypeId {
+            get {
+                return this.warrantorTypeIdField;
+            }
+            set {
+                this.warrantorTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int WarrantorId {
+            get {
+                return this.warrantorIdField;
+            }
+            set {
+                this.warrantorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Location Asset {
+            get {
+                return this.assetField;
+            }
+            set {
+                this.assetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TimeZone {
+            get {
+                return this.timeZoneField;
+            }
+            set {
+                this.timeZoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WorkZone WorkZone {
+            get {
+                return this.workZoneField;
+            }
+            set {
+                this.workZoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ContactInfo[] ContactAddresses {
+            get {
+                return this.contactAddressesField;
+            }
+            set {
+                this.contactAddressesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsManufacturer {
+            get {
+                return this.isManufacturerField;
+            }
+            set {
+                this.isManufacturerField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum WarrantyStatus {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        Expired,
+        
+        /// <remarks/>
+        Active,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum SchedInterval {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Day,
+        
+        /// <remarks/>
+        Week,
+        
+        /// <remarks/>
+        Month,
+        
+        /// <remarks/>
+        Quarter,
+        
+        /// <remarks/>
+        Year,
+        
+        /// <remarks/>
+        Custom,
+        
+        /// <remarks/>
+        Weather,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class Portfolio : CorrigoEntityWithOptimisticLock {
+        
+        private string displayAsField;
+        
+        private PortfolioType typeIdField;
+        
+        private int parentPortfolioIdField;
+        
+        private bool useBizHoursField;
+        
+        private bool useHolidaysField;
+        
+        private bool useOnCallField;
+        
+        private bool useEscalationField;
+        
+        private int turnTemplateIdField;
+        
+        private SlaValuesOverride[] slaValuesField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public PortfolioType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ParentPortfolioId {
+            get {
+                return this.parentPortfolioIdField;
+            }
+            set {
+                this.parentPortfolioIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool UseBizHours {
+            get {
+                return this.useBizHoursField;
+            }
+            set {
+                this.useBizHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool UseHolidays {
+            get {
+                return this.useHolidaysField;
+            }
+            set {
+                this.useHolidaysField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool UseOnCall {
+            get {
+                return this.useOnCallField;
+            }
+            set {
+                this.useOnCallField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool UseEscalation {
+            get {
+                return this.useEscalationField;
+            }
+            set {
+                this.useEscalationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TurnTemplateId {
+            get {
+                return this.turnTemplateIdField;
+            }
+            set {
+                this.turnTemplateIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public SlaValuesOverride[] SlaValues {
+            get {
+                return this.slaValuesField;
+            }
+            set {
+                this.slaValuesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum PortfolioType {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Grouping,
+        
+        /// <remarks/>
+        Primary,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class AssetTemplate : CorrigoEntityWithOptimisticLock {
+        
+        private string displayAsField;
+        
+        private int rootAssetIdField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int RootAssetId {
+            get {
+                return this.rootAssetIdField;
+            }
+            set {
+                this.rootAssetIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ProviderCoi : CorrigoEntityWithOptimisticLock {
+        
+        private string displayAsField;
+        
+        private int employeeIdField;
+        
+        private MoneyValue amtCoverageField;
+        
+        private InsuranceStatus statusIdField;
+        
+        private System.DateTime startDateField;
+        
+        private System.DateTime endDateField;
+        
+        private string commentField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int EmployeeId {
+            get {
+                return this.employeeIdField;
+            }
+            set {
+                this.employeeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue AmtCoverage {
+            get {
+                return this.amtCoverageField;
+            }
+            set {
+                this.amtCoverageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public InsuranceStatus StatusId {
+            get {
+                return this.statusIdField;
+            }
+            set {
+                this.statusIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime StartDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime EndDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum InsuranceStatus {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        Expired,
+        
+        /// <remarks/>
+        ExpiringSoon,
+        
+        /// <remarks/>
+        Current,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class TimeCard : CorrigoEntityWithOptimisticLock {
+        
+        private System.DateTime weekStartDateField;
+        
+        private Employee employeeField;
+        
+        private int flaggedField;
+        
+        private TimeCardStatus statusIdField;
+        
+        private TimeCardWeek weekField;
+        
+        /// <remarks/>
+        public System.DateTime WeekStartDate {
+            get {
+                return this.weekStartDateField;
+            }
+            set {
+                this.weekStartDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Employee Employee {
+            get {
+                return this.employeeField;
+            }
+            set {
+                this.employeeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Flagged {
+            get {
+                return this.flaggedField;
+            }
+            set {
+                this.flaggedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TimeCardStatus StatusId {
+            get {
+                return this.statusIdField;
+            }
+            set {
+                this.statusIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TimeCardWeek Week {
+            get {
+                return this.weekField;
+            }
+            set {
+                this.weekField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum TimeCardStatus {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Pending,
+        
+        /// <remarks/>
+        Submitted,
+        
+        /// <remarks/>
+        Approved,
+        
+        /// <remarks/>
+        Exported,
+        
+        /// <remarks/>
+        ReadyForExport,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class TimeCardWeek : CorrigoEntity {
+        
+        private System.DateTime startDateField;
+        
+        private System.DateTime endDateField;
+        
+        /// <remarks/>
+        public System.DateTime StartDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime EndDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class TimeCardItem : CorrigoEntityWithOptimisticLock {
+        
+        private string commentField;
+        
+        private WorkZone workZoneField;
+        
+        private System.Nullable<System.DateTime> endDateField;
+        
+        private System.Nullable<System.DateTime> systemEndDateField;
+        
+        private System.DateTime startDateField;
+        
+        private System.Nullable<System.DateTime> systemStartDateField;
+        
+        private System.DateTime weekStartDateField;
+        
+        private int durationField;
+        
+        private Employee employeeField;
+        
+        private LaborCode laborCodeField;
+        
+        private decimal latitudeStartField;
+        
+        private decimal latitudeStopField;
+        
+        private decimal longitudeStartField;
+        
+        private decimal longitudeStopField;
+        
+        private TimeCard timeCardField;
+        
+        private TimeCardType typeIdField;
+        
+        private FinancialItem internalCostItemField;
+        
+        private WorkOrder workOrderField;
+        
+        private int qtyField;
+        
+        private decimal rateField;
+        
+        private CurrencyType moneyIdField;
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WorkZone WorkZone {
+            get {
+                return this.workZoneField;
+            }
+            set {
+                this.workZoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> EndDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> SystemEndDate {
+            get {
+                return this.systemEndDateField;
+            }
+            set {
+                this.systemEndDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime StartDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> SystemStartDate {
+            get {
+                return this.systemStartDateField;
+            }
+            set {
+                this.systemStartDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime WeekStartDate {
+            get {
+                return this.weekStartDateField;
+            }
+            set {
+                this.weekStartDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Duration {
+            get {
+                return this.durationField;
+            }
+            set {
+                this.durationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Employee Employee {
+            get {
+                return this.employeeField;
+            }
+            set {
+                this.employeeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LaborCode LaborCode {
+            get {
+                return this.laborCodeField;
+            }
+            set {
+                this.laborCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal LatitudeStart {
+            get {
+                return this.latitudeStartField;
+            }
+            set {
+                this.latitudeStartField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal LatitudeStop {
+            get {
+                return this.latitudeStopField;
+            }
+            set {
+                this.latitudeStopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal LongitudeStart {
+            get {
+                return this.longitudeStartField;
+            }
+            set {
+                this.longitudeStartField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal LongitudeStop {
+            get {
+                return this.longitudeStopField;
+            }
+            set {
+                this.longitudeStopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TimeCard TimeCard {
+            get {
+                return this.timeCardField;
+            }
+            set {
+                this.timeCardField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TimeCardType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public FinancialItem InternalCostItem {
+            get {
+                return this.internalCostItemField;
+            }
+            set {
+                this.internalCostItemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WorkOrder WorkOrder {
+            get {
+                return this.workOrderField;
+            }
+            set {
+                this.workOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Qty {
+            get {
+                return this.qtyField;
+            }
+            set {
+                this.qtyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal Rate {
+            get {
+                return this.rateField;
+            }
+            set {
+                this.rateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType MoneyId {
+            get {
+                return this.moneyIdField;
+            }
+            set {
+                this.moneyIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum TimeCardType {
+        
+        /// <remarks/>
+        Uknown,
+        
+        /// <remarks/>
+        Clock,
+        
+        /// <remarks/>
+        Manual,
+        
+        /// <remarks/>
+        WoLabor,
+        
+        /// <remarks/>
+        Allowance,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class FinancialItem : CorrigoEntityWithOptimisticLock {
+        
+        private int woIdField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        private string commentField;
+        
+        private MoneyValue amountField;
+        
+        private CostCategory costCategoryIdField;
+        
+        private MoneyValue rateField;
+        
+        private System.Nullable<System.DateTime> startDateField;
+        
+        private int durationField;
+        
+        private InvoiceDictionaryItem invoiceItemField;
+        
+        private bool excludeField;
+        
+        private WoCostExclusion ruleModificationField;
+        
+        private Product productField;
+        
+        private Employee employeeField;
+        
+        private decimal quantityField;
+        
+        private LaborCode laborCodeField;
+        
+        private WoCostLineType typeIdField;
+        
+        private MoneyValue taxAmountField;
+        
+        private decimal withholdingTaxRateField;
+        
+        private bool withholdingTaxRateUndefinedField;
+        
+        private StockLocation stockLocationField;
+        
+        private TaxCode taxCodeReferenceField;
+        
+        private System.Nullable<bool> nonBillableField;
+        
+        private string merchantNameField;
+        
+        private bool checkForNonBillableField;
+        
+        /// <remarks/>
+        public int WoId {
+            get {
+                return this.woIdField;
+            }
+            set {
+                this.woIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue Amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                this.amountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CostCategory CostCategoryId {
+            get {
+                return this.costCategoryIdField;
+            }
+            set {
+                this.costCategoryIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue Rate {
+            get {
+                return this.rateField;
+            }
+            set {
+                this.rateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> StartDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Duration {
+            get {
+                return this.durationField;
+            }
+            set {
+                this.durationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public InvoiceDictionaryItem InvoiceItem {
+            get {
+                return this.invoiceItemField;
+            }
+            set {
+                this.invoiceItemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool Exclude {
+            get {
+                return this.excludeField;
+            }
+            set {
+                this.excludeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WoCostExclusion RuleModification {
+            get {
+                return this.ruleModificationField;
+            }
+            set {
+                this.ruleModificationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Product Product {
+            get {
+                return this.productField;
+            }
+            set {
+                this.productField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Employee Employee {
+            get {
+                return this.employeeField;
+            }
+            set {
+                this.employeeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal Quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LaborCode LaborCode {
+            get {
+                return this.laborCodeField;
+            }
+            set {
+                this.laborCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WoCostLineType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue TaxAmount {
+            get {
+                return this.taxAmountField;
+            }
+            set {
+                this.taxAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal WithholdingTaxRate {
+            get {
+                return this.withholdingTaxRateField;
+            }
+            set {
+                this.withholdingTaxRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool WithholdingTaxRateUndefined {
+            get {
+                return this.withholdingTaxRateUndefinedField;
+            }
+            set {
+                this.withholdingTaxRateUndefinedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public StockLocation StockLocation {
+            get {
+                return this.stockLocationField;
+            }
+            set {
+                this.stockLocationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TaxCode TaxCodeReference {
+            get {
+                return this.taxCodeReferenceField;
+            }
+            set {
+                this.taxCodeReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> NonBillable {
+            get {
+                return this.nonBillableField;
+            }
+            set {
+                this.nonBillableField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string MerchantName {
+            get {
+                return this.merchantNameField;
+            }
+            set {
+                this.merchantNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool CheckForNonBillable {
+            get {
+                return this.checkForNonBillableField;
+            }
+            set {
+                this.checkForNonBillableField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum WoCostExclusion {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        Item,
+        
+        /// <remarks/>
+        Category,
+        
+        /// <remarks/>
+        Min,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum WoCostLineType {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Cost,
+        
+        /// <remarks/>
+        Vendor,
+        
+        /// <remarks/>
+        ServiceFee,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class StockLocation : CorrigoEntityWithOptimisticLock {
+        
+        private string displayAsField;
+        
+        private string numberField;
+        
+        private MhLocationType typeIdField;
+        
+        private string shipToNameField;
+        
+        private string billToNameField;
+        
+        private string deliveryInstructionsField;
+        
+        private string commentsField;
+        
+        private bool allowNegativeQtyField;
+        
+        private CurrencyType moneyIdField;
+        
+        private int timeZoneIdField;
+        
+        private Address2[] streetAddressesField;
+        
+        private ContactInfo[] contactAddressesField;
+        
+        private CustomField2[] customFieldsField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Number {
+            get {
+                return this.numberField;
+            }
+            set {
+                this.numberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MhLocationType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ShipToName {
+            get {
+                return this.shipToNameField;
+            }
+            set {
+                this.shipToNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string BillToName {
+            get {
+                return this.billToNameField;
+            }
+            set {
+                this.billToNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DeliveryInstructions {
+            get {
+                return this.deliveryInstructionsField;
+            }
+            set {
+                this.deliveryInstructionsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comments {
+            get {
+                return this.commentsField;
+            }
+            set {
+                this.commentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool AllowNegativeQty {
+            get {
+                return this.allowNegativeQtyField;
+            }
+            set {
+                this.allowNegativeQtyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType MoneyId {
+            get {
+                return this.moneyIdField;
+            }
+            set {
+                this.moneyIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TimeZoneId {
+            get {
+                return this.timeZoneIdField;
+            }
+            set {
+                this.timeZoneIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Address2[] StreetAddresses {
+            get {
+                return this.streetAddressesField;
+            }
+            set {
+                this.streetAddressesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ContactInfo[] ContactAddresses {
+            get {
+                return this.contactAddressesField;
+            }
+            set {
+                this.contactAddressesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CustomField2[] CustomFields {
+            get {
+                return this.customFieldsField;
+            }
+            set {
+                this.customFieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum MhLocationType {
+        
+        /// <remarks/>
+        Other,
+        
+        /// <remarks/>
+        Garage,
+        
+        /// <remarks/>
+        Basement,
+        
+        /// <remarks/>
+        Closet,
+        
+        /// <remarks/>
+        Warehouse,
+        
+        /// <remarks/>
+        StoreRoom,
+        
+        /// <remarks/>
+        Truck,
+        
+        /// <remarks/>
+        Cylinder,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ToDoType : CorrigoEntityWithOptimisticLock {
+        
+        private string displayAsField;
+        
+        private string descriptionField;
+        
+        private bool isDefaultField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsDefault {
+            get {
+                return this.isDefaultField;
+            }
+            set {
+                this.isDefaultField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ReplenishmentOrder : CorrigoEntityWithOptimisticLock {
+        
+        private MhOrderStatus statusIdField;
+        
+        private string descriptionField;
+        
+        private string poNumberField;
+        
+        private System.Nullable<System.DateTime> dEstimatedtDeliveryField;
+        
+        private Employee supplierField;
+        
+        private StockLocation stockLocationField;
+        
+        private string supplierInstructionsField;
+        
+        private string supplierOrderNumberField;
+        
+        private bool isExportedField;
+        
+        private string numberField;
+        
+        private int timeZoneField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        private ReplenishmentOrderItem[] itemsField;
+        
+        /// <remarks/>
+        public MhOrderStatus StatusId {
+            get {
+                return this.statusIdField;
+            }
+            set {
+                this.statusIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PoNumber {
+            get {
+                return this.poNumberField;
+            }
+            set {
+                this.poNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> DEstimatedtDelivery {
+            get {
+                return this.dEstimatedtDeliveryField;
+            }
+            set {
+                this.dEstimatedtDeliveryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Employee Supplier {
+            get {
+                return this.supplierField;
+            }
+            set {
+                this.supplierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public StockLocation StockLocation {
+            get {
+                return this.stockLocationField;
+            }
+            set {
+                this.stockLocationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string SupplierInstructions {
+            get {
+                return this.supplierInstructionsField;
+            }
+            set {
+                this.supplierInstructionsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string SupplierOrderNumber {
+            get {
+                return this.supplierOrderNumberField;
+            }
+            set {
+                this.supplierOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsExported {
+            get {
+                return this.isExportedField;
+            }
+            set {
+                this.isExportedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Number {
+            get {
+                return this.numberField;
+            }
+            set {
+                this.numberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TimeZone {
+            get {
+                return this.timeZoneField;
+            }
+            set {
+                this.timeZoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ReplenishmentOrderItem[] Items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum MhOrderStatus {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Pending,
+        
+        /// <remarks/>
+        OnOrder,
+        
+        /// <remarks/>
+        Shipped,
+        
+        /// <remarks/>
+        Received,
+        
+        /// <remarks/>
+        Partial,
+        
+        /// <remarks/>
+        Cancelled,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ReplenishmentOrderItem : CorrigoEntityWithOptimisticLock {
+        
+        private int replenishmentOrderIdField;
+        
+        private Product productField;
+        
+        private MoneyValue priceField;
+        
+        private decimal qtyOrderedField;
+        
+        private decimal qtyReceivedField;
+        
+        private MoneyValue amtTotalField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        /// <remarks/>
+        public int ReplenishmentOrderId {
+            get {
+                return this.replenishmentOrderIdField;
+            }
+            set {
+                this.replenishmentOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Product Product {
+            get {
+                return this.productField;
+            }
+            set {
+                this.productField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue Price {
+            get {
+                return this.priceField;
+            }
+            set {
+                this.priceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal QtyOrdered {
+            get {
+                return this.qtyOrderedField;
+            }
+            set {
+                this.qtyOrderedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal QtyReceived {
+            get {
+                return this.qtyReceivedField;
+            }
+            set {
+                this.qtyReceivedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue AmtTotal {
+            get {
+                return this.amtTotalField;
+            }
+            set {
+                this.amtTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class CustomFieldAutocompleteOption : CorrigoEntityWithOptimisticLock {
+        
+        private int descriptorIdField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        public int DescriptorId {
+            get {
+                return this.descriptorIdField;
+            }
+            set {
+                this.descriptorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class TimeOff : CorrigoEntityWithOptimisticLock {
+        
+        private int employeeIdField;
+        
+        private System.DateTime startDateField;
+        
+        private System.DateTime endDateField;
+        
+        private int replaceByIdField;
+        
+        /// <remarks/>
+        public int EmployeeId {
+            get {
+                return this.employeeIdField;
+            }
+            set {
+                this.employeeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime StartDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime EndDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ReplaceById {
+            get {
+                return this.replaceByIdField;
+            }
+            set {
+                this.replaceByIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class Turn : CorrigoEntityWithOptimisticLock {
+        
+        private int assetIdField;
+        
+        private int wtTemplateIdField;
+        
+        private System.Nullable<System.DateTime> dtReadyByDueField;
+        
+        private System.Nullable<System.DateTime> dtParentScheduledStartField;
+        
+        private TurnStatus statusIdField;
+        
+        private string errorDetailsField;
+        
+        private int workOrderIdField;
+        
+        /// <remarks/>
+        public int AssetId {
+            get {
+                return this.assetIdField;
+            }
+            set {
+                this.assetIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int WtTemplateId {
+            get {
+                return this.wtTemplateIdField;
+            }
+            set {
+                this.wtTemplateIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> DtReadyByDue {
+            get {
+                return this.dtReadyByDueField;
+            }
+            set {
+                this.dtReadyByDueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> DtParentScheduledStart {
+            get {
+                return this.dtParentScheduledStartField;
+            }
+            set {
+                this.dtParentScheduledStartField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TurnStatus StatusId {
+            get {
+                return this.statusIdField;
+            }
+            set {
+                this.statusIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ErrorDetails {
+            get {
+                return this.errorDetailsField;
+            }
+            set {
+                this.errorDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum TurnStatus {
+        
+        /// <remarks/>
+        Pending,
+        
+        /// <remarks/>
+        Failed,
+        
+        /// <remarks/>
+        Done,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WoFlag : CorrigoEntityWithOptimisticLock {
+        
+        private int woIdField;
+        
+        private int flagIdField;
+        
+        private System.DateTime utcStampField;
+        
+        private string commentField;
+        
+        /// <remarks/>
+        public int WoId {
+            get {
+                return this.woIdField;
+            }
+            set {
+                this.woIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int FlagId {
+            get {
+                return this.flagIdField;
+            }
+            set {
+                this.flagIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime UtcStamp {
+            get {
+                return this.utcStampField;
+            }
+            set {
+                this.utcStampField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10825,6 +15673,10 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private int contactIdField;
         
         private string contactNameField;
+        
+        private bool isMultilineField;
+        
+        private QuoteOrEstimateItem[] itemsField;
         
         /// <remarks/>
         public int WorkOrderId {
@@ -10905,10 +15757,30 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.contactNameField = value;
             }
         }
+        
+        /// <remarks/>
+        public bool IsMultiline {
+            get {
+                return this.isMultilineField;
+            }
+            set {
+                this.isMultilineField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public QuoteOrEstimateItem[] Items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum QuoteStatus {
@@ -10936,7 +15808,148 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class QuoteOrEstimateItem : CorrigoEntityWithOptimisticLock {
+        
+        private int workOrderIdField;
+        
+        private int parentIdField;
+        
+        private ActorType parentTypeIdField;
+        
+        private InvoiceDictionaryItem invoiceItemField;
+        
+        private string descriptionField;
+        
+        private decimal quantityField;
+        
+        private MoneyValue rateField;
+        
+        private MoneyValue amountField;
+        
+        private bool isFlaggedField;
+        
+        private TaxCode taxCodeField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ParentId {
+            get {
+                return this.parentIdField;
+            }
+            set {
+                this.parentIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ActorType ParentTypeId {
+            get {
+                return this.parentTypeIdField;
+            }
+            set {
+                this.parentTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public InvoiceDictionaryItem InvoiceItem {
+            get {
+                return this.invoiceItemField;
+            }
+            set {
+                this.invoiceItemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal Quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue Rate {
+            get {
+                return this.rateField;
+            }
+            set {
+                this.rateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MoneyValue Amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                this.amountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsFlagged {
+            get {
+                return this.isFlaggedField;
+            }
+            set {
+                this.isFlaggedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TaxCode TaxCode {
+            get {
+                return this.taxCodeField;
+            }
+            set {
+                this.taxCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11174,7 +16187,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum OnSiteValidationType {
@@ -11193,7 +16206,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum OnSiteValidationResult {
@@ -11212,7 +16225,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11230,6 +16243,10 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private string reasonField;
         
         private QuoteStatus statusIdField;
+        
+        private bool isMultilineField;
+        
+        private QuoteOrEstimateItem[] itemsField;
         
         /// <remarks/>
         public int WoId {
@@ -11290,10 +16307,30 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.statusIdField = value;
             }
         }
+        
+        /// <remarks/>
+        public bool IsMultiline {
+            get {
+                return this.isMultilineField;
+            }
+            set {
+                this.isMultilineField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public QuoteOrEstimateItem[] Items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11374,7 +16411,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WoRating {
@@ -11399,88 +16436,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class WoPunchListItem : CorrigoEntityWithOptimisticLock {
-        
-        private int workOrderIdField;
-        
-        private int idxField;
-        
-        private string commentField;
-        
-        private bool doneField;
-        
-        private string descriptionField;
-        
-        private string exceptionField;
-        
-        /// <remarks/>
-        public int WorkOrderId {
-            get {
-                return this.workOrderIdField;
-            }
-            set {
-                this.workOrderIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Idx {
-            get {
-                return this.idxField;
-            }
-            set {
-                this.idxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Comment {
-            get {
-                return this.commentField;
-            }
-            set {
-                this.commentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool Done {
-            get {
-                return this.doneField;
-            }
-            set {
-                this.doneField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Exception {
-            get {
-                return this.exceptionField;
-            }
-            set {
-                this.exceptionField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11549,7 +16505,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WoEquipmentType {
@@ -11568,7 +16524,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11661,722 +16617,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class FinancialItem : CorrigoEntityWithOptimisticLock {
-        
-        private int woIdField;
-        
-        private CurrencyType currencyTypeIdField;
-        
-        private string commentField;
-        
-        private MoneyValue amountField;
-        
-        private CostCategory costCategoryIdField;
-        
-        private MoneyValue rateField;
-        
-        private System.Nullable<System.DateTime> startDateField;
-        
-        private int durationField;
-        
-        private InvoiceDictionaryItem invoiceItemField;
-        
-        private bool excludeField;
-        
-        private Product productField;
-        
-        private Employee employeeField;
-        
-        private decimal quantityField;
-        
-        private LaborCode laborCodeField;
-        
-        private WoCostLineType typeIdField;
-        
-        private MoneyValue taxAmountField;
-        
-        /// <remarks/>
-        public int WoId {
-            get {
-                return this.woIdField;
-            }
-            set {
-                this.woIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CurrencyType CurrencyTypeId {
-            get {
-                return this.currencyTypeIdField;
-            }
-            set {
-                this.currencyTypeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Comment {
-            get {
-                return this.commentField;
-            }
-            set {
-                this.commentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public MoneyValue Amount {
-            get {
-                return this.amountField;
-            }
-            set {
-                this.amountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CostCategory CostCategoryId {
-            get {
-                return this.costCategoryIdField;
-            }
-            set {
-                this.costCategoryIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public MoneyValue Rate {
-            get {
-                return this.rateField;
-            }
-            set {
-                this.rateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Nullable<System.DateTime> StartDate {
-            get {
-                return this.startDateField;
-            }
-            set {
-                this.startDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Duration {
-            get {
-                return this.durationField;
-            }
-            set {
-                this.durationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public InvoiceDictionaryItem InvoiceItem {
-            get {
-                return this.invoiceItemField;
-            }
-            set {
-                this.invoiceItemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool Exclude {
-            get {
-                return this.excludeField;
-            }
-            set {
-                this.excludeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Product Product {
-            get {
-                return this.productField;
-            }
-            set {
-                this.productField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Employee Employee {
-            get {
-                return this.employeeField;
-            }
-            set {
-                this.employeeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal Quantity {
-            get {
-                return this.quantityField;
-            }
-            set {
-                this.quantityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public LaborCode LaborCode {
-            get {
-                return this.laborCodeField;
-            }
-            set {
-                this.laborCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public WoCostLineType TypeId {
-            get {
-                return this.typeIdField;
-            }
-            set {
-                this.typeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public MoneyValue TaxAmount {
-            get {
-                return this.taxAmountField;
-            }
-            set {
-                this.taxAmountField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class Product : CorrigoEntity {
-        
-        private InvoiceDictionaryItem invoiceItemField;
-        
-        private string partNameField;
-        
-        /// <remarks/>
-        public InvoiceDictionaryItem InvoiceItem {
-            get {
-                return this.invoiceItemField;
-            }
-            set {
-                this.invoiceItemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PartName {
-            get {
-                return this.partNameField;
-            }
-            set {
-                this.partNameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum WoCostLineType {
-        
-        /// <remarks/>
-        Unknown,
-        
-        /// <remarks/>
-        Cost,
-        
-        /// <remarks/>
-        Vendor,
-        
-        /// <remarks/>
-        ServiceFee,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class Warranty : CorrigoEntityWithOptimisticLock {
-        
-        private string displayAsField;
-        
-        private string additionalInfoField;
-        
-        private bool isTemplateField;
-        
-        private Organization organizationField;
-        
-        private WarrantyStatus statusIdField;
-        
-        private string primaryContactField;
-        
-        private int templateIdField;
-        
-        private WorkOrder workOrderField;
-        
-        private System.Nullable<System.DateTime> startDateField;
-        
-        private System.Nullable<System.DateTime> endDateField;
-        
-        private int autoCoverageField;
-        
-        private SchedInterval laborCoverageTypeIdField;
-        
-        private int laborCoverageLengthField;
-        
-        private SchedInterval partsCoverageTypeIdField;
-        
-        private int partsCoverageLengthField;
-        
-        private ActorType warrantorTypeIdField;
-        
-        private int warrantorIdField;
-        
-        private string commentField;
-        
-        private Location assetField;
-        
-        private int timeZoneField;
-        
-        private WorkZone workZoneField;
-        
-        private ContactInfo[] contactAddressesField;
-        
-        /// <remarks/>
-        public string DisplayAs {
-            get {
-                return this.displayAsField;
-            }
-            set {
-                this.displayAsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string AdditionalInfo {
-            get {
-                return this.additionalInfoField;
-            }
-            set {
-                this.additionalInfoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool IsTemplate {
-            get {
-                return this.isTemplateField;
-            }
-            set {
-                this.isTemplateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Organization Organization {
-            get {
-                return this.organizationField;
-            }
-            set {
-                this.organizationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public WarrantyStatus StatusId {
-            get {
-                return this.statusIdField;
-            }
-            set {
-                this.statusIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PrimaryContact {
-            get {
-                return this.primaryContactField;
-            }
-            set {
-                this.primaryContactField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int TemplateId {
-            get {
-                return this.templateIdField;
-            }
-            set {
-                this.templateIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public WorkOrder WorkOrder {
-            get {
-                return this.workOrderField;
-            }
-            set {
-                this.workOrderField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Nullable<System.DateTime> StartDate {
-            get {
-                return this.startDateField;
-            }
-            set {
-                this.startDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public System.Nullable<System.DateTime> EndDate {
-            get {
-                return this.endDateField;
-            }
-            set {
-                this.endDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int AutoCoverage {
-            get {
-                return this.autoCoverageField;
-            }
-            set {
-                this.autoCoverageField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public SchedInterval LaborCoverageTypeId {
-            get {
-                return this.laborCoverageTypeIdField;
-            }
-            set {
-                this.laborCoverageTypeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int LaborCoverageLength {
-            get {
-                return this.laborCoverageLengthField;
-            }
-            set {
-                this.laborCoverageLengthField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public SchedInterval PartsCoverageTypeId {
-            get {
-                return this.partsCoverageTypeIdField;
-            }
-            set {
-                this.partsCoverageTypeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int PartsCoverageLength {
-            get {
-                return this.partsCoverageLengthField;
-            }
-            set {
-                this.partsCoverageLengthField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ActorType WarrantorTypeId {
-            get {
-                return this.warrantorTypeIdField;
-            }
-            set {
-                this.warrantorTypeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int WarrantorId {
-            get {
-                return this.warrantorIdField;
-            }
-            set {
-                this.warrantorIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Comment {
-            get {
-                return this.commentField;
-            }
-            set {
-                this.commentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Location Asset {
-            get {
-                return this.assetField;
-            }
-            set {
-                this.assetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int TimeZone {
-            get {
-                return this.timeZoneField;
-            }
-            set {
-                this.timeZoneField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public WorkZone WorkZone {
-            get {
-                return this.workZoneField;
-            }
-            set {
-                this.workZoneField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ContactInfo[] ContactAddresses {
-            get {
-                return this.contactAddressesField;
-            }
-            set {
-                this.contactAddressesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum WarrantyStatus {
-        
-        /// <remarks/>
-        None,
-        
-        /// <remarks/>
-        Expired,
-        
-        /// <remarks/>
-        Active,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum SchedInterval {
-        
-        /// <remarks/>
-        Unknown,
-        
-        /// <remarks/>
-        Day,
-        
-        /// <remarks/>
-        Week,
-        
-        /// <remarks/>
-        Month,
-        
-        /// <remarks/>
-        Quarter,
-        
-        /// <remarks/>
-        Year,
-        
-        /// <remarks/>
-        Custom,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class Portfolio : CorrigoEntityWithOptimisticLock {
-        
-        private string displayAsField;
-        
-        private PortfolioType typeIdField;
-        
-        private int parentPortfolioIdField;
-        
-        private bool useBizHoursField;
-        
-        private bool useHolidaysField;
-        
-        private bool useOnCallField;
-        
-        private bool useEscalationField;
-        
-        /// <remarks/>
-        public string DisplayAs {
-            get {
-                return this.displayAsField;
-            }
-            set {
-                this.displayAsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public PortfolioType TypeId {
-            get {
-                return this.typeIdField;
-            }
-            set {
-                this.typeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int ParentPortfolioId {
-            get {
-                return this.parentPortfolioIdField;
-            }
-            set {
-                this.parentPortfolioIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool UseBizHours {
-            get {
-                return this.useBizHoursField;
-            }
-            set {
-                this.useBizHoursField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool UseHolidays {
-            get {
-                return this.useHolidaysField;
-            }
-            set {
-                this.useHolidaysField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool UseOnCall {
-            get {
-                return this.useOnCallField;
-            }
-            set {
-                this.useOnCallField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool UseEscalation {
-            get {
-                return this.useEscalationField;
-            }
-            set {
-                this.useEscalationField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum PortfolioType {
-        
-        /// <remarks/>
-        Unknown,
-        
-        /// <remarks/>
-        Grouping,
-        
-        /// <remarks/>
-        Primary,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class AssetTemplate : CorrigoEntityWithOptimisticLock {
-        
-        private string displayAsField;
-        
-        private int rootAssetIdField;
-        
-        /// <remarks/>
-        public string DisplayAs {
-            get {
-                return this.displayAsField;
-            }
-            set {
-                this.displayAsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int RootAssetId {
-            get {
-                return this.rootAssetIdField;
-            }
-            set {
-                this.rootAssetIdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12457,40 +16698,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class PunchListMasterNote : CorrigoEntity {
-        
-        private string displayAsField;
-        
-        private int idxField;
-        
-        /// <remarks/>
-        public string DisplayAs {
-            get {
-                return this.displayAsField;
-            }
-            set {
-                this.displayAsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Idx {
-            get {
-                return this.idxField;
-            }
-            set {
-                this.idxField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12516,6 +16724,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private int completedEmployeeIdField;
         
         private System.Nullable<System.DateTime> dtUtcCompletedField;
+        
+        private ToDoType typeField;
         
         /// <remarks/>
         public int ActorId {
@@ -12618,10 +16828,172 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.dtUtcCompletedField = value;
             }
         }
+        
+        /// <remarks/>
+        public ToDoType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTree))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public abstract partial class CorrigoEntityWithComposedIdOfAssetTreeEntitySpecifierInvTree : CorrigoEntity {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class AssetTree : CorrigoEntityWithComposedIdOfAssetTreeEntitySpecifierInvTree {
+        
+        private int parentIdField;
+        
+        private int childIdField;
+        
+        private Location childField;
+        
+        private byte distanceField;
+        
+        /// <remarks/>
+        public int ParentId {
+            get {
+                return this.parentIdField;
+            }
+            set {
+                this.parentIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ChildId {
+            get {
+                return this.childIdField;
+            }
+            set {
+                this.childIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Location Child {
+            get {
+                return this.childField;
+            }
+            set {
+                this.childField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public byte Distance {
+            get {
+                return this.distanceField;
+            }
+            set {
+                this.distanceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class PrintoutTemplate : CorrigoEntity {
+        
+        private string displayAsField;
+        
+        private bool isDefaultField;
+        
+        private bool isHiddenField;
+        
+        private PrintoutStatus statusIdField;
+        
+        private ActorType actorTypeIdField;
+        
+        /// <remarks/>
+        public string DisplayAs {
+            get {
+                return this.displayAsField;
+            }
+            set {
+                this.displayAsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsDefault {
+            get {
+                return this.isDefaultField;
+            }
+            set {
+                this.isDefaultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsHidden {
+            get {
+                return this.isHiddenField;
+            }
+            set {
+                this.isHiddenField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public PrintoutStatus StatusId {
+            get {
+                return this.statusIdField;
+            }
+            set {
+                this.statusIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ActorType ActorTypeId {
+            get {
+                return this.actorTypeIdField;
+            }
+            set {
+                this.actorTypeIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum PrintoutStatus {
+        
+        /// <remarks/>
+        NotValidated,
+        
+        /// <remarks/>
+        Valid,
+        
+        /// <remarks/>
+        Invalid,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12666,7 +17038,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12735,7 +17107,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WONoteType {
@@ -12754,7 +17126,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12812,7 +17184,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WOActionProperty {
@@ -12866,6 +17238,15 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         ScanType,
         
         /// <remarks/>
+        CustomerAdded,
+        
+        /// <remarks/>
+        CustomerRemoved,
+        
+        /// <remarks/>
+        TriggerEventId,
+        
+        /// <remarks/>
         PrevWoStatus,
         
         /// <remarks/>
@@ -12873,10 +17254,25 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         MsgAddress,
+        
+        /// <remarks/>
+        ApptWindowStart,
+        
+        /// <remarks/>
+        ApptWindowEnd,
+        
+        /// <remarks/>
+        UiSubType,
+        
+        /// <remarks/>
+        ProviderNotCompliant,
+        
+        /// <remarks/>
+        IntValues,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13029,7 +17425,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum UIType {
@@ -13068,11 +17464,20 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         WON,
         
         /// <remarks/>
+        WonRequestor,
+        
+        /// <remarks/>
+        CustomerPortalApp,
+        
+        /// <remarks/>
+        JetApp,
+        
+        /// <remarks/>
         OTHER,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13177,7 +17582,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum BillStatus {
@@ -13202,77 +17607,662 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         Billed_BilledAndModified,
+        
+        /// <remarks/>
+        ReadyToBeBilled_Billed_BilledAndModified,
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetTree))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceLog))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public abstract partial class CorrigoEntityWithComposedIdOfAssetTreeEntitySpecifierInvTree : CorrigoEntity {
+    public abstract partial class CorrigoEntityWithComposedIdOfInvoiceLogEntitySpecifierCiLog : CorrigoEntity {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public partial class AssetTree : CorrigoEntityWithComposedIdOfAssetTreeEntitySpecifierInvTree {
+    public partial class InvoiceLog : CorrigoEntityWithComposedIdOfInvoiceLogEntitySpecifierCiLog {
         
-        private int parentIdField;
+        private Invoice invoiceField;
         
-        private int childIdField;
+        private Actor actorField;
         
-        private Location childField;
+        private int idxField;
         
-        private byte distanceField;
+        private CiActionType actionTypeIdField;
+        
+        private System.DateTime dtStampField;
+        
+        private System.DateTime dtActualField;
+        
+        private string commentsField;
         
         /// <remarks/>
-        public int ParentId {
+        public Invoice Invoice {
             get {
-                return this.parentIdField;
+                return this.invoiceField;
             }
             set {
-                this.parentIdField = value;
+                this.invoiceField = value;
             }
         }
         
         /// <remarks/>
-        public int ChildId {
+        public Actor Actor {
             get {
-                return this.childIdField;
+                return this.actorField;
             }
             set {
-                this.childIdField = value;
+                this.actorField = value;
             }
         }
         
         /// <remarks/>
-        public Location Child {
+        public int Idx {
             get {
-                return this.childField;
+                return this.idxField;
             }
             set {
-                this.childField = value;
+                this.idxField = value;
             }
         }
         
         /// <remarks/>
-        public byte Distance {
+        public CiActionType ActionTypeId {
             get {
-                return this.distanceField;
+                return this.actionTypeIdField;
             }
             set {
-                this.distanceField = value;
+                this.actionTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime DtStamp {
+            get {
+                return this.dtStampField;
+            }
+            set {
+                this.dtStampField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime DtActual {
+            get {
+                return this.dtActualField;
+            }
+            set {
+                this.dtActualField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comments {
+            get {
+                return this.commentsField;
+            }
+            set {
+                this.commentsField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum CiActionType {
+        
+        /// <remarks/>
+        Created,
+        
+        /// <remarks/>
+        TaxComputed,
+        
+        /// <remarks/>
+        Posted,
+        
+        /// <remarks/>
+        Paid,
+        
+        /// <remarks/>
+        PaymentSubmitted,
+        
+        /// <remarks/>
+        Disputed,
+        
+        /// <remarks/>
+        Approved,
+        
+        /// <remarks/>
+        DocumentAttached,
+        
+        /// <remarks/>
+        Recalled,
+        
+        /// <remarks/>
+        ManuallySent,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class MaterialTransaction : CorrigoEntity {
+        
+        private MhTransactionType typeIdField;
+        
+        private int workOrderIdField;
+        
+        private string poNumberField;
+        
+        private int supplierIdField;
+        
+        private string supplierOrderNumberField;
+        
+        private System.DateTime transactionDateField;
+        
+        private string commentsField;
+        
+        private int creatorIdField;
+        
+        private ActorType creatorTypeIdField;
+        
+        private bool isCommittedField;
+        
+        private int stockLocationIdField;
+        
+        private int sourceStockLocationIdField;
+        
+        private int replenishmentOrderIdField;
+        
+        private MaterialTransactionItem[] itemsField;
+        
+        /// <remarks/>
+        public MhTransactionType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PoNumber {
+            get {
+                return this.poNumberField;
+            }
+            set {
+                this.poNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SupplierId {
+            get {
+                return this.supplierIdField;
+            }
+            set {
+                this.supplierIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string SupplierOrderNumber {
+            get {
+                return this.supplierOrderNumberField;
+            }
+            set {
+                this.supplierOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime TransactionDate {
+            get {
+                return this.transactionDateField;
+            }
+            set {
+                this.transactionDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comments {
+            get {
+                return this.commentsField;
+            }
+            set {
+                this.commentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int CreatorId {
+            get {
+                return this.creatorIdField;
+            }
+            set {
+                this.creatorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ActorType CreatorTypeId {
+            get {
+                return this.creatorTypeIdField;
+            }
+            set {
+                this.creatorTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsCommitted {
+            get {
+                return this.isCommittedField;
+            }
+            set {
+                this.isCommittedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int StockLocationId {
+            get {
+                return this.stockLocationIdField;
+            }
+            set {
+                this.stockLocationIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SourceStockLocationId {
+            get {
+                return this.sourceStockLocationIdField;
+            }
+            set {
+                this.sourceStockLocationIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ReplenishmentOrderId {
+            get {
+                return this.replenishmentOrderIdField;
+            }
+            set {
+                this.replenishmentOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MaterialTransactionItem[] Items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum MhTransactionType {
+        
+        /// <remarks/>
+        Other,
+        
+        /// <remarks/>
+        Receive,
+        
+        /// <remarks/>
+        UseInService,
+        
+        /// <remarks/>
+        Issue,
+        
+        /// <remarks/>
+        Adjust,
+        
+        /// <remarks/>
+        Return,
+        
+        /// <remarks/>
+        Transfer,
+        
+        /// <remarks/>
+        Remove,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class MaterialTransactionItem : CorrigoEntity {
+        
+        private int transactionIdField;
+        
+        private int productIdField;
+        
+        private int stockLocationIdField;
+        
+        private int sourceStockLocationIdField;
+        
+        private MhTransactionType typeIdField;
+        
+        private int financialItemIdField;
+        
+        private decimal quantityField;
+        
+        private System.Nullable<decimal> priceField;
+        
+        private System.Nullable<decimal> lineAmountField;
+        
+        private int replenishmentOrderItemIdField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        /// <remarks/>
+        public int TransactionId {
+            get {
+                return this.transactionIdField;
+            }
+            set {
+                this.transactionIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ProductId {
+            get {
+                return this.productIdField;
+            }
+            set {
+                this.productIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int StockLocationId {
+            get {
+                return this.stockLocationIdField;
+            }
+            set {
+                this.stockLocationIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SourceStockLocationId {
+            get {
+                return this.sourceStockLocationIdField;
+            }
+            set {
+                this.sourceStockLocationIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MhTransactionType TypeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int FinancialItemId {
+            get {
+                return this.financialItemIdField;
+            }
+            set {
+                this.financialItemIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal Quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Price {
+            get {
+                return this.priceField;
+            }
+            set {
+                this.priceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> LineAmount {
+            get {
+                return this.lineAmountField;
+            }
+            set {
+                this.lineAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ReplenishmentOrderItemId {
+            get {
+                return this.replenishmentOrderItemIdField;
+            }
+            set {
+                this.replenishmentOrderItemIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class StockLocationInventoryDetails : CorrigoEntity {
+        
+        private int stockLocationIdField;
+        
+        private int productIdField;
+        
+        private System.Nullable<decimal> priceField;
+        
+        private decimal quantityField;
+        
+        private System.DateTime createdOnField;
+        
+        private CurrencyType currencyTypeIdField;
+        
+        /// <remarks/>
+        public int StockLocationId {
+            get {
+                return this.stockLocationIdField;
+            }
+            set {
+                this.stockLocationIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ProductId {
+            get {
+                return this.productIdField;
+            }
+            set {
+                this.productIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Price {
+            get {
+                return this.priceField;
+            }
+            set {
+                this.priceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal Quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime CreatedOn {
+            get {
+                return this.createdOnField;
+            }
+            set {
+                this.createdOnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CurrencyType CurrencyTypeId {
+            get {
+                return this.currencyTypeIdField;
+            }
+            set {
+                this.currencyTypeIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class InternalCostStatus : CorrigoEntity {
+        
+        private string nameField;
+        
+        private string descriptionField;
+        
+        private ForecastGroup forecastGroupIdField;
+        
+        private CostState internalCostStateIdField;
+        
+        /// <remarks/>
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ForecastGroup ForecastGroupId {
+            get {
+                return this.forecastGroupIdField;
+            }
+            set {
+                this.forecastGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CostState InternalCostStateId {
+            get {
+                return this.internalCostStateIdField;
+            }
+            set {
+                this.internalCostStateIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum CostState {
+        
+        /// <remarks/>
+        Pending,
+        
+        /// <remarks/>
+        Submitted,
+        
+        /// <remarks/>
+        Approved,
+        
+        /// <remarks/>
+        Exported,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum BillingRule {
@@ -13297,10 +18287,13 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         /// <remarks/>
         CostsAndFees,
+        
+        /// <remarks/>
+        ApprovedEstimate,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum TaxValidationStatus {
@@ -13322,26 +18315,114 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum CostState {
+    public partial class TaxDetail {
+        
+        private JurisdictionType jurisTypeField;
+        
+        private string jurisNameField;
+        
+        private decimal rateField;
+        
+        private decimal taxCalculatedField;
+        
+        private int moneyIdField;
+        
+        private System.Nullable<System.DateTime> taxDateField;
         
         /// <remarks/>
-        Pending,
+        public JurisdictionType JurisType {
+            get {
+                return this.jurisTypeField;
+            }
+            set {
+                this.jurisTypeField = value;
+            }
+        }
         
         /// <remarks/>
-        Submitted,
+        public string JurisName {
+            get {
+                return this.jurisNameField;
+            }
+            set {
+                this.jurisNameField = value;
+            }
+        }
         
         /// <remarks/>
-        Approved,
+        public decimal Rate {
+            get {
+                return this.rateField;
+            }
+            set {
+                this.rateField = value;
+            }
+        }
         
         /// <remarks/>
-        Exported,
+        public decimal TaxCalculated {
+            get {
+                return this.taxCalculatedField;
+            }
+            set {
+                this.taxCalculatedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int MoneyId {
+            get {
+                return this.moneyIdField;
+            }
+            set {
+                this.moneyIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> TaxDate {
+            get {
+                return this.taxDateField;
+            }
+            set {
+                this.taxDateField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum JurisdictionType {
+        
+        /// <remarks/>
+        Country,
+        
+        /// <remarks/>
+        Composite,
+        
+        /// <remarks/>
+        State,
+        
+        /// <remarks/>
+        County,
+        
+        /// <remarks/>
+        City,
+        
+        /// <remarks/>
+        Special,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WorkOrderStatus {
@@ -13359,12 +18440,6 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         Cancelled,
         
         /// <remarks/>
-        Closed,
-        
-        /// <remarks/>
-        Attention,
-        
-        /// <remarks/>
         New,
         
         /// <remarks/>
@@ -13378,7 +18453,32 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum IsmStatus {
+        
+        /// <remarks/>
+        NotApplicable,
+        
+        /// <remarks/>
+        NotRequired,
+        
+        /// <remarks/>
+        Passed,
+        
+        /// <remarks/>
+        PassedManual,
+        
+        /// <remarks/>
+        Waiting,
+        
+        /// <remarks/>
+        Started,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13401,7 +18501,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AllProperties))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertySet))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13410,7 +18510,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13419,7 +18519,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13440,7 +18540,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13452,6 +18552,10 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private string companyNameField;
         
         private Protocols protocolField;
+        
+        private string companyVersionField;
+        
+        private int companyIdField;
         
         /// <remarks/>
         public string Url {
@@ -13482,10 +18586,30 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.protocolField = value;
             }
         }
+        
+        /// <remarks/>
+        public string CompanyVersion {
+            get {
+                return this.companyVersionField;
+            }
+            set {
+                this.companyVersionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int CompanyId {
+            get {
+                return this.companyIdField;
+            }
+            set {
+                this.companyIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum Protocols {
@@ -13498,7 +18622,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13543,7 +18667,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13564,7 +18688,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13585,7 +18709,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13606,7 +18730,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13627,7 +18751,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13648,7 +18772,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13669,7 +18793,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13702,7 +18826,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13723,7 +18847,338 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class GetLicensedProvidersResponse : CommandResponse {
+        
+        private LicensedProvider[] providersField;
+        
+        /// <remarks/>
+        public LicensedProvider[] Providers {
+            get {
+                return this.providersField;
+            }
+            set {
+                this.providersField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class LicensedProvider {
+        
+        private int orderIdxField;
+        
+        private int employeeIdField;
+        
+        private string employeeNameField;
+        
+        private string coverageTypeNameField;
+        
+        private int coverageTypeIdField;
+        
+        private int licenseTypeIdField;
+        
+        private string licenseTypeNameField;
+        
+        /// <remarks/>
+        public int OrderIdx {
+            get {
+                return this.orderIdxField;
+            }
+            set {
+                this.orderIdxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int EmployeeId {
+            get {
+                return this.employeeIdField;
+            }
+            set {
+                this.employeeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string EmployeeName {
+            get {
+                return this.employeeNameField;
+            }
+            set {
+                this.employeeNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CoverageTypeName {
+            get {
+                return this.coverageTypeNameField;
+            }
+            set {
+                this.coverageTypeNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int CoverageTypeId {
+            get {
+                return this.coverageTypeIdField;
+            }
+            set {
+                this.coverageTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int LicenseTypeId {
+            get {
+                return this.licenseTypeIdField;
+            }
+            set {
+                this.licenseTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string LicenseTypeName {
+            get {
+                return this.licenseTypeNameField;
+            }
+            set {
+                this.licenseTypeNameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class VerifyWorkResponse : CommandResponse {
+        
+        private WoVerification workVerificationField;
+        
+        /// <remarks/>
+        public WoVerification WorkVerification {
+            get {
+                return this.workVerificationField;
+            }
+            set {
+                this.workVerificationField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class SendWorkOrderResponse : CommandResponse {
+        
+        private WorkOrder workOrderField;
+        
+        /// <remarks/>
+        public WorkOrder WorkOrder {
+            get {
+                return this.workOrderField;
+            }
+            set {
+                this.workOrderField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class TimeCardActionResponse : CommandResponse {
+        
+        private TimeCard timeCardField;
+        
+        /// <remarks/>
+        public TimeCard TimeCard {
+            get {
+                return this.timeCardField;
+            }
+            set {
+                this.timeCardField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class UpdateInvoiceStateCommandResponse : CommandResponse {
+        
+        private Invoice invoiceField;
+        
+        /// <remarks/>
+        public Invoice Invoice {
+            get {
+                return this.invoiceField;
+            }
+            set {
+                this.invoiceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class CreateWoPrintoutResponse : CommandResponse {
+        
+        private byte[] printoutBodyField;
+        
+        private string filenameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] PrintoutBody {
+            get {
+                return this.printoutBodyField;
+            }
+            set {
+                this.printoutBodyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Filename {
+            get {
+                return this.filenameField;
+            }
+            set {
+                this.filenameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class MaterialTransactionCommitResponse : CommandResponse {
+        
+        private MaterialTransaction transactionField;
+        
+        /// <remarks/>
+        public MaterialTransaction Transaction {
+            get {
+                return this.transactionField;
+            }
+            set {
+                this.transactionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class GetProcedureStepsDocumentsResponse : CommandResponse {
+        
+        private ProcedureStepDocument[] documentsField;
+        
+        /// <remarks/>
+        public ProcedureStepDocument[] Documents {
+            get {
+                return this.documentsField;
+            }
+            set {
+                this.documentsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class ProcedureStepDocument {
+        
+        private int documentIdField;
+        
+        private string urlField;
+        
+        private int procedureStepIdField;
+        
+        private System.DateTime documentCreatedUtcField;
+        
+        /// <remarks/>
+        public int DocumentId {
+            get {
+                return this.documentIdField;
+            }
+            set {
+                this.documentIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Url {
+            get {
+                return this.urlField;
+            }
+            set {
+                this.urlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ProcedureStepId {
+            get {
+                return this.procedureStepIdField;
+            }
+            set {
+                this.procedureStepIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime DocumentCreatedUtc {
+            get {
+                return this.documentCreatedUtcField;
+            }
+            set {
+                this.documentCreatedUtcField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13850,6 +19305,13 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CostStatusChangeCommand))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoFlagCommand))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoCreateCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoRecallCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoMessageCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneratePmWoCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWoInductionAndSafetyStatusCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoCopyCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoSetFlagsCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoClearFlagsCommand))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoScheduleRoutine))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCompanyWsdkUrlCommand))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoAutoAssignRoutine))]
@@ -13863,7 +19325,20 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConvertMoneyValuesCommand))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AddChildWorkOrderRoutine))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPreferredAssigneesRoutine))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetLicensedProvidersRoutine))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerifyWorkCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SendWorkOrderCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCardActionCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTimeCardCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SetWorkOrderDependencyCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceDisputeCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateWoPrintoutCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkZoneDeleteCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PortfolioDeleteCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InvoiceRecallCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MaterialTransactionCommitCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetProcedureStepsDocumentsRoutine))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13872,7 +19347,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13930,7 +19405,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13951,7 +19426,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13985,7 +19460,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14006,7 +19481,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14039,7 +19514,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14060,7 +19535,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14081,7 +19556,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14127,7 +19602,14 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CostStatusChangeCommand))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoFlagCommand))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoCreateCommand))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoRecallCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoMessageCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneratePmWoCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWoInductionAndSafetyStatusCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoCopyCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoSetFlagsCommand))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WoClearFlagsCommand))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14208,7 +19690,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WOStatus {
@@ -14226,9 +19708,6 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         Cancelled,
         
         /// <remarks/>
-        Attention,
-        
-        /// <remarks/>
         New,
         
         /// <remarks/>
@@ -14242,7 +19721,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14251,7 +19730,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14260,7 +19739,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14269,7 +19748,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14278,7 +19757,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14287,7 +19766,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14296,7 +19775,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14329,7 +19808,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum CompletionNoteOptions {
@@ -14345,7 +19824,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14354,7 +19833,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private int[] assigneesField;
         
-        private WoChangeAssigmentMode modeField;
+        private ChangeAssignmentMode modeField;
         
         /// <remarks/>
         public int[] Assignees {
@@ -14367,7 +19846,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public WoChangeAssigmentMode Mode {
+        public ChangeAssignmentMode Mode {
             get {
                 return this.modeField;
             }
@@ -14378,10 +19857,10 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum WoChangeAssigmentMode {
+    public enum ChangeAssignmentMode {
         
         /// <remarks/>
         Primary,
@@ -14398,23 +19877,23 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApSubmitPaymentCommand))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public partial class ApStatusChangeCommand : BaseWoActionCommand {
         
-        private APInvoiceStatus vendorInvoiceStatusIdField;
+        private int vendorInvoiceStatusIdField;
         
         private bool keepCommentIntactField;
         
-        private APInvoiceStatus currentStatusIdField;
+        private int currentStatusIdField;
         
         private int financialConcurrencyIdField;
         
         /// <remarks/>
-        public APInvoiceStatus VendorInvoiceStatusId {
+        public int VendorInvoiceStatusId {
             get {
                 return this.vendorInvoiceStatusIdField;
             }
@@ -14434,7 +19913,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public APInvoiceStatus CurrentStatusId {
+        public int CurrentStatusId {
             get {
                 return this.currentStatusIdField;
             }
@@ -14455,38 +19934,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum APInvoiceStatus {
-        
-        /// <remarks/>
-        Unknown,
-        
-        /// <remarks/>
-        None,
-        
-        /// <remarks/>
-        Received,
-        
-        /// <remarks/>
-        Paid,
-        
-        /// <remarks/>
-        Waiting,
-        
-        /// <remarks/>
-        Authorized,
-        
-        /// <remarks/>
-        Exported,
-        
-        /// <remarks/>
-        Disputed,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14532,23 +19980,23 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public partial class CostStatusChangeCommand : BaseWoActionCommand {
         
-        private CostStatus costStatusIdField;
+        private int costStatusIdField;
         
         private bool keepCommentIntactField;
         
-        private CostStatus currentStatusIdField;
+        private int currentStatusIdField;
         
         private int financialConcurrencyIdField;
         
         /// <remarks/>
-        public CostStatus CostStatusId {
+        public int CostStatusId {
             get {
                 return this.costStatusIdField;
             }
@@ -14568,7 +20016,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public CostStatus CurrentStatusId {
+        public int CurrentStatusId {
             get {
                 return this.currentStatusIdField;
             }
@@ -14589,29 +20037,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
-    public enum CostStatus {
-        
-        /// <remarks/>
-        Unknown,
-        
-        /// <remarks/>
-        Pending,
-        
-        /// <remarks/>
-        Submitted,
-        
-        /// <remarks/>
-        Approved,
-        
-        /// <remarks/>
-        Exported,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14620,7 +20046,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14643,7 +20069,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private bool skipBillToLogicField;
         
-        private bool skipPunchListsField;
+        private bool skipProceduresField;
         
         private string externalNumberField;
         
@@ -14728,12 +20154,12 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
-        public bool SkipPunchLists {
+        public bool SkipProcedures {
             get {
-                return this.skipPunchListsField;
+                return this.skipProceduresField;
             }
             set {
-                this.skipPunchListsField = value;
+                this.skipProceduresField = value;
             }
         }
         
@@ -14749,7 +20175,142 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WoRecallCommand : BaseWoActionCommand {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WoMessageCommand : BaseWoActionCommand {
+        
+        private int senderIdField;
+        
+        private ActorType senderTypeField;
+        
+        /// <remarks/>
+        public int SenderId {
+            get {
+                return this.senderIdField;
+            }
+            set {
+                this.senderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ActorType SenderType {
+            get {
+                return this.senderTypeField;
+            }
+            set {
+                this.senderTypeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class GeneratePmWoCommand : BaseWoActionCommand {
+        
+        private int pmScheduleIdField;
+        
+        /// <remarks/>
+        public int PmScheduleId {
+            get {
+                return this.pmScheduleIdField;
+            }
+            set {
+                this.pmScheduleIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class UpdateWoInductionAndSafetyStatusCommand : BaseWoActionCommand {
+        
+        private IsmStatus inductionAndSafetyStatusIDField;
+        
+        /// <remarks/>
+        public IsmStatus InductionAndSafetyStatusID {
+            get {
+                return this.inductionAndSafetyStatusIDField;
+            }
+            set {
+                this.inductionAndSafetyStatusIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WoCopyCommand : BaseWoActionCommand {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WoSetFlagsCommand : BaseWoActionCommand {
+        
+        private int[] flagsToSetField;
+        
+        /// <remarks/>
+        public int[] FlagsToSet {
+            get {
+                return this.flagsToSetField;
+            }
+            set {
+                this.flagsToSetField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WoClearFlagsCommand : BaseWoActionCommand {
+        
+        private int[] flagsToClearField;
+        
+        /// <remarks/>
+        public int[] FlagsToClear {
+            get {
+                return this.flagsToClearField;
+            }
+            set {
+                this.flagsToClearField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14807,7 +20368,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     
     /// <remarks/>
     [System.FlagsAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum WoScheduleOptions {
@@ -14838,7 +20399,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14871,7 +20432,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14904,7 +20465,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14917,11 +20478,15 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         
         private System.DateTime endDateField;
         
+        private System.DateTime moveInDateField;
+        
         private System.DateTime moveOutDateField;
         
         private string instructionsField;
         
         private int unitIdField;
+        
+        private DuplicateUnitMode ifUnitAlreadyExistsField;
         
         private NewUnitSpecifier newUnitSpecifierField;
         
@@ -14956,6 +20521,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public System.DateTime MoveInDate {
+            get {
+                return this.moveInDateField;
+            }
+            set {
+                this.moveInDateField = value;
+            }
+        }
+        
+        /// <remarks/>
         public System.DateTime MoveOutDate {
             get {
                 return this.moveOutDateField;
@@ -14986,6 +20561,16 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         }
         
         /// <remarks/>
+        public DuplicateUnitMode IfUnitAlreadyExists {
+            get {
+                return this.ifUnitAlreadyExistsField;
+            }
+            set {
+                this.ifUnitAlreadyExistsField = value;
+            }
+        }
+        
+        /// <remarks/>
         public NewUnitSpecifier NewUnitSpecifier {
             get {
                 return this.newUnitSpecifierField;
@@ -14997,7 +20582,26 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum DuplicateUnitMode {
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        Fail,
+        
+        /// <remarks/>
+        Reuse,
+        
+        /// <remarks/>
+        Ignore,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15054,7 +20658,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15099,7 +20703,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15108,7 +20712,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15141,7 +20745,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15162,7 +20766,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15195,7 +20799,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15228,7 +20832,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15249,7 +20853,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15269,6 +20873,8 @@ namespace CorrigoServiceWebReference.CorrigoGA {
         private int recordCountField;
         
         private bool updateRoundRobinField;
+        
+        private string countryField;
         
         /// <remarks/>
         public int SpecialtyId {
@@ -15339,10 +20945,576 @@ namespace CorrigoServiceWebReference.CorrigoGA {
                 this.updateRoundRobinField = value;
             }
         }
+        
+        /// <remarks/>
+        public string Country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class GetLicensedProvidersRoutine : CommandRequest {
+        
+        private int specialtyIdField;
+        
+        private string postalCodeField;
+        
+        private System.Nullable<System.DateTime> timeStampField;
+        
+        private int customerIdField;
+        
+        private int recordCountField;
+        
+        private string countryField;
+        
+        /// <remarks/>
+        public int SpecialtyId {
+            get {
+                return this.specialtyIdField;
+            }
+            set {
+                this.specialtyIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PostalCode {
+            get {
+                return this.postalCodeField;
+            }
+            set {
+                this.postalCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> TimeStamp {
+            get {
+                return this.timeStampField;
+            }
+            set {
+                this.timeStampField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int CustomerId {
+            get {
+                return this.customerIdField;
+            }
+            set {
+                this.customerIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int RecordCount {
+            get {
+                return this.recordCountField;
+            }
+            set {
+                this.recordCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class VerifyWorkCommand : CommandRequest {
+        
+        private int workOrderIdField;
+        
+        private WoRating woRatingIdField;
+        
+        private string commentField;
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public WoRating WoRatingId {
+            get {
+                return this.woRatingIdField;
+            }
+            set {
+                this.woRatingIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class SendWorkOrderCommand : CommandRequest {
+        
+        private int workOrderIdField;
+        
+        private string sendToField;
+        
+        private bool requestQuoteField;
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string SendTo {
+            get {
+                return this.sendToField;
+            }
+            set {
+                this.sendToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool RequestQuote {
+            get {
+                return this.requestQuoteField;
+            }
+            set {
+                this.requestQuoteField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class TimeCardActionCommand : CommandRequest {
+        
+        private int employeeIdField;
+        
+        private System.DateTime weekStartDateField;
+        
+        private TimeCardAction actionIdField;
+        
+        private string commentField;
+        
+        /// <remarks/>
+        public int EmployeeId {
+            get {
+                return this.employeeIdField;
+            }
+            set {
+                this.employeeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime WeekStartDate {
+            get {
+                return this.weekStartDateField;
+            }
+            set {
+                this.weekStartDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TimeCardAction ActionId {
+            get {
+                return this.actionIdField;
+            }
+            set {
+                this.actionIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public enum TimeCardAction {
+        
+        /// <remarks/>
+        Uknown,
+        
+        /// <remarks/>
+        Flag,
+        
+        /// <remarks/>
+        Submit,
+        
+        /// <remarks/>
+        Approve,
+        
+        /// <remarks/>
+        Export,
+        
+        /// <remarks/>
+        ClearFlag,
+        
+        /// <remarks/>
+        UnSubmit,
+        
+        /// <remarks/>
+        UnApprove,
+        
+        /// <remarks/>
+        UnExport,
+        
+        /// <remarks/>
+        ReadyForExport,
+        
+        /// <remarks/>
+        NotReadyForExport,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class GetTimeCardCommand : CommandRequest {
+        
+        private int employeeIdField;
+        
+        private System.DateTime baseDateField;
+        
+        /// <remarks/>
+        public int EmployeeId {
+            get {
+                return this.employeeIdField;
+            }
+            set {
+                this.employeeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime BaseDate {
+            get {
+                return this.baseDateField;
+            }
+            set {
+                this.baseDateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class SetWorkOrderDependencyCommand : CommandRequest {
+        
+        private int mainWorkOrderIdField;
+        
+        private int dependentWorkOrderIdField;
+        
+        /// <remarks/>
+        public int MainWorkOrderId {
+            get {
+                return this.mainWorkOrderIdField;
+            }
+            set {
+                this.mainWorkOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int DependentWorkOrderId {
+            get {
+                return this.dependentWorkOrderIdField;
+            }
+            set {
+                this.dependentWorkOrderIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class InvoiceDisputeCommand : CommandRequest {
+        
+        private int invoiceIdField;
+        
+        private System.Nullable<System.DateTime> timestampField;
+        
+        private string commentField;
+        
+        /// <remarks/>
+        public int InvoiceId {
+            get {
+                return this.invoiceIdField;
+            }
+            set {
+                this.invoiceIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> Timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                this.timestampField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class CreateWoPrintoutCommand : CommandRequest {
+        
+        private int workOrderIdField;
+        
+        private int printoutTemplateIdField;
+        
+        private int languageIdField;
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int PrintoutTemplateId {
+            get {
+                return this.printoutTemplateIdField;
+            }
+            set {
+                this.printoutTemplateIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int LanguageId {
+            get {
+                return this.languageIdField;
+            }
+            set {
+                this.languageIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class WorkZoneDeleteCommand : CommandRequest {
+        
+        private int workZoneIdField;
+        
+        /// <remarks/>
+        public int WorkZoneId {
+            get {
+                return this.workZoneIdField;
+            }
+            set {
+                this.workZoneIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class PortfolioDeleteCommand : CommandRequest {
+        
+        private int portfolioIdField;
+        
+        /// <remarks/>
+        public int PortfolioId {
+            get {
+                return this.portfolioIdField;
+            }
+            set {
+                this.portfolioIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class InvoiceRecallCommand : CommandRequest {
+        
+        private int invoiceIdField;
+        
+        private System.Nullable<System.DateTime> timestampField;
+        
+        private string commentField;
+        
+        /// <remarks/>
+        public int InvoiceId {
+            get {
+                return this.invoiceIdField;
+            }
+            set {
+                this.invoiceIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> Timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                this.timestampField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class MaterialTransactionCommitCommand : CommandRequest {
+        
+        private MaterialTransaction transactionField;
+        
+        /// <remarks/>
+        public MaterialTransaction Transaction {
+            get {
+                return this.transactionField;
+            }
+            set {
+                this.transactionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
+    public partial class GetProcedureStepsDocumentsRoutine : CommandRequest {
+        
+        private int workOrderIdField;
+        
+        /// <remarks/>
+        public int WorkOrderId {
+            get {
+                return this.workOrderIdField;
+            }
+            set {
+                this.workOrderIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15375,7 +21547,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15420,7 +21592,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum ConditionOperator {
@@ -15469,7 +21641,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15514,7 +21686,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum LogicalOperator {
@@ -15527,7 +21699,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15560,7 +21732,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://corrigo.com/integration/")]
     public enum OrderType {
@@ -15575,7 +21747,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(QueryByProperty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(QueryExpression))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15644,7 +21816,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15665,7 +21837,7 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15698,11 +21870,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void RetrieveCompletedEventHandler(object sender, RetrieveCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RetrieveCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15724,11 +21896,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void RetrieveMultipleCompletedEventHandler(object sender, RetrieveMultipleCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RetrieveMultipleCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15750,11 +21922,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void ExecuteCompletedEventHandler(object sender, ExecuteCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ExecuteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15776,11 +21948,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void ExecuteMultipleCompletedEventHandler(object sender, ExecuteMultipleCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ExecuteMultipleCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15802,11 +21974,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GetCompanyWsdkUrlCompletedEventHandler(object sender, GetCompanyWsdkUrlCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetCompanyWsdkUrlCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15828,11 +22000,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void LogOutCompletedEventHandler(object sender, LogOutCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class LogOutCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15854,11 +22026,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void LogInStatusCompletedEventHandler(object sender, LogInStatusCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class LogInStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15880,11 +22052,11 @@ namespace CorrigoServiceWebReference.CorrigoGA {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void LogInCompanyCompletedEventHandler(object sender, LogInCompanyCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class LogInCompanyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

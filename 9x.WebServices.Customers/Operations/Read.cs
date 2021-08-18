@@ -29,7 +29,7 @@ namespace _9x.WebServices.Customers.Operations
 				"Contract.*",
                 "WorkZone.*"
             };
-
+			//No row with the given identifier exists[Corrigo.BO.Customer.WoCostDefault#4]
 			var response = service.Retrieve(entity, new PropertySet { Properties = properties });
 			return response as Customer;
 		}

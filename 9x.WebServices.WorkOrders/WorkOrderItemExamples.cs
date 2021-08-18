@@ -1,12 +1,24 @@
-﻿using _9x.WebServices.WorkOrders.Operations.Items;
-using CorrigoServiceWebReference.CorrigoGA;
+﻿using CorrigoServiceWebReference.CorrigoGA;
 
-namespace _9x.WebServices.WorkOrders
+namespace _9x.WebServices.WorkOrders.Operations.Items
 {
 	public static class WorkOrderItemExamples
 	{
 		public static EntitySpecifier[] CreateItem(CorrigoService service, int workOrderId)
 			=> Create.Execute(service, workOrderId);
+
+		public static CorrigoEntity[] ReadItems(CorrigoService service)
+			=> Read.RetrieveAll(service);
+
+		public static void UpdateItem(CorrigoService service, int workOrderId)
+			=> Update.Execute(service, workOrderId);
+
+		public static void DeleteItem(CorrigoService service, int workOrderId)
+			=> Delete.Execute(service, workOrderId);
+
+		//----
+		public static WorkOrder GetOrder(CorrigoService service, int workOrderId)
+			=> Operations.Read.Execute(service, workOrderId);
 		//public static WoAssignment ReadAssignment(CorrigoService service, int? assignmentId)
 		//	=> Read.Retrieve(service, assignmentId);
 		//public static void UpdateAssignment(CorrigoService service, int? assignmentId)

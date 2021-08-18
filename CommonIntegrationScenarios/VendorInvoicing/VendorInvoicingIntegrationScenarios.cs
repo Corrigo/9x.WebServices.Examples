@@ -18,7 +18,33 @@ namespace CommonIntegrationScenarios.VendorInvoicing
             // Update the status of specified invoices to "Exported"
             // 
             int[] invoiceIDs = approvedInvoices.Select(i => i.Id).Take(2).ToArray();
-            InvoiceScenario.UpdateInvoiceStatus(corrigoService, invoiceIDs, APInvoiceStatus.Exported);
+
+            PropertySet _propertySet = new PropertySet
+            {
+                Properties = new string[]
+                            {
+                                "Id",
+                                "DisplayAs",
+                                "Description",
+                                "ForecastGroupId",
+                                "ApStateId",
+                                "ReadyForExport",
+                                "SetOnExport",
+                                "ChildWoDefault"
+                            }
+            };
+            var query = new QueryByProperty
+            {
+                EntityType = EntityType.ApInvoiceStatus,
+                PropertySet = _propertySet,
+                Conditions = new[]
+                    {
+                        new PropertyValuePair {PropertyName = "ApStateId", Value = ApState.Exported},
+                    },
+            };
+            var invoiceStatuses = corrigoService.RetrieveMultiple(query).Cast<ApInvoiceStatus>().ToArray();
+
+            InvoiceScenario.UpdateInvoiceStatus(corrigoService, invoiceIDs, invoiceStatuses[0].ApStateId);
 
             //
             // Vendor Invoice Payment

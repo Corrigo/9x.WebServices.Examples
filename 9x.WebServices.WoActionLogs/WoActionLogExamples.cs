@@ -44,7 +44,13 @@ namespace _9x.WebServices.WoActionLogs
 
         }
 
-        // Returns specified number of latest Work Orders
+        /// <summary>
+        /// Returns specified number of latest Work Orders
+        /// Ordered - latest is 1st
+        /// </summary>
+        /// <param name="service"></param>
+        /// <param name="numberOfWOs"></param>
+        /// <returns></returns>
         public static CorrigoEntity[] GetLatestWOs(CorrigoService service, int numberOfWOs)
         {
             var list = service.RetrieveMultiple(

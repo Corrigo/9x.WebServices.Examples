@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_9x.WebServices.CustomField2s</RootNamespace>
     <AssemblyName>9x.WebServices.CustomField2s</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>
     </SccProjectName>
@@ -19,6 +19,7 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,6 +59,10 @@
     <Compile Include="CustomField2Examples.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\9x.WebServices.WorkOrders\9x.WebServices.WorkOrders.csproj">
+      <Project>{7C4B23B5-A61F-456A-8919-E2DA7438B08D}</Project>
+      <Name>9x.WebServices.WorkOrders</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CorrigoServiceWebReference\CorrigoServiceWebReference.csproj">
       <Project>{1849279d-221b-4c26-95b4-7d3f7ae8d536}</Project>
       <Name>CorrigoServiceWebReference</Name>

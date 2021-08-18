@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9x.WebServices.Examples.Main", "9x.WebServices.Examples\9x.WebServices.Examples.Main.csproj", "{8194A747-DD62-462A-852E-BE07AB9EE682}"
 EndProject
@@ -30,8 +30,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9x.WebServices.RepairCodes", "9x.WebServices.RepairCodes\9x.WebServices.RepairCodes.csproj", "{E4199A05-662F-4926-880A-923F6EC9AD2B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTransactionCommands", "OneTransactionCommands\OneTransactionCommands.csproj", "{A843C1DF-0AAB-4430-A55F-A8BF699A58DE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9x.WebServices.Actors", "Actor\9x.WebServices.Actors.csproj", "{698A6CED-4D88-4871-A1A0-C1D2B714DBB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9x.WebServices.Contracts", "9x.WebServices.Contracts\9x.WebServices.Contracts.csproj", "{0D2D6E60-B976-4CB1-A3F9-6908785C3CAD}"
 EndProject
@@ -115,10 +113,6 @@ Global
 		{A843C1DF-0AAB-4430-A55F-A8BF699A58DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A843C1DF-0AAB-4430-A55F-A8BF699A58DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A843C1DF-0AAB-4430-A55F-A8BF699A58DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{698A6CED-4D88-4871-A1A0-C1D2B714DBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{698A6CED-4D88-4871-A1A0-C1D2B714DBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{698A6CED-4D88-4871-A1A0-C1D2B714DBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{698A6CED-4D88-4871-A1A0-C1D2B714DBB9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D2D6E60-B976-4CB1-A3F9-6908785C3CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D2D6E60-B976-4CB1-A3F9-6908785C3CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D2D6E60-B976-4CB1-A3F9-6908785C3CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -162,5 +156,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {482E1D8C-5515-4AB7-BBB7-DEA5254FCA75}
 	EndGlobalSection
 EndGlobal

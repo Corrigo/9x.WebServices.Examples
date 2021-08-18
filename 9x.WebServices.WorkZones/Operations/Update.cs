@@ -5,7 +5,7 @@ namespace _9x.WebServices.WorkZones.Operations
 {
     internal static class Update
     {
-        // WorkZone is Readonly - NonCreatable, NonDeletable, NonUpdatable
+        // WorkZone is Readonly - NonCreatable, NonDeletable
         public static void Execute(CorrigoService service, WorkZone toUpdate)
         {
             if (toUpdate == null || service == null) return;

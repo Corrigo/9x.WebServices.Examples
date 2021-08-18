@@ -35,7 +35,6 @@ namespace _9x.WebServices.Tasks.Operations
                             "Symptom",
                             "CompletionTime",
                             "Specialty.*",
-                            "PunchList.*",
                             "Priority.*",
                             "SelfHelpType",
                             "Instructions",
@@ -90,12 +89,6 @@ namespace _9x.WebServices.Tasks.Operations
                 Console.WriteLine(string.Concat("Task.Specialty.Id=".PadRight(padRightNumber), toReturn.Specialty.Id.ToString()));
                 Console.WriteLine(string.Concat("Task.Specialty.DisplayAs=".PadRight(padRightNumber), toReturn.Specialty.DisplayAs ?? ""));
                 Console.WriteLine(string.Concat("Task.Specialty.Instructions=".PadRight(padRightNumber), toReturn.Specialty.Instructions));
-            }
-
-            if (toReturn.PunchList != null)
-            {
-                Console.WriteLine(string.Concat("Task.PunchList.Id=".PadRight(padRightNumber), toReturn.PunchList.Id.ToString()));
-                Console.WriteLine(string.Concat("Task.PunchList.DisplayAs=".PadRight(padRightNumber), toReturn.PunchList.DisplayAs ?? ""));                
             }
 
             if (toReturn.Priority != null)
@@ -228,7 +221,6 @@ namespace _9x.WebServices.Tasks.Operations
                             "Symptom",
                             "CompletionTime",
                             "Specialty.*",
-                            "PunchList.*",
                             "Priority.*",
                             "SelfHelpType",
                             "Instructions",

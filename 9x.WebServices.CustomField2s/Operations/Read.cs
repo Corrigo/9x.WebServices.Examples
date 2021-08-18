@@ -24,25 +24,25 @@ namespace _9x.WebServices.CustomField2s.Operations
                             "Value",
                         }
                     },
-                    Criteria = new FilterExpression
-                    {
-                        Conditions = new ConditionExpression[]
-                        {
-                            new ConditionExpression
-                            {
-                                PropertyName = "ObjectId",
-                                Operator = ConditionOperator.Equal,
-                                Values = new object[] {entity.Id}
-                            },
-                            new ConditionExpression
-                            {
-                                PropertyName = "Descriptor.Id",
-                                Operator = ConditionOperator.Equal,
-                                Values = new object[] {customFieldDescriptor.Id}
-                            }
-                        },
-                        FilterOperator = LogicalOperator.And
-                    }
+                    //Criteria = new FilterExpression
+                    //{
+                    //    Conditions = new ConditionExpression[]
+                    //    {
+                    //        new ConditionExpression
+                    //        {
+                    //            PropertyName = "ObjectId",
+                    //            Operator = ConditionOperator.Equal,
+                    //            Values = new object[] {entity.Id}
+                    //        },
+                    //        new ConditionExpression
+                    //        {
+                    //            PropertyName = "Descriptor.Id",
+                    //            Operator = ConditionOperator.Equal,
+                    //            Values = new object[] {customFieldDescriptor.Id}
+                    //        }
+                    //    },
+                    //    FilterOperator = LogicalOperator.And
+                    //}
                 });
 
             return list.FirstOrDefault() as CustomField2;
