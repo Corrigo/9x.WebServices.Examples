@@ -9,7 +9,7 @@ namespace _9x.WebServices.Customers
 		{
 			var createdCustomerId = Create.Execute(service);
 
-			//var customer = Read.Execute(service, createdCustomerId);
+			var customer = Read.Execute(service, createdCustomerId);
 
 			return createdCustomerId;// customer.Id;
 		}
